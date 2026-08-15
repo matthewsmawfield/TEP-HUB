@@ -2,7 +2,7 @@
 
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 
-![TEP-HUB: The Chronometric Illusion](site/public/image.webp)
+![TEP-HUB: The Mount Wilson Paradigm](site/public/image.webp)
 
 **Author:** Matthew Lukin Smawfield  
 **Version:** v0.1 (Harare)  

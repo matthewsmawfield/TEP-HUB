@@ -1,4 +1,4 @@
-# TEP-HUB: The Chronometric Illusion
+# TEP-HUB: The Mount Wilson Paradigm
 # Core stack for TEP-HUB manuscript build pipeline and analysis tools
 
 # Astronomical computing
