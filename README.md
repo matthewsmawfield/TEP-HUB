@@ -1,4 +1,4 @@
-# The Chronometric Illusion: Rescuing the Eternal Continuum and Resolving Cosmological Crises via the Temporal Equivalence Principle
+# The Mount Wilson Paradigm: Restoring the Eternal Universe via the Temporal Equivalence Principle
 
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 
