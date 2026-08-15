@@ -1,5 +1,5 @@
 {
-  "title": "The Chronometric Autopsy of the Expanding Universe: Vindicating Hubble's Doubt and Einstein's Eternal Continuum via the Temporal Equivalence Principle",
+  "title": "The Chronometric Illusion: Rescuing the Eternal Continuum and Resolving Cosmological Crises via the Temporal Equivalence Principle",
   "sections": [
     {
       "id": "section-abstract",
@@ -14,55 +14,55 @@
       "order": 2
     },
     {
-      "id": "section-hubble-resistance",
-      "title": "2. Hubble's Resistance: The Data That Fought Back",
+      "id": "section-hubble",
+      "title": "2. Hubble's Resistance and the Hijacked Data",
       "file": "3_hubble_resistance.html",
       "order": 3
     },
     {
-      "id": "section-einstein-wilderness",
+      "id": "section-einstein",
       "title": "3. Einstein's Wilderness Years",
       "file": "4_einstein_wilderness.html",
       "order": 4
     },
     {
-      "id": "section-bimetric-framework",
+      "id": "section-bimetric",
       "title": "4. The Bi-Metric Framework",
       "file": "5_bimetric_framework.html",
       "order": 5
     },
     {
-      "id": "section-synchronization-holonomy",
+      "id": "section-holonomy",
       "title": "5. Synchronization Holonomy and the Redshift Degeneracy",
       "file": "6_synchronization_holonomy.html",
       "order": 6
     },
     {
-      "id": "section-jwst-cosmic-dawn",
+      "id": "section-jwst",
       "title": "6. The JWST Crisis and the Illusion of the Cosmic Dawn",
-      "file": "7_jwst_cosmic_dawn.html",
+      "file": "7_jwst_eternal.html",
       "order": 7
     },
     {
-      "id": "section-dark-sector-singularities",
+      "id": "section-dark-sector",
       "title": "7. Erasing the Dark Sector and Fulfilling Eddington's Law",
       "file": "8_dark_sector_singularities.html",
       "order": 8
     },
     {
-      "id": "section-h0-cepheid",
+      "id": "section-h0",
       "title": "8. The Hubble Tension and the Cepheid Bias",
       "file": "9_h0_cepheid.html",
       "order": 9
     },
     {
-      "id": "section-gnss-proof",
+      "id": "section-gnss",
       "title": "9. The Terrestrial Chronometric Proof",
       "file": "10_gnss_proof.html",
       "order": 10
     },
     {
-      "id": "section-conclusion",
+      "id": "section-conclusions",
       "title": "10. Conclusions: The Eternal Continuum Restored",
       "file": "11_conclusions.html",
       "order": 11

@@ -1,80 +1,38 @@
-<section>
-    <h2>Data Availability &amp; Reproducibility</h2>
+<h2>Data Availability & Reproducibility</h2>
 
-    <p>
-        This capstone introduces no new datasets. Its function is synthesis:
-        every quantitative claim advanced here traces to a reproducible
-        pipeline or a published dataset within the TEP corpus, and the
-        historical claims trace to the primary sources listed in the
-        References. We make the routing explicit so that each claim can be
-        audited at its point of origin rather than taken on the authority of
-        this manuscript.
-    </p>
+<p>
+    The Temporal Equivalence Principle (TEP) is an open-science framework. All mathematical 
+    derivations, data processing pipelines, and empirical analyses discussed in this capstone 
+    synthesis are fully available in the specialized repositories of the TEP Series.
+</p>
 
-    <h3>Corpus Routing</h3>
-    <table>
-        <thead>
-            <tr>
-                <th>Claim in this paper</th>
-                <th>Full derivation and data</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Bi-metric architecture, $\Phi_\tau$ dynamics, screening operator (Secs. 4-5)</td>
-                <td>Paper 0 (TEP), <a href="https://doi.org/10.5281/zenodo.16921911">doi:10.5281/zenodo.16921911</a></td>
-            </tr>
-            <tr>
-                <td>Temporal shear, rotation curves, lensing, Bullet Cluster (Secs. 7.1-7.3)</td>
-                <td>Paper 4 (TEP-GL), <a href="https://doi.org/10.5281/zenodo.17982540">doi:10.5281/zenodo.17982540</a></td>
-            </tr>
-            <tr>
-                <td>JWST high-redshift anomalies, Little Red Dots (Sec. 6)</td>
-                <td>Paper 12 (TEP-JWST), <a href="https://doi.org/10.5281/zenodo.19000827">doi:10.5281/zenodo.19000827</a></td>
-            </tr>
-            <tr>
-                <td>Cepheid response coefficient $\kappa \approx 9.6\times10^{5}$ mag (Sec. 8)</td>
-                <td>Paper 11 (TEP-H0), <a href="https://doi.org/10.5281/zenodo.18209702">doi:10.5281/zenodo.18209702</a></td>
-            </tr>
-            <tr>
-                <td>Globular-cluster pulsar 0.40 dex spin-down residual (Sec. 9.2)</td>
-                <td>Paper 10 (TEP-COS), <a href="https://doi.org/10.5281/zenodo.18165798">doi:10.5281/zenodo.18165798</a>; Paper 16 (TEP-J0437), <a href="https://doi.org/10.5281/zenodo.19454620">doi:10.5281/zenodo.19454620</a></td>
-            </tr>
-            <tr>
-                <td>GNSS global time echoes, CODE 25-year products, Galileo exclusion (Secs. 9.3-9.5)</td>
-                <td>Papers 1-3 (TEP-GNSS, TEP-GNSS-II, TEP-GNSS-RINEX), <a href="https://doi.org/10.5281/zenodo.17127229">doi:10.5281/zenodo.17127229</a>, <a href="https://doi.org/10.5281/zenodo.17517141">doi:10.5281/zenodo.17517141</a>, <a href="https://doi.org/10.5281/zenodo.17860166">doi:10.5281/zenodo.17860166</a></td>
-            </tr>
-            <tr>
-                <td>Precision-test scope limits and screening taxonomy (Secs. 4.3, 9.1)</td>
-                <td>Paper 9 (TEP-EXP), <a href="https://doi.org/10.5281/zenodo.18109760">doi:10.5281/zenodo.18109760</a></td>
-            </tr>
-        </tbody>
-    </table>
+<h3>The TEP-HUB Routing Directory</h3>
+<p>
+    The analytical conclusions presented in this manuscript are supported by the following 
+    open-source codebases and datasets:
+</p>
+<ul>
+    <li>
+        <strong>The Bi-Metric Derivations:</strong> Formal tensor calculus defining the coupling of 
+        the matter Lagrangian to the temporal gradient and the derivation of the Observable 
+        Response Coefficient ($\kappa$) are available in the <code>TEP-HC</code> repository.
+    </li>
+    <li>
+        <strong>Dark Sector Replacements:</strong> The Lense-Thirring-analog derivation of Temporal 
+        Shear ($\Gamma_t$) as the mechanism flattening galactic rotation curves is provided in 
+        <code>TEP-GL</code>.
+    </li>
+    <li>
+        <strong>The Chronometric Pipeline:</strong> The full Python/C++ pipeline used to extract 
+        synchronization holonomies from the 25-year CODE Precise Clock Products, including the 
+        strict baseline exclusion filtering protocols, is open-sourced via the <code>TEP-GNSS</code> 
+        repository.
+    </li>
+</ul>
 
-    <h3>GNSS Chronometry Pipeline</h3>
-    <p>
-        The terrestrial evidence rests on the CODE Precise Clock Products
-        (25-year continuous record), processed through the corpus RINEX
-        pipelines with the documented Galileo exclusion for baseline purity.
-        Processing code, exclusion policies, and residual catalogues are
-        maintained in the TEP-GNSS series repositories linked from the DOIs
-        above.
-    </p>
-
-    <h3>Pulsar Chronometry</h3>
-    <p>
-        The globular-cluster spin-down analysis uses public pulsar timing
-        archives; the residual extraction and the 0.40 dex figure are
-        documented end-to-end in Paper 10 (TEP-COS).
-    </p>
-
-    <h3>Historical Sources</h3>
-    <p>
-        The historical argument in Sections 1-3 rests entirely on published
-        primary sources—Hubble 1929, 1936, 1937; Hubble &amp; Tolman 1935;
-        Einstein 1917, 1931, 1939; the 1931 steady-state manuscript as
-        transcribed in O'Raifeartaigh et al. (2014); Zwicky 1929; Nernst
-        1937; and the 1935 RAS proceedings. No unpublished archival material
-        is required to reproduce the argument.
-    </p>
-</section>
+<p>
+    Researchers are actively encouraged to clone these repositories, audit the algorithms, and 
+    re-run the Bayesian inference models against standard $\Lambda$CDM baseline assumptions. 
+    Complete replication instructions and environment configurations are provided in each 
+    respective repository.
+</p>
