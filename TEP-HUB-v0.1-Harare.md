@@ -20,6 +20,8 @@ Keywords: cosmological redshift, isochrony axiom, spatial expansion, scalar-tens
 
 The standard cosmological model ($\Lambda$CDM) rests upon a foundational consensus established in the early 1930s: that the redshift of extragalactic nebulae observed by Edwin Hubble and Milton Humason constitutes direct evidence of an expanding spatial metric. For nearly a century, this spatial-kinematic interpretation has served as the unassailable axiom of modern astrophysics. However, a rigorous epistemological audit of the era reveals that this interpretation was not derived from pristine first principles, but was rather a forced mathematical compromise born of profound technological limitation and theoretical panic.
 
+It is instructive to regard $\Lambda$CDM not as a physical theory in isolation, but as a legacy data architecture whose every downstream module has been compiled against a single, unverified kernel. In this reading, the isochrony axiom ($d\tau = dt$) is not merely an assumption but a hardcoded variable: a constant pinned at compile time in the absence of any chronometric instrumentation capable of resolving its true value. Once that constant was frozen, every subsequent dynamical observation—the Hubble flow, the acceleration term, the missing mass—was forced to resolve against a spatial metric that had inherited the entire kinetic budget of the universe. The dark sector, in this view, is not a discovery but a runtime patch: a sequence of compensating modules (cold dark matter, dark energy, inflation) required to keep a legacy architecture numerically consistent with data it was never designed to parse. The present audit reopens that kernel and restores the suppressed temporal degrees of freedom, allowing the dynamics to be re-projected onto the field that actually carries them.
+
 ### 1.1 The Technological Asymmetry
 
 In the 1920s, humanity possessed an unparalleled apparatus for spatial observation: the 100-inch Hooker Telescope at the Mount Wilson Observatory. Utilizing this instrument, Humason gathered spectrographic data by measuring physical shadows on glass plates, a mechanism that inherently enforced a spatial-optical mindset. Yet, while astronomers possessed extraordinary spatial vision, they were chronometrically blind. The atomic clock would not be invented for another two decades; precision chronometry was limited to pendulums and mechanical escapements.
@@ -48,7 +50,7 @@ Hubble's skepticism culminated in a direct empirical challenge. Working with Ric
 
 The observational data heavily favored a static universe. Rather than abandoning the expanding metric, theorists invented arbitrary "evolutionary corrections"—asserting that early galaxies were simply much brighter than modern ones, perfectly offsetting the expected dimming. Hubble viewed this as theoretical tailoring, stretching the man to fit the suit. By 1937, he issued a final ultimatum, noting that an expanding universe leads to an inexplicably, suspiciously young cosmos, and pleaded that the redshift must be due to "some hitherto unrecognized principle of nature."
 
-## 3. Einstein's Wilderness Years
+## 3. The Wilderness Years: Einstein's Desperate Search for the Temporal Field
 
 Albert Einstein’s 1931 visit to Mount Wilson Observatory is frequently cited as the moment he abandoned his belief in a static universe and excised the cosmological constant ($\Lambda$) as his "greatest blunder." However, when re-evaluated through the lens of the Temporal Equivalence Principle, his capitulation was not an embrace of the Big Bang, but an act of deep exhaustion. Einstein was fundamentally committed to a Machian, deterministic, and eternal continuum, and he spent his subsequent "wilderness years" searching for the exact scalar field mechanics necessary to circumvent the very model he had ostensibly endorsed.
 
@@ -68,7 +70,7 @@ Stripped of the cosmological constant, and bound by the isochrony axiom, Einstei
 
 In his 1955 correspondence regarding the death of Michele Besso, Einstein expressed profound despair over the "illusion of now" and the loss of Mach's Principle, which required a stable global reference frame. Had he possessed the formalism to treat proper time as a dynamical field, he could have retained both $\Lambda$ and his eternal continuum.
 
-## 4. The Bi-Metric Framework
+## 4. The TEP Architecture: Formalizing the Bi-Metric Continuum
 
 To resolve the historical and mathematical contradictions of standard cosmology, we must introduce Hubble's requested "unknown principle of nature" without abandoning the rigorous successes of General Relativity. The Temporal Equivalence Principle (TEP) achieves this by replacing the single-metric architecture of $\Lambda$CDM with a bi-metric scalar-tensor framework. This approach discards the isochrony axiom and mathematically formalizes proper time as a dynamical entity.
 
@@ -76,7 +78,13 @@ To resolve the historical and mathematical contradictions of standard cosmology,
 
 In standard GR, proper time ($\tau$) is strictly a path-dependent parameter derived from the metric tensor $g_{\mu\nu}$. Under the TEP framework, the universe consists of a rigid, eternal, and stable spatial geometry ($g_{ij}$) permeated by a fundamental, dynamical scalar proper time field ($\Phi_\tau$). This field possesses its own degrees of freedom, kinetics, and potential energy.
 
-Baryonic matter ($L_m$) does not couple directly to the bare spatial metric. Instead, it couples to an effective metric ($\tilde{g}_{\mu\nu}$) that is continuously modulated by the gradient of the temporal field. The Einstein-Hilbert action is thereby modified to include the scalar field representing proper time, ensuring that local physical processes are universally governed by the local density and shear of time, rather than a uniform background parameter.
+Baryonic matter ($L_m$) does not couple directly to the bare spatial metric. Instead, it couples to an effective metric ($\tilde{g}_{\mu\nu}$) that is continuously modulated by the gradient of the temporal field. The bare metric $g_{\mu\nu}$ is augmented by the symmetric product of the temporal covector, yielding the formal tensor relation:
+
+\begin{equation} \label{eq:effective_metric}
+\tilde{g}_{\mu\nu} = g_{\mu\nu} + \nabla_\mu \Phi_\tau \, \nabla_\nu \Phi_\tau
+\end{equation}
+
+The Einstein-Hilbert action is thereby modified to include the scalar field representing proper time, ensuring that local physical processes are universally governed by the local density and shear of time, rather than a uniform background parameter.
 
 ### 4.2 Vindicating $\Lambda$ and Restoring Mach's Principle
 
@@ -93,7 +101,7 @@ If the spatial metric is static and eternal, the cosmological redshift ($z$) obs
 In the standard FLRW metric, cosmological redshift is derived as the ratio of the spatial scale factor at the time of observation to the scale factor at the time of emission:
 
 \begin{equation} \label{eq:spatial_redshift}
-1 + z = \frac{a_{\rm obs}}{a_{\rm emit}}
+1 + z = \frac{a(t_{\rm obs})}{a(t_{\rm emit})}
 \end{equation}
 
 The TEP framework fixes the spatial scale factor to $a = 1$, rendering the spatial universe static. However, because the matter Lagrangian couples to the effective metric, photon frequencies are modulated by the local temporal amplification factor $\chi(\Phi_\tau, \Gamma_t)$. The exact same redshift is therefore produced by the kinetic gradient of the proper time field:
@@ -130,7 +138,7 @@ The standard model requires that 95% of the universe consists of invisible, unde
 
 ### 7.1 Temporal Shear as Dark Matter
 
-As detailed in the specialized TEP corpus (e.g., *4-TEP-GL*), dense baryonic mass concentrations do not merely warp spatial geometry; they violently drag the proper time field. This Lense-Thirring-like effect generates an inward acceleration gradient known as Temporal Shear ($\Gamma_t$). It is this localized temporal gradient that flattens galactic rotation curves, completely eliminating the need for dark matter halos.
+As detailed in the specialized TEP corpus (e.g., *4-TEP-GL*), dense baryonic mass concentrations do not merely warp spatial geometry; they violently drag the proper time field. Just as a rotating mass drags spatial geometry (the Lense-Thirring effect), a dense baryonic disc drags the proper time field—but with a vastly greater effective magnitude, because the temporal field carries the kinetic budget that the spatial metric has been denied. This dragging generates an inward kinetic acceleration gradient, $\mathcal{F}^\mu(\nabla \Phi_\tau)$, known as Temporal Shear ($\Gamma_t$). It is this chronometric topography—not invisible mass—that flattens galactic rotation curves, reproduces the Tully-Fisher relation, and eliminates the need for dark matter halos.
 
 Similarly, the enhanced gravitational lensing observed around galaxy clusters (such as the Bullet Cluster or the recent JWST COSMOS-Web data) does not map invisible mass. It maps the steep topography of the $\Phi_\tau$ field. In the Bullet Cluster collision, the visible baryonic gas collided and halted, but the massive temporal shear shockwaves propagated forward, perfectly explaining the lensing offsets without dark matter.
 
@@ -140,7 +148,7 @@ In 1935, Arthur Eddington famously attacked Subrahmanyan Chandrasekhar’s calcu
 
 As gravitational density increases, the temporal gradient steepens. In extreme collapse scenarios, Temporal Shear approaches infinity ($\Gamma_t \to \infty$) before the spatial geometry can puncture. Because proper time functionally freezes relative to the external universe, local kinematics halt. Event horizons are therefore replaced by Temporal Topological Defects, fulfilling Eddington's demand and preserving the continuous, non-singular fabric of the eternal universe.
 
-## 8. The Hubble Tension and the Cepheid Bias
+## 8. The Cepheid Bias: Resolving the $H_0$ Tension via Local Temporal Topology
 
 The "Hubble Tension"—the irreconcilable discrepancy between the expansion rate ($H_0$) measured via the local distance ladder (supernovae, Cepheids) and the rate inferred from the early universe (Cosmic Microwave Background)—has fractured modern cosmology. The TEP framework demonstrates that this tension is not a physical crisis, but an inevitable calibration error stemming directly from the isochrony axiom.
 
@@ -167,6 +175,8 @@ The initial bridge between cosmological scales and local metrology is found in p
 The definitive proof of synchronization holonomy exists within the 25-year archive of the Center for Orbit Determination in Europe (CODE) Precise Clock Products. Global Navigation Satellite Systems (GNSS) continuously orbit through Earth's gravitational potential, accumulating proper time.
 
 By applying rigid analytical infrastructure to this data, we can track "Global Time Echoes"—the exact same temporal phase-shifts that generate cosmological redshift, operating on a micro-scale. It is critical to note the architectural strictness required for this proof: our methodology mandates the deliberate exclusion of specific datasets (such as Galileo) to isolate pristine proper time gradients without cross-constellation pollution or proprietary software smoothing.
+
+This exclusion is not a casual choice but an uncompromising data-integrity standard. Our pipeline strictly enforces baseline exclusions—most notably the complete exclusion of Galileo constellation datasets—to prevent cross-constellation calibration errors and proprietary smoothing algorithms from polluting the temporal gradient data. By relying purely on untainted GPS/GLONASS baselines within the CODE products, we isolate true "Global Time Echoes" rather than software artifacts, ensuring that the extracted chronometric signal is a property of the $\Phi_\tau$ field and not an artifact of heterogeneous clock disciplining or inter-system bias corrections.
 
 The successful extraction of these temporal field gradients from GNSS orbital chronometry confirms that $d\tau \neq dt$. Time is a dynamical field, and its kinetic topography governs the universe from the satellite orbital plane to the cosmic horizon.
 

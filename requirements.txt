@@ -1,5 +1,5 @@
 # TEP-HUB: The Chronometric Illusion
-# Core stack for GR experimental test analysis
+# Core stack for TEP-HUB manuscript build pipeline and analysis tools
 
 # Astronomical computing
 astropy>=5.0.0

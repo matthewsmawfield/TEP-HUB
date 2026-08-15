@@ -50,7 +50,7 @@ def load_citation_metadata():
             version_match = re.search(r'version:\s*"?([^"\n]+)"?', content)
             version_str = version_match.group(1).strip() if version_match else 'v0.1'
         
-        # Parse version string like 'v0.1 (Sintra)'
+        # Parse version string like 'v0.1 (Harare)'
         pattern = r'^(v?[\d.]+)(?:\s*\(([^)]+)\))?$'
         match = re.match(pattern, version_str.strip())
         

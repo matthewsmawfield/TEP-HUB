@@ -21,13 +21,13 @@
     },
     {
       "id": "section-einstein",
-      "title": "3. Einstein's Wilderness Years",
+      "title": "3. The Wilderness Years: Einstein's Desperate Search for the Temporal Field",
       "file": "4_einstein_wilderness.html",
       "order": 4
     },
     {
       "id": "section-bimetric",
-      "title": "4. The Bi-Metric Framework",
+      "title": "4. The TEP Architecture: Formalizing the Bi-Metric Continuum",
       "file": "5_bimetric_framework.html",
       "order": 5
     },
@@ -51,7 +51,7 @@
     },
     {
       "id": "section-h0",
-      "title": "8. The Hubble Tension and the Cepheid Bias",
+      "title": "8. The Cepheid Bias: Resolving the $H_0$ Tension via Local Temporal Topology",
       "file": "9_h0_cepheid.html",
       "order": 9
     },
@@ -95,5 +95,5 @@
   "start_url": ".",
   "display": "standalone",
   "background_color": "#ffffff",
-  "theme_color": "#220126"
+  "theme_color": "#1a3a3a"
 }

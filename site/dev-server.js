@@ -114,8 +114,6 @@ class DevServer {
             path.join(__dirname, 'components'),
             path.join(__dirname, 'index.html'),
             path.join(__dirname, 'manifest.json'),
-            path.join(__dirname, 'figures'),
-            path.join(__dirname, 'data'),
             path.join(__dirname, 'public')
         ];
         
@@ -181,8 +179,6 @@ class DevServer {
         console.log('   • components/*.html');
         console.log('   • index.html');
         console.log('   • manifest.json');
-        console.log('   • figures/*.png');
-        console.log('   • data/*.json');
         console.log('   • public/*');
         console.log(`\n🌐 Server running at: http://localhost:${this.port}`);
         console.log('📱 The page will auto-reload when you make changes!');

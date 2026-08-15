@@ -14,7 +14,7 @@
 }
 
 .executive-summary h2 {
-    color: #220126;
+    color: #1a3a3a;
     margin-top: 0;
     text-align: center;
     font-size: 24px;
@@ -28,7 +28,7 @@
 }
 
 .executive-summary-section h3 {
-    color: #220126;
+    color: #1a3a3a;
     margin-top: 0;
 }
 
@@ -46,7 +46,7 @@
 }
 
 .executive-summary-conclusion h3 {
-    color: #220126;
+    color: #1a3a3a;
     margin-top: 0;
 }
 
@@ -187,7 +187,7 @@
 
 .section-header h2 {
     margin: 0;
-    color: #220126;
+    color: #1a3a3a;
 }
 
 .subsection-header {
@@ -197,7 +197,7 @@
 
 .subsection-header h3 {
     margin: 0;
-    color: #220126;
+    color: #1a3a3a;
 }
 
 /* ============================================
@@ -271,7 +271,7 @@
 
 .methodology-step h4 {
     margin-top: 0;
-    color: #220126;
+    color: #1a3a3a;
 }
 
 .methodology-step-number {
@@ -402,7 +402,7 @@
 }
 
 .appendix-section h2 {
-    color: #220126;
+    color: #1a3a3a;
     margin-top: 0;
 }
 

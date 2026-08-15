@@ -55,7 +55,7 @@ class HTMLToMarkdownConverter {
         // Convert images
         html = html.replace(/<img[^>]*src=["']([^"']*)["'][^>]*alt=["']([^"']*)["'][^>]*>/gi, (match, src, alt) => {
             // Fix path for root-level markdown
-            if (src.startsWith('figures/')) {
+            if (src.startsWith('public/')) {
                 src = 'site/' + src;
             }
             return `\n![${alt}](${src})\n`;
@@ -195,7 +195,7 @@ class HTMLToMarkdownConverter {
         
         if (rows.length === 0) return '';
         
-        // Create markdown table (simple format like Jakarta)
+        // Create markdown table (simple format)
         let markdown = '\n';
         rows.forEach((row, index) => {
             markdown += '| ' + row.join(' | ') + ' |\n';
@@ -226,7 +226,7 @@ class HTMLToMarkdownConverter {
             .trim() : 'v0.1 (Harare)';
         
         const dateMatch = html.match(/<div[^>]*class=["'][^"']*date[^"']*["'][^>]*>(.*?)<\/div>/i);
-        const date = dateMatch ? dateMatch[1].replace(/<[^>]+>/g, '').trim() : 'First published: 31 December 2025 · Last updated: 29 April 2026';
+        const date = dateMatch ? dateMatch[1].replace(/<[^>]+>/g, '').trim() : 'First published: 15 August 2026 · Last updated: 15 August 2026';
         
         const doiMatch = html.match(/DOI:\s*<a[^>]*href=["']([^"']*)["'][^>]*>\s*([^<]*?)\s*<\/a>/i);
         const doi = doiMatch ? doiMatch[2] : '[DOI]';
