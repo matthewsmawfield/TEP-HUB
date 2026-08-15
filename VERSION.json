@@ -1,7 +1,6 @@
 {
-  "version": "0.5",
-  "codename": "Istanbul",
-  "description": "Paper 9: What Do Precision Tests of General Relativity Actually Measure?",
-  "date": "2026-08-08",
-  "paper": "9"
+  "version": "0.1",
+  "codename": "Harare",
+  "description": "TEP-HUB: central hub for the Temporal Equivalence Principle research program",
+  "date": "2026-08-15"
 }
