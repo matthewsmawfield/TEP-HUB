@@ -104,14 +104,6 @@ async function buildStaticSite() {
             }
         }
         
-        // Copy figures from results/figures/ to dist/figures/ (main figure source)
-        const resultsFiguresPath = path.join(__dirname, '..', 'results', 'figures');
-        const distFiguresPath = path.join(distDir, 'figures');
-        if (fs.existsSync(resultsFiguresPath)) {
-            console.log('📁 Copying results/figures/ → dist/figures/');
-            copyRecursiveSync(resultsFiguresPath, distFiguresPath);
-        }
-        
         // Copy manifest.json for reference
         fs.copyFileSync(manifestPath, path.join(distDir, 'manifest.json'));
         

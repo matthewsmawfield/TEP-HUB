@@ -103,7 +103,7 @@ def copy_pdf_to_docs(source_pdf: Path, docs_dir: Path):
     version_str = f"v{metadata['version']}-{metadata['codename']}"
     
     # Primary PDF name
-    target_name = f"9-TEP-HUB-{version_str}.pdf"
+    target_name = f"TEP-HUB-{version_str}.pdf"
     target_path = docs_dir / target_name
     
     # Copy the file
@@ -123,7 +123,7 @@ def copy_pdf_to_root(source_pdf: Path, base_dir: Path):
     version_str = f"v{metadata['version']}-{metadata['codename']}"
     
     # Primary PDF name
-    target_name = f"9-TEP-HUB-{version_str}.pdf"
+    target_name = f"TEP-HUB-{version_str}.pdf"
     target_path = base_dir / target_name
     
     # Copy the file
