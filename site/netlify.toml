@@ -54,6 +54,6 @@
   status = 301
 
 [[redirects]]
-  from = "/TEP-EXP"
+  from = "/TEP-HUB"
   to = "/"
   status = 301

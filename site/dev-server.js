@@ -14,7 +14,7 @@ class DevServer {
         this.liveServerProcess = null;
         this.watcherReady = false;
         this.watcherRestarting = false;
-        this.port = 51820; // Unique port for TEP-EXP
+        this.port = 51820; // Unique port for TEP-HUB
     }
 
     async startLiveServer() {
@@ -94,7 +94,7 @@ class DevServer {
     }
 
     async start() {
-        console.log('🎯 TEP-EXP Development Server (Paper 9)');
+        console.log('🎯 TEP-HUB Development Server (Hub)');
         console.log('=====================================\n');
 
         // Ensure dist directory exists and do initial build

@@ -1,4 +1,4 @@
-# robots.txt for TEP-EXP: Precision Tests of General Relativity
+# robots.txt for TEP-HUB: The Chronometric Illusion
 User-agent: *
 Allow: /
 

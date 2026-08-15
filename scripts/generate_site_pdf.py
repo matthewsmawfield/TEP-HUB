@@ -36,7 +36,7 @@ def load_citation_metadata():
     
     if not citation_file.exists():
         print("⚠️  CITATION.cff not found, using defaults")
-        return {'version': 'v0.1', 'codename': 'Istanbul', 'title': 'TEP-EXP'}
+        return {'version': 'v0.1', 'codename': 'Harare', 'title': 'TEP-HUB'}
     
     try:
         if yaml:
@@ -56,16 +56,16 @@ def load_citation_metadata():
         
         if match:
             version = match.group(1).lstrip('v')
-            codename = match.group(2) or 'Istanbul'
+            codename = match.group(2) or 'Harare'
         else:
             version = version_str.lstrip('v')
-            codename = 'Istanbul'
+            codename = 'Harare'
         
         return {'version': version, 'codename': codename}
         
     except Exception as e:
         print(f"⚠️  Error parsing CITATION.cff: {e}, using defaults")
-        return {'version': 'v0.1', 'codename': 'Istanbul', 'title': 'TEP-EXP'}
+        return {'version': 'v0.1', 'codename': 'Harare', 'title': 'TEP-HUB'}
 
 
 def build_static_site():
@@ -103,7 +103,7 @@ def copy_pdf_to_docs(source_pdf: Path, docs_dir: Path):
     version_str = f"v{metadata['version']}-{metadata['codename']}"
     
     # Primary PDF name
-    target_name = f"9-TEP-EXP-{version_str}.pdf"
+    target_name = f"9-TEP-HUB-{version_str}.pdf"
     target_path = docs_dir / target_name
     
     # Copy the file
@@ -123,7 +123,7 @@ def copy_pdf_to_root(source_pdf: Path, base_dir: Path):
     version_str = f"v{metadata['version']}-{metadata['codename']}"
     
     # Primary PDF name
-    target_name = f"9-TEP-EXP-{version_str}.pdf"
+    target_name = f"9-TEP-HUB-{version_str}.pdf"
     target_path = base_dir / target_name
     
     # Copy the file

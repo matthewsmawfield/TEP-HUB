@@ -1,7 +1,7 @@
 {
   "id": "smawfield2025exp",
   "type": "article",
-  "title": "What Do Precision Tests of General Relativity Actually Measure?",
+  "title": "The Chronometric Illusion: Rescuing the Eternal Continuum and Resolving Cosmological Crises via the Temporal Equivalence Principle",
   "author": [
     {
       "family": "Smawfield",
@@ -14,5 +14,5 @@
   "abstract": "Most high-precision tests of general relativity constrain reciprocity-even, largely local observables within single-metric frameworks. This leaves open a specific underdetermination between General Relativity (GR) and a class of two-metric disformal scalar-tensor modifications, exemplified here by the Temporal Equivalence Principle (TEP). This paper formalizes a measurement taxonomy distinguishing gauge-invariant from convention-dependent observables and identifies six recurring scope limitations in the experimental canon: (1) two-way measurement dominance; (2) local/global conflation; (3) model-dependent calibration; (4) single-path multi-messenger constraints on differential propagation that do not directly test common-mode conformal clock-sector structure; (5) theory-laden data reduction; and (6) the proximity-regime screening blind spot, whereby tests performed in deep potential wells probe only the screened regime where scalar-field gradients are continuously suppressed, leaving the active-shear dilute regime unexplored. These characteristics do not diminish the experimental achievements but indicate that, in many cases, the tests primarily constrain parameter space within assumed frameworks rather than systematically discriminating between alternatives. Discriminating observables—specifically loop asymmetries, spatial correlations, and proximity-regime screening transitions—are proposed, together with experimental configurations capable of resolving the underdetermination.",
   "URL": "https://mlsmawfield.com/tep/exp/",
   "publisher": "Preprint",
-  "note": "Preprint, Version v0.5 (Istanbul)"
+  "note": "Preprint, Version v0.1 (Harare)"
 }

@@ -4,13 +4,13 @@
         xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
     <url>
-        <loc>https://mlsmawfield.com/tep/exp/</loc>
+        <loc>https://mlsmawfield.com/tep/hub/</loc>
         <lastmod>2026-08-08</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>https://mlsmawfield.com/tep/exp/public/docs/9-TEP-EXP-v0.5-Istanbul.pdf</loc>
+        <loc>https://mlsmawfield.com/tep/hub/public/docs/TEP-HUB-v0.1-Harare.pdf</loc>
         <lastmod>2026-08-08</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>

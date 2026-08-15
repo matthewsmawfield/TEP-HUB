@@ -5,7 +5,7 @@ This paper formalizes a measurement taxonomy distinguishing gauge-invariant from
 Discriminating observables—specifically loop asymmetries, spatial correlations, and proximity-regime screening transitions—are proposed, together with experimental configurations capable of resolving the underdetermination. These include large-area triangle holonomy tests (targeting residual synchronization holonomy H_resid), interplanetary closed-loop timing, altitude-varying optical clock networks to map continuous geometric screening, and matter-wave interferometry.
 
 Website: https://mlsmawfield.com/tep/exp
-Repository: https://github.com/matthewsmawfield/TEP-EXP
+Repository: https://github.com/matthewsmawfield/TEP-HUB
 
 DOI: 10.5281/zenodo.18109760
 

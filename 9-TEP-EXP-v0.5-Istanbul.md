@@ -224,7 +224,7 @@ Researchers are actively encouraged to clone these repositories, audit the algor
 
 ---
 
-*This document was automatically generated from the TEP-HUB research site. For the interactive version with figures and enhanced formatting, visit: https://mlsmawfield.com/tep/hub/*
+*This document was automatically generated from the TEP-EXP research site. For the interactive version with figures and enhanced formatting, visit: https://mlsmawfield.com/tep/exp/*
 
 *Related Work:*
 - [TEP Theory](https://doi.org/10.5281/zenodo.16921911) (Foundational framework)
@@ -232,4 +232,4 @@ Researchers are actively encouraged to clone these repositories, audit the algor
 - [TEP-GNSS II](https://doi.org/10.5281/zenodo.17517141) (25-Year Analysis)
 - [TEP-GNSS III](https://doi.org/10.5281/zenodo.17860166) (Raw RINEX Validation)
 
-*Source code available at: https://github.com/matthewsmawfield/TEP-HUB*
+*Source code available at: https://github.com/matthewsmawfield/TEP-EXP*

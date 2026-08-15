@@ -1,8 +1,8 @@
 {
-  "name": "tep-exp-site",
-  "version": "0.5.0",
-  "description": "What Do Precision Tests of General Relativity Actually Measure?",
-  "comment": "Package version matches manuscript version v0.5 (Istanbul)",
+  "name": "tep-hub-site",
+  "version": "0.1.0",
+  "description": "The Chronometric Illusion: Rescuing the Eternal Continuum and Resolving Cosmological Crises via the Temporal Equivalence Principle",
+  "comment": "Package version matches manuscript version v0.1 (Harare)",
   "main": "index.html",
   "scripts": {
     "dev": "node dev-server.js",
@@ -15,7 +15,7 @@
     "serve:dist": "cd dist && python3 -m http.server 8351"
   },
   "keywords": [
-    "TEP-EXP",
+    "TEP-HUB",
     "Temporal Equivalence Principle",
     "general relativity",
     "experimental tests",
@@ -28,7 +28,7 @@
   "license": "CC-BY-4.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/matthewsmawfield/TEP-EXP.git"
+    "url": "https://github.com/matthewsmawfield/TEP-HUB.git"
   },
   "homepage": "https://mlsmawfield.com/tep/exp/",
   "devDependencies": {
