@@ -1,4 +1,4 @@
-# The Chronometric Autopsy of the Expanding Universe
+# The Chronometric Illusion: Rescuing the Eternal Continuum and Resolving Cosmological Crises via the Temporal Equivalence Principle
 **Matthew Lukin Smawfield**
 Version: v0.1 (Harare)
 First published: 15 August 2026 · Last updated: 15 August 2026
@@ -192,19 +192,29 @@ Ultimately, this framework vindicates the abandoned instincts of the 20th centur
 
 [6] Einstein, A. (1931). Zum kosmologischen Problem der allgemeinen Relativitätstheorie. *Sitzungsberichte der Königlich Preußischen Akademie der Wissenschaften*, 235-237.
 
-[7] Zwicky, F. (1929). On the red shift of spectral lines through interstellar space. *Proceedings of the National Academy of Sciences*, 15(10), 773-779.
+[7] Einstein, A. (1911). Über den Einfluß der Schwerkraft auf die Ausbreitung des Lichtes. *Annalen der Physik*, 340(10), 898-908.
 
-[8] Lemaître, G. (1927). Un univers homogène de masse constante et de rayon croissant rendant compte de la vitesse radiale des nébuleuses extra-galactiques. *Annales de la Société Scientifique de Bruxelles*, A47, 49-59.
+[8] Einstein, A. (1928). Riemann-Geometrie mit Aufrechterhaltung des Begriffs des Fernparallelismus. *Sitzungsberichte der Preußischen Akademie der Wissenschaften*, 217-221.
 
-[9] Eddington, A. S. (1935). On relativistic degeneracy. *Monthly Notices of the Royal Astronomical Society*, 95, 194-206.
+[9] Einstein, A. (1955). Letter to the family of Michele Besso, 15 March 1955. In *Albert Einstein: Michele Besso Correspondance 1903-1955*, Hermann (1972).
 
-[10] Smawfield, M. L. (2025). *0-TEP: The Temporal Equivalence Principle*. TEP Series.
+[10] Zwicky, F. (1929). On the red shift of spectral lines through interstellar space. *Proceedings of the National Academy of Sciences*, 15(10), 773-779.
 
-[11] Smawfield, M. L. (2025). *4-TEP-GL: Temporal Shear and Galactic Rotation Curves*. TEP Series.
+[11] Lemaître, G. (1927). Un univers homogène de masse constante et de rayon croissant rendant compte de la vitesse radiale des nébuleuses extra-galactiques. *Annales de la Société Scientifique de Bruxelles*, A47, 49-59.
 
-[12] Smawfield, M. L. (2026). *9-TEP-EXP: What Do Precision Tests of General Relativity Actually Measure?* TEP Series. DOI: 10.5281/zenodo.18109760.
+[12] Eddington, A. S. (1935). On relativistic degeneracy. *Monthly Notices of the Royal Astronomical Society*, 95, 194-206.
 
-[13] Smawfield, M. L. (2026). *18-TEP-HC: The Observable Response Coefficient and the Hubble Tension*. TEP Series.
+[13] Nernst, W. (1937). Weitere Prüfung der Annahme eines stationären Zustandes im Weltall. *Zeitschrift für Physik*, 106(9-10), 633-637.
+
+[14] de Sitter, W. (1917). On the relativity of inertia. Remarks concerning Einstein's latest hypothesis. *Proceedings of the Royal Academy of Sciences at Amsterdam*, 19, 1217-1225.
+
+[15] Smawfield, M. L. (2025). *0-TEP: The Temporal Equivalence Principle*. TEP Series.
+
+[16] Smawfield, M. L. (2025). *4-TEP-GL: Temporal Shear and Galactic Rotation Curves*. TEP Series.
+
+[17] Smawfield, M. L. (2026). *9-TEP-EXP: What Do Precision Tests of General Relativity Actually Measure?* TEP Series.
+
+[18] Smawfield, M. L. (2026). *18-TEP-HC: The Observable Response Coefficient and the Hubble Tension*. TEP Series.
 
 ## Data Availability & Reproducibility
 

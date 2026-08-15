@@ -17,12 +17,12 @@
   "keywords": [
     "TEP-HUB",
     "Temporal Equivalence Principle",
-    "general relativity",
-    "experimental tests",
-    "GPS",
-    "synchronization",
-    "underdetermination",
-    "philosophy of science"
+    "isochrony axiom",
+    "cosmological redshift",
+    "spatial expansion",
+    "Hubble tension",
+    "JWST anomalies",
+    "eternal universe"
   ],
   "author": "Matthew Lukin Smawfield <matthew@mlsmawfield.com>",
   "license": "CC-BY-4.0",
@@ -30,7 +30,7 @@
     "type": "git",
     "url": "https://github.com/matthewsmawfield/TEP-HUB.git"
   },
-  "homepage": "https://mlsmawfield.com/tep/exp/",
+  "homepage": "https://mlsmawfield.com/tep/hub/",
   "devDependencies": {
     "chokidar": "^4.0.3",
     "live-server": "^1.2.2",

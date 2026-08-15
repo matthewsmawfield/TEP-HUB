@@ -62,3 +62,6 @@ research
 data/
 
 .devin/
+# Auto-generated manuscript markdown
+*-v*-Harare.md
+*-v*-Istanbul.md

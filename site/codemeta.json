@@ -4,10 +4,10 @@
     "ScholarlyArticle",
     "SoftwareSourceCode"
   ],
-  "identifier": "https://doi.org/10.5281/zenodo.18109760",
-  "doi": "10.5281/zenodo.18109760",
+  "identifier": "https://doi.org/DOI-PENDING",
+  "doi": "DOI-PENDING",
   "name": "The Chronometric Illusion: Rescuing the Eternal Continuum and Resolving Cosmological Crises via the Temporal Equivalence Principle",
-  "description": "Most high-precision tests of general relativity constrain reciprocity-even, largely local observables within single-metric frameworks. This leaves open a specific underdetermination between General Relativity (GR) and a class of two-metric disformal scalar-tensor modifications, exemplified here by the Temporal Equivalence Principle (TEP). This paper formalizes a measurement taxonomy distinguishing gauge-invariant from convention-dependent observables and identifies six recurring scope limitations in the experimental canon: (1) two-way measurement dominance; (2) local/global conflation; (3) model-dependent calibration; (4) single-path multi-messenger constraints on differential propagation that do not directly test common-mode conformal clock-sector structure; (5) theory-laden data reduction; and (6) the proximity-regime screening blind spot, whereby tests performed in deep potential wells probe only the screened regime where scalar-field gradients are continuously suppressed, leaving the active-shear dilute regime unexplored. These characteristics do not diminish the experimental achievements but indicate that, in many cases, the tests primarily constrain parameter space within assumed frameworks rather than systematically discriminating between alternatives. Discriminating observables—specifically loop asymmetries, spatial correlations, and proximity-regime screening transitions—are proposed, together with experimental configurations capable of resolving the underdetermination.",
+  "description": "For nearly a century, the standard cosmological model (LCDM) has interpreted extragalactic redshift as a signature of spatial expansion. This interpretation relies entirely upon the unverified isochrony axiom—the assumption that the baseline chronometry of proper time is universally static across all cosmological epochs. Utilizing the Temporal Equivalence Principle (TEP)—a bi-metric scalar-tensor framework where proper time is treated as a dynamical scalar field—we formally dismantle the necessity of spatial expansion. Cosmological redshift is reinterpreted as the accumulated synchronization holonomy of photons crossing a gradient in the proper time field. By reassigning these dynamics from the spatial metric to the temporal field, TEP offers a classical, field-based resolution to multiple modern astrophysical crises without requiring the invention of dark physics.",
   "author": [
     {
       "@type": "Person",
@@ -16,21 +16,25 @@
       "@id": "https://orcid.org/0009-0003-8219-3159"
     }
   ],
-  "datePublished": "2025-12-31",
-  "dateModified": "2026-08-08",
-  "version": "0.5",
+  "datePublished": "2026-08-15",
+  "dateModified": "2026-08-15",
+  "version": "0.1",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "codeRepository": "https://github.com/matthewsmawfield/TEP-HUB",
-  "url": "https://mlsmawfield.com/tep/exp/",
+  "url": "https://mlsmawfield.com/tep/hub/",
   "keywords": [
-    "general relativity",
-    "experimental tests",
-    "underdetermination",
-    "synchronization",
-    "GPS",
-    "gravitational redshift",
-    "Shapiro delay",
-    "multi-messenger astronomy"
+    "Temporal Equivalence Principle",
+    "isochrony axiom",
+    "cosmological redshift",
+    "spatial expansion",
+    "scalar-tensor theory",
+    "Hubble tension",
+    "JWST anomalies",
+    "eternal universe",
+    "synchronization holonomy",
+    "temporal shear",
+    "dark matter",
+    "dark energy"
   ],
   "developmentStatus": "active",
   "runtimePlatform": "Python",
