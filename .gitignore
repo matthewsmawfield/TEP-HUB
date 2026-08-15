@@ -55,13 +55,11 @@ results/**/*.hdf5
 # !logs/.gitkeep
 
 # Private research notes (should never be committed)
-research
+research.txt
 .windsurf
 # IDE files
 *.code-workspace
 data/
 
 .devin/
-# Auto-generated manuscript markdown
-*-v*-Harare.md
-*-v*-Istanbul.md
+

@@ -1,7 +1,7 @@
 # Temporal Equivalence Principle: A Unified Resolution to the JWST High-Redshift Anomalies
 **Matthew Lukin Smawfield**  
-Version: v0.5 (Kos)  
-First published: 13 March 2026 · Last updated: 29 April 2026  
+Version: v0.6 (Kos)  
+First published: 13 March 2026 · Last updated: 8 August 2026  
 DOI: 10.5281/zenodo.19000827
 
 ---

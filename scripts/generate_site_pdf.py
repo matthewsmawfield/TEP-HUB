@@ -103,7 +103,7 @@ def copy_pdf_to_docs(source_pdf: Path, docs_dir: Path):
     version_str = f"v{metadata['version']}-{metadata['codename']}"
     
     # Primary PDF name
-    target_name = f"TEP-HUB-{version_str}.pdf"
+    target_name = f"30-TEP-HUB-{version_str}.pdf"
     target_path = docs_dir / target_name
     
     # Copy the file
@@ -123,7 +123,7 @@ def copy_pdf_to_root(source_pdf: Path, base_dir: Path):
     version_str = f"v{metadata['version']}-{metadata['codename']}"
     
     # Primary PDF name
-    target_name = f"TEP-HUB-{version_str}.pdf"
+    target_name = f"30-TEP-HUB-{version_str}.pdf"
     target_path = base_dir / target_name
     
     # Copy the file
@@ -247,11 +247,11 @@ async def generate_pdf(quality: str = 'high', wait_time: float = 5.0, skip_build
         # Copy to docs directory
         final_pdf = copy_pdf_to_docs(output_pdf, docs_dir)
         
-        # Copy to root directory
-        copy_pdf_to_root(final_pdf, base_dir)
-        
-        # Process with metadata
+        # Process with metadata (compress + embed DOI, title, etc.)
         process_pdf_with_metadata(final_pdf)
+        
+        # Copy processed PDF to root directory
+        copy_pdf_to_root(final_pdf, base_dir)
         
         print(f"\n✅ Complete! PDF available at:")
         print(f"   {final_pdf}")

@@ -62,7 +62,7 @@ async function buildStaticSite() {
         
         // Replace the dynamic content with static content
         // Remove the loading div and script, insert the content directly
-        const staticContent = indexContent
+        let staticContent = indexContent
             // Replace the loading div and manuscript-content div with the built content
             .replace(
                 /<div id="loading".*?<\/div>\s*<div id="manuscript-content".*?<\/div>/s,
@@ -87,7 +87,18 @@ async function buildStaticSite() {
         if (!fs.existsSync(distDir)) {
             fs.mkdirSync(distDir, { recursive: true });
         }
-        
+
+        // Apply production base path to relative asset URLs.
+        // Dev server serves dist/ at root (/), so BASE_URL defaults to /.
+        // For production at /tep/hub/, build with: BASE_URL=/tep/hub/ npm run build
+        const baseUrl = process.env.BASE_URL || '/';
+        if (baseUrl !== '/') {
+            console.log(`🔗 Rewriting asset paths with BASE_URL=${baseUrl}`);
+            staticContent = staticContent
+                .replace(/(href|src)="(public\/[^"]+)"/g, `$1="${baseUrl}$2"`)
+                .replace(/(href|src)="(manifest\.json)"/g, `$1="${baseUrl}$2"`);
+        }
+
         // Write the built file
         const outputPath = path.join(distDir, 'index.html');
         fs.writeFileSync(outputPath, staticContent, 'utf8');
@@ -104,8 +115,14 @@ async function buildStaticSite() {
             }
         }
         
-        // Copy manifest.json for reference
-        fs.copyFileSync(manifestPath, path.join(distDir, 'manifest.json'));
+        // Copy manifest.json for reference (rewrite asset paths for production base)
+        let manifestContent = fs.readFileSync(manifestPath, 'utf8');
+        if (baseUrl !== '/') {
+            manifestContent = manifestContent
+                .replace(/"src":\s*"(public\/[^"]+)"/g, `"src": "${baseUrl}$1"`)
+                .replace(/"start_url":\s*"\."/g, `"start_url": "${baseUrl}"`);
+        }
+        fs.writeFileSync(path.join(distDir, 'manifest.json'), manifestContent, 'utf8');
         
         // Copy .nojekyll to dist root for GitHub Pages
         const nojekyllSrc = path.join(__dirname, 'public', '.nojekyll');
@@ -120,7 +137,7 @@ async function buildStaticSite() {
         }
 
         // Copy robots.txt and sitemap.xml to dist root
-        const rootFiles = ['404.html', 'robots.txt', 'sitemap.xml', 'CNAME', '30c6507763d2303d801cc8ed89d39f88.txt'];
+        const rootFiles = ['404.html', 'robots.txt', 'sitemap.xml', 'CNAME'];
         for (const file of rootFiles) {
             const src = path.join(__dirname, 'public', file);
             const dest = path.join(distDir, file);
@@ -163,7 +180,7 @@ async function buildStaticSite() {
         
         console.log('✅ Static site built successfully!');
         console.log(`📁 Output: ${outputPath}`);
-        console.log('📄 Markdown: TEP-HUB-v0.1-Harare.md (in root)');
+        console.log('📄 Markdown: 30-TEP-HUB-v0.1-Harare.md (in root)');
         console.log(`📊 Generated ${manifest.sections.length} sections (TEP-HUB)`);
         console.log('🚀 TEP-HUB ready for deployment');
         

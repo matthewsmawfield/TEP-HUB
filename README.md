@@ -1,34 +1,112 @@
 # The Mount Wilson Paradigm: Restoring the Eternal Universe via the Temporal Equivalence Principle
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21954258.svg)](https://doi.org/10.5281/zenodo.21954258)
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 
 ![TEP-HUB: The Mount Wilson Paradigm](site/public/image.webp)
 
 **Author:** Matthew Lukin Smawfield  
 **Version:** v0.1 (Harare)  
-**Date:** First published: 15 August 2026
+**First published:** 15 August 2026 · **Last updated:** 15 August 2026  
 **Status:** Preprint  
+**DOI:** [10.5281/zenodo.21954258](https://doi.org/10.5281/zenodo.21954258)  
+**Website:** [https://mlsmawfield.com/tep/hub/](https://mlsmawfield.com/tep/hub/)  
+**Paper Series:** TEP Series: Paper 30 (TEP Hub)
 
 ## Abstract
 
-For nearly a century, the standard cosmological model ($\Lambda$CDM) has interpreted extragalactic redshift as a signature of spatial expansion. This interpretation, originating from Hubble's initial spatial projection of Humason's spectrographic data, relies entirely upon the unverified isochrony axiom—the assumption that the baseline chronometry of proper time is universally static across all cosmological epochs. This paper demonstrates that by adhering to a rigid temporal parameter, standard cosmology enforces a mathematical degeneracy that artificially projects temporal dynamics onto spatial geometry.
-
-Utilizing the Temporal Equivalence Principle (TEP)—a bi-metric scalar-tensor framework where proper time is treated as a dynamical scalar field ($\Phi_\tau$)—this work formally dismantles the necessity of spatial expansion. An effective metric is derived wherein the matter Lagrangian couples to the temporal gradient, generating a local temporal amplification factor $\chi(\Phi_\tau, \Gamma_t)$. Under this formulation, cosmological redshift ($z$) is reinterpreted not as a spatial velocity or scale-factor stretching, but as the accumulated synchronization holonomy of photons crossing a gradient in the proper time field ($1+z = \chi_{\rm obs}/\chi_{\rm emit}$).
-
-By reassigning these dynamics from the spatial metric ($g_{ij}$) to the temporal field, TEP offers a classical, field-based resolution to multiple modern astrophysical crises without requiring the invention of dark physics. We show that the $H_0$ tension naturally dissolves as an artifact of miscalibrated epoch-dependent chronometry. Furthermore, violating the isochrony axiom drastically extends the local physical time available in high-redshift ($z>10$) environments, elegantly resolving the anomalous overmassive galaxy assemblies recently observed by the JWST without breaking standard baryonic limits. The spatial expansion of the universe is thus reframed as the kinetic evolution of proper time.
+Cosmological redshift is standardly interpreted as a geometric signature of spatial expansion. This interpretation requires a fundamental assumption that is defined herein as the Isochrony Axiom: the premise that, after gravitational and kinematic effects derived from the spacetime metric have been included, the calibration of every matter clock is fully exhausted by that single metric, so that no independently dynamical field may rescale matter proper time across cosmological epochs. Standard single-metric cosmology closed the temporal sector before the redshift was interpreted. In this paper, it is demonstrated that when matter-clock calibration is permitted an independent dynamical scalar degree of freedom (φ), the measured cosmological redshift (z) can be rigorously derived from the ratio of matter-clock calibrations between emission and observation on a static spatial manifold. The scalar field defines a spatiotemporal clock geometry—the Temporal Topology—whose homogeneous evolution governs cosmological calibration and whose inhomogeneous disformal connection can become non-integrable, producing synchronization holonomy. Using the canonical matter metric of the Temporal Equivalence Principle (TEP), g̃_{μν} = A²(φ) g_{μν} + B(φ) ∇_μ φ ∇_ν φ, the Mount Wilson Equivalence Theorem is proven: on a homogeneous, spatially flat, static gravitational background, with universal matter coupling and A² − B φ̇² > 0, the endpoint redshift 1 + z = A₀/A_em is observationally degenerate with the FLRW relation 1 + z = a₀/a_em at the level of the redshift observable alone. TEP is distinguished from a mere conformal rewriting by its separate matter and gravitational propagation sectors, making multi-messenger observations a principal inter-sector discriminator. The historical data from Mount Wilson Observatory are re-examined to separate the documented spectral displacements from the subsequent spatial inferences, demonstrating that the observed dynamics are consistent with a temporal reinterpretation on a static spatial manifold. Precision GNSS chronometry, pulsar scintillation, and Lunar Laser Ranging are identified as the empirical instruments capable of testing the temporal sector locally. Consequently, a globally consistent framework for an eternal, deterministic continuum is presented, supplying the common mathematical resolution to the questions that Einstein separated.
 
 ## About TEP-HUB
 
-This repository serves as the central hub and capstone synthesis for the Temporal Equivalence Principle (TEP) research program. It outlines the historical and theoretical rationale that necessitates the transition from a standard $\Lambda$CDM expanding spatial metric to a static, eternal universe governed by a dynamical proper time field.
+This repository serves as the central hub and capstone synthesis for the Temporal Equivalence Principle (TEP) research program. It outlines the historical and theoretical rationale that necessitates the transition from a standard ΛCDM expanding spatial metric to a static, eternal universe governed by a dynamical proper time field.
 
-### Core Manuscript
+## Manuscript Sections
 
-The manuscript source code is built via a componentized HTML pipeline located in `site/components/`. 
-To build the static site locally:
+1. Abstract
+2. Prologue: The Photograph
+3. 1. The Evidence
+4. 2. The Interpretation
+5. 3. The Hidden Closure
+6. 4. The Mount Wilson Equivalence Theorem
+7. 5. Einstein's Unfinished Continuum
+8. 6. From Degeneracy to the Eternal Branch
+9. 7. The Arrival of Chronometric Astronomy
+10. Epilogue: Return to Mount Wilson
+11. Appendices
+12. References
+13. Data Availability & Reproducibility
+
+## Site Build
 
 ```bash
 cd site
 npm run build
 ```
 
-This compiles the final manuscript and updates the `dist/` directory.
+This generates:
+- `site/dist/index.html` — static manuscript
+- `30-TEP-HUB-v0.1-Harare.md` — root markdown manuscript
+
+## PDF Generation
+
+```bash
+python scripts/generate_site_pdf.py --quality high --wait-time 8
+```
+
+Generates `30-TEP-HUB-v0.1-Harare.pdf` in both the root and `site/public/docs/`.
+
+## Project Structure
+
+```
+TEP-HUB/
+├── scripts/              # PDF generation and utility scripts
+│   ├── generate_site_pdf.py
+│   └── utils/            # PDF processing and metadata utilities
+├── site/                 # Manuscript site
+│   ├── components/       # HTML components (edit these)
+│   ├── dist/             # Built static site (auto-generated)
+│   ├── public/           # Static assets, PDF, sitemap
+│   ├── build.js          # Site build script
+│   ├── html-to-markdown.js
+│   ├── index.html        # Source HTML template
+│   └── manifest.json     # Site manifest
+├── manuscripts/          # Markdown manuscripts synced from the TEP series
+├── 30-TEP-HUB-v0.1-Harare.md  # Auto-generated root manuscript
+└── 30-TEP-HUB-v0.1-Harare.pdf # Generated PDF
+```
+
+## License
+
+Creative Commons Attribution 4.0 International License (CC BY 4.0) — see the [LICENSE](LICENSE) file.
+
+## The TEP Research Program
+
+| Paper | Repository | Title | DOI |
+|-------|-----------|-------|-----|
+| **Paper 0** | [TEP](https://github.com/matthewsmawfield/TEP) | Temporal Equivalence Principle: Dynamic Time & Emergent Light Speed | [10.5281/zenodo.16921911](https://doi.org/10.5281/zenodo.16921911) |
+| **Paper 1** | [TEP-GNSS](https://github.com/matthewsmawfield/TEP-GNSS) | Global Time Echoes: Distance-Structured Correlations in GNSS Clocks | [10.5281/zenodo.17127229](https://doi.org/10.5281/zenodo.17127229) |
+| **Paper 2** | [TEP-GNSS-II](https://github.com/matthewsmawfield/TEP-GNSS-II) | Global Time Echoes: 25-Year Analysis of CODE Precise Clock Products | [10.5281/zenodo.17517141](https://doi.org/10.5281/zenodo.17517141) |
+| **Paper 3** | [TEP-GNSS-RINEX](https://github.com/matthewsmawfield/TEP-GNSS-RINEX) | Global Time Echoes: Raw RINEX Consistency Test | [10.5281/zenodo.17860166](https://doi.org/10.5281/zenodo.17860166) |
+| **Paper 4** | [TEP-GL](https://github.com/matthewsmawfield/TEP-GL) | Temporal-Spatial Coupling in Gravitational Lensing: A Reinterpretation of Dark Matter Observations | [10.5281/zenodo.17982540](https://doi.org/10.5281/zenodo.17982540) |
+| **Paper 5** | [TEP-GTE](https://github.com/matthewsmawfield/TEP-GTE) | Global Time Echoes: Empirical Synthesis | [10.5281/zenodo.18004832](https://doi.org/10.5281/zenodo.18004832) |
+| **Paper 6** | [TEP-UCD](https://github.com/matthewsmawfield/TEP-UCD) | Temporal Topology Saturation Scale: Cross-Scale Consistency of $\rho_T$ | [10.5281/zenodo.18064365](https://doi.org/10.5281/zenodo.18064365) |
+| **Paper 7** | [TEP-RBH](https://github.com/matthewsmawfield/TEP-RBH) | The Soliton Wake: Exploring RBH-1 as a Temporal Topology Candidate | [10.5281/zenodo.18059250](https://doi.org/10.5281/zenodo.18059250) |
+| **Paper 8** | [TEP-SLR](https://github.com/matthewsmawfield/TEP-SLR) | Global Time Echoes: Optical-Domain Consistency Test via Satellite Laser Ranging | [10.5281/zenodo.18064581](https://doi.org/10.5281/zenodo.18064581) |
+| **Paper 9** | [TEP-EXP](https://github.com/matthewsmawfield/TEP-EXP) | What Do Precision Tests of General Relativity Actually Measure? | [10.5281/zenodo.18109760](https://doi.org/10.5281/zenodo.18109760) |
+| **Paper 10** | [TEP-COS](https://github.com/matthewsmawfield/TEP-COS) | Temporal Equivalence Principle: Suppressed Density Scaling in Globular Cluster Pulsars | [10.5281/zenodo.18165798](https://doi.org/10.5281/zenodo.18165798) |
+| **Paper 11** | [TEP-H0](https://github.com/matthewsmawfield/TEP-H0) | The Cepheid Bias: Resolving the Hubble Tension | [10.5281/zenodo.18209702](https://doi.org/10.5281/zenodo.18209702) |
+| **Paper 12** | [TEP-JWST](https://github.com/matthewsmawfield/TEP-JWST) | Temporal Equivalence Principle: A Unified Resolution to the JWST High-Redshift Anomalies | [10.5281/zenodo.19000827](https://doi.org/10.5281/zenodo.19000827) |
+| **Paper 13** | [TEP-WB](https://github.com/matthewsmawfield/TEP-WB) | Temporal Equivalence Principle: Temporal Shear Recovery in Gaia DR3 Wide Binaries | [10.5281/zenodo.19102061](https://doi.org/10.5281/zenodo.19102061) |
+| **Paper 14** | [TEP-GNSS-MGEX](https://github.com/matthewsmawfield/TEP-GNSS-MGEX) | Global Time Echoes: MGEX Multi-GNSS Clock Replication, 2025–2026 | [10.5281/zenodo.20572727](https://doi.org/10.5281/zenodo.20572727) |
+| **Paper 15** | [TEP-EFA](https://github.com/matthewsmawfield/TEP-EFA) | Temporal Equivalence Principle: Temporal Shear in the Earth Flyby Anomaly | [10.5281/zenodo.19454863](https://doi.org/10.5281/zenodo.19454863) |
+| **Paper 16** | [TEP-J0437](https://github.com/matthewsmawfield/TEP-J0437) | Temporal Equivalence Principle: Synchronization Holonomy in Pulsar Scintillation | [10.5281/zenodo.19454620](https://doi.org/10.5281/zenodo.19454620) |
+| **Paper 17** | [TEP-LLR](https://github.com/matthewsmawfield/TEP-LLR) | Temporal Equivalence Principle: Lunar Laser Ranging and the Nordtvedt Effect | [10.5281/zenodo.19446029](https://doi.org/10.5281/zenodo.19446029) |
+| **Paper 18** | [TEP-HC](https://github.com/matthewsmawfield/TEP-HC) | Temporal Equivalence Principle: Native hi_class Conformal Implementation, Linear Perturbation Closure, and CMB Acoustic Peak Preservation | [10.5281/zenodo.20572722](https://doi.org/10.5281/zenodo.20572722) |
+| **Paper 19** | [TEP-LENS](https://github.com/matthewsmawfield/TEP-LENS) | Temporal Equivalence Principle: A Blind-Prediction Residual Test in Multiply-Imaged Supernovae | [10.5281/zenodo.20572720](https://doi.org/10.5281/zenodo.20572720) |
+| **Paper 23** | [TEP-QF](https://github.com/matthewsmawfield/TEP-QF) | Temporal Equivalence Principle: The Dirac Limit of Dynamical Proper Time | [10.5281/zenodo.20572697](https://doi.org/10.5281/zenodo.20572697) |
+| **Paper 26** | [TEP-C0](https://github.com/matthewsmawfield/TEP-C0) | Temporal Equivalence Principle: A Covariant Alternative to Cosmic Expansion | [10.5281/zenodo.20370143](https://doi.org/10.5281/zenodo.20370143) |
+| **Paper 27** | [TEP-TH](https://github.com/matthewsmawfield/TEP-TH) | Temporal Equivalence Principle: Temporal Horizon Cosmology and the Absence of a Physical Big Bang Singularity | [10.5281/zenodo.20723059](https://doi.org/10.5281/zenodo.20723059) |
+| **Paper 28** | [TEP-BH](https://github.com/matthewsmawfield/TEP-BH) | Temporal Equivalence Principle: Black Holes and the Temporal Horizon | [10.5281/zenodo.21677826](https://doi.org/10.5281/zenodo.21677826) |
+| **Paper 29** | [TEP-BBN](https://github.com/matthewsmawfield/TEP-BBN) | Temporal Equivalence Principle: Dynamical Proper Time and the Illusion of Primordial Deuterium | [10.5281/zenodo.21841148](https://doi.org/10.5281/zenodo.21841148) |
+| **Paper 30** | [TEP-HUB](https://github.com/matthewsmawfield/TEP-HUB) | The Mount Wilson Paradigm: Restoring the Eternal Universe via the Temporal Equivalence Principle | [10.5281/zenodo.21954258](https://doi.org/10.5281/zenodo.21954258) |

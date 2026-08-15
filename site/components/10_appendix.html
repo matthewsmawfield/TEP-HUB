@@ -1,0 +1,165 @@
+<h2>Appendix A: Canonical TEP Metric and Cosmological Ansatz</h2>
+<p>
+    The rigorous foundation of the Temporal Equivalence Principle <sup class="cite">24</sup> relies on the distinction between the gravitational metric ($g_{\mu\nu}$) and the causal matter metric ($\tilde g_{\mu\nu}$). The canonical matter metric is defined as:
+</p>
+<div class="equation">
+    \begin{equation}
+    \tilde g_{\mu\nu} = A^2(\phi)\,g_{\mu\nu} + B(\phi)\,\nabla_\mu\phi\,\nabla_\nu\phi
+    \end{equation}
+</div>
+<p>
+    Here, $\phi$ is a dynamical scalar proper-time field. The coupling function takes the canonical form $A = \exp(\beta\phi/M_{\rm Pl})$, implying a field normalization compatible with $\phi/M_{\rm Pl}$ rather than a literal time coordinate. The complete action is:
+</p>
+<div class="equation">
+    \begin{equation}
+    S = \int d^4x\,\sqrt{-g}\left[\frac{M_{\rm Pl}^2}{2}\,R - \frac{1}{2}\,g^{\mu\nu}\nabla_\mu\phi\,\nabla_\nu\phi - V(\phi)\right] + S_m[\tilde g_{\mu\nu},\,\psi_m]
+    \end{equation}
+</div>
+<p>
+    where the matter action $S_m$ couples universally to $\tilde g_{\mu\nu}$, ensuring that the proper-time calibration of all physical clocks and the trajectories of all Standard Model fields are governed by the local value and gradient of $\phi$. The vector $\nabla_\mu\phi$ is strictly timelike on the cosmological branch to ensure Lorentzian signature and the invertibility of the effective metric. The conditions $A > 0$ and $A^2 - B\dot\phi^2 > 0$ are required on the homogeneous branch. The precise static cosmological ansatz fixes the spatial components of the background gravitational metric ($g_{ij}$) to a time-independent scale ($a = 1$).
+</p>
+
+<h2>Appendix B: Derivation of Cosmological Redshift</h2>
+<p>
+    The full derivation is presented in Section 4. The key steps are summarized here for reference. On the homogeneous, spatially flat branch with $\phi = \phi(t)$, the effective lapse is $N^2(t) = A^2(\phi) - B(\phi)\,\dot\phi^2 > 0$. Spatial homogeneity supplies three translational Killing vectors, so the covariant spatial wavevector $q_i = A^2\,\delta_{ij}\,k^j$ is conserved along the photon trajectory. The null condition gives $N^2(k^0)^2 = q^2/A^2$, and the measured photon frequency is:
+</p>
+<div class="equation">
+    \begin{equation}
+    \omega = -\tilde g_{\mu\nu}\,\tilde u^\mu\,k^\nu = N\,k^0 = \frac{q}{A}
+    \end{equation}
+</div>
+<p>
+    Since $q$ is conserved, the endpoint redshift relation follows:
+</p>
+<div class="equation">
+    \begin{equation}
+    1+z = \frac{A_0}{A_{\rm em}}
+    \end{equation}
+</div>
+<p>
+    This endpoint ratio is path-independent on the homogeneous background, representing a conformal temporal redshift rather than a kinematic stretching of space. The disformal term $B(\phi)$ enters through $N$ but cancels from the homogeneous endpoint ratio. True synchronization holonomy, which requires a non-integrable clock-transport connection, arises in inhomogeneous disformal configurations where the connection constructed from $\phi$ and its gradients becomes non-exact. The specialized corpus studies address these inhomogeneous regimes: TEP-GL <sup class="cite">25</sup> derives the temporal shear factor $\Gamma_t$ and its application to rotation curves and lensing, while TEP-BH <sup class="cite">32</sup> develops the horizon-free temporal-well branch under extreme temporal gradients.
+</p>
+
+<h2>Appendix C: The Matter-Frame Static-Space Distinction</h2>
+<p>
+    A critical question must be answered directly: if $\tilde g_{ij} = A^2(\phi)g_{ij}$ and $A$ changes cosmologically, the matter-frame spatial metric exhibits a time-dependent scale. How does TEP differ from FLRW expansion written in a different conformal frame?
+</p>
+<p>
+    The answer rests on a precise operational definition. In TEP, "space is static" means that the gravitational metric $g_{ij}$, which governs the propagation of gravitational radiation and defines the bare spatial geometry, is time-independent. The factor $A^2$ changes the calibration of matter rods relative to the static gravitational geometry; it does not introduce an independently dynamical spatial scale factor. The distinction from FLRW is not that matter rods see no expansion; it is that the expansion they see is a derived consequence of temporal field evolution, not a fundamental degree of freedom of the gravitational sector.
+</p>
+<p>
+    The decisive question is not which metric is described as static, but whether TEP predicts a dimensionless inter-sector observable unavailable in minimally coupled single-metric FLRW. A standard siren compares tensor generation and propagation in $g_{\mu\nu}$ with source redshift and detector calibration in $\tilde g_{\mu\nu}$. Once generation, propagation and matter-frame detection are treated consistently, TEP predicts a gravitational-to-electromagnetic distance relation that can test the separation of the two sectors. Additional distinctions arise in the angular-diameter distance at high redshift, the distance-duality relation, and the growth-rate of structure, each of which acquires corrections from the temporal field that are absent in standard FLRW. The full derivations of these discriminating tests are provided in TEP-C0 <sup class="cite">29</sup> for the background cosmology and TEP-HC <sup class="cite">27</sup> for the growth and perturbation analysis.
+</p>
+<p>
+    The existing conformal-frame literature, including the disformal invariance analyses of Chiba, Chibana, and Yamaguchi <sup class="cite">22</sup> and the Minkowski-frame cosmology treatment of Lombriser <sup class="cite">23</sup>, addresses the question of when a scalar-tensor theory can be reduced to FLRW by a field redefinition. Chiba et al. show that redshift remains invariant under a consistently performed disformal transformation, while Lombriser explicitly demonstrates that cosmology can be represented in a Minkowski frame without changing physical observations. The TEP framework is distinguished from those cases by its universal matter coupling to $\tilde g_{\mu\nu}$ combined with a static gravitational sector, which prevents a single conformal transformation from simultaneously mapping both sectors to minimally coupled FLRW. The multi-messenger test identified in Section 4.1 provides the physical observable that breaks the frame equivalence.
+</p>
+<p>
+    The obstruction is mathematical, not merely interpretive. Define $g'_{\mu\nu}=\Omega^2(\phi)\,g_{\mu\nu}$. The matter metric then becomes $\tilde g_{\mu\nu}=(A^2/\Omega^2)\,g'_{\mu\nu}+B\,\nabla_\mu\phi\,\nabla_\nu\phi$. Choosing Ω = A removes the conformal prefactor from the matter metric, although the disformal term remains; but it also gives $g'_{\mu\nu}=A^2\,g_{\mu\nu}$, making the gravitational metric explicitly time-dependent. Choosing a constant Ω preserves the static gravitational metric but leaves the matter sector A(φ)-dependent. Unless A is constant, no single conformal frame both preserves the static gravitational geometry and removes the temporal calibration from matter. This frame trade-off is why the multi-messenger siren deviation $\Delta_{\rm siren}$ cannot be dismissed as a relabelling of one minimally coupled metric.
+</p>
+
+<h2>Appendix D: Corpus Evidence Routing</h2>
+<p>
+    The TEP corpus systematically applies this framework to specific astrophysical anomalies. The table below outlines the primary routing of claims to their respective specialized derivations:
+</p>
+<table>
+    <thead>
+    <tr>
+        <th>Phenomenon</th>
+        <th>Standard Interpretation</th>
+        <th>TEP Framework Solution</th>
+        <th>Primary Reference</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>Background cosmology, apparent acceleration</td>
+        <td>Dark energy, ΛCDM</td>
+        <td>Temporal field thermodynamic evolution</td>
+        <td>TEP-C0 <sup class="cite">29</sup></td>
+    </tr>
+    <tr>
+        <td>Hubble Tension ($H_0$)</td>
+        <td>Distance-ladder systematics or early- and late-universe model extensions</td>
+        <td>Cepheid bias via local temporal topology</td>
+        <td>TEP-H0 <sup class="cite">31</sup></td>
+    </tr>
+    <tr>
+        <td>Growth and structure formation</td>
+        <td>Cold Dark Matter, ΛCDM perturbations</td>
+        <td>Temporal field perturbation consistency</td>
+        <td>TEP-HC <sup class="cite">27</sup></td>
+    </tr>
+    <tr>
+        <td>High-$z$ Mature Galaxies (JWST)</td>
+        <td>Rapid, anomalous baryonic accretion</td>
+        <td>Removed FLRW age ceiling; finite local assembly</td>
+        <td>TEP-TH <sup class="cite">30</sup> / TEP-JWST <sup class="cite">35</sup></td>
+    </tr>
+    <tr>
+        <td>Galactic Rotation Curves</td>
+        <td>Cold Dark Matter halos</td>
+        <td>Temporal shear ($\Gamma_t$); Phantom Mass</td>
+        <td>TEP-GL <sup class="cite">25</sup></td>
+    </tr>
+    <tr>
+        <td>Extreme Compact Objects</td>
+        <td>Singularities, event horizons</td>
+        <td>Deep temporal wells, continuous space</td>
+        <td>TEP-BH <sup class="cite">32</sup></td>
+    </tr>
+    <tr>
+        <td>Big Bang Nucleosynthesis</td>
+        <td>Early-universe hot phase</td>
+        <td>Eternal chemical evolution; He-4 asymptotic attractor</td>
+        <td>TEP-BBN <sup class="cite">33</sup></td>
+    </tr>
+    <tr>
+        <td>Quantum phase and coherence</td>
+        <td>Standard quantum mechanics</td>
+        <td>Proper-time scalar as quantum phase parameter</td>
+        <td>TEP-QF <sup class="cite">34</sup></td>
+    </tr>
+    <tr>
+        <td>Precision Clock Anomalies</td>
+        <td>Processing noise, unexplained residuals</td>
+        <td>Local gradients in the proper-time field ($\phi$)</td>
+        <td>TEP-GNSS <sup class="cite">28</sup> / TEP-EXP <sup class="cite">26</sup></td>
+    </tr>
+    <tr>
+        <td>GNSS program synthesis</td>
+        <td>—</td>
+        <td>Convergent multi-analysis temporal topology signature</td>
+        <td>TEP-GTE <sup class="cite">44</sup></td>
+    </tr>
+    <tr>
+        <td>Cross-scale saturation scale</td>
+        <td>Dark matter $M$–$R$ relation</td>
+        <td>Universal $M^{1/3}$ scaling from $\rho_T$</td>
+        <td>TEP-UCD <sup class="cite">45</sup></td>
+    </tr>
+    <tr>
+        <td>Wide-binary screening</td>
+        <td>Newtonian breakdown / MOND</td>
+        <td>Temporal shear recovery with screening transition</td>
+        <td>TEP-WB <sup class="cite">46</sup></td>
+    </tr>
+    <tr>
+        <td>Pulsar scintillation</td>
+        <td>Interstellar scattering</td>
+        <td>Synchronization holonomy candidate</td>
+        <td>TEP-J0437 <sup class="cite">47</sup></td>
+    </tr>
+    <tr>
+        <td>Lunar Laser Ranging</td>
+        <td>Nordtvedt effect (SEP violation)</td>
+        <td>Compactness-dependent temporal response</td>
+        <td>TEP-LLR <sup class="cite">48</sup></td>
+    </tr>
+    <tr>
+        <td>Multiply-imaged supernovae</td>
+        <td>Standard lensing time delays</td>
+        <td>Blind-prediction temporal-shear residual</td>
+        <td>TEP-LENS <sup class="cite">49</sup></td>
+    </tr>
+    </tbody>
+</table>

@@ -296,7 +296,7 @@ class HTMLToMarkdownConverter {
             const markdown = this.buildMarkdownDocument(metadata, markdownContent);
             
             // Write to file
-            const outputPath = path.join(__dirname, '..', 'TEP-HUB-v0.1-Harare.md');
+            const outputPath = path.join(__dirname, '..', '30-TEP-HUB-v0.1-Harare.md');
             fs.writeFileSync(outputPath, markdown, 'utf8');
             
             console.log('✅ Markdown conversion complete!');

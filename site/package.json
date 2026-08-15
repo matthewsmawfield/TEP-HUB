@@ -8,6 +8,7 @@
     "dev": "node dev-server.js",
     "start": "python3 -m http.server 8000",
     "build": "node build.js",
+    "build:prod": "BASE_URL=/tep/hub/ node build.js",
     "build:dev": "npm run build && cd dist && python3 -m http.server 8350",
     "build:markdown": "npm run build && node html-to-markdown.js",
     "markdown": "node html-to-markdown.js",

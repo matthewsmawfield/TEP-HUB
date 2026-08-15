@@ -1,64 +1,45 @@
 cff-version: 1.2.0
-title: The Mount Wilson Paradigm: Restoring the Eternal Universe via the Temporal Equivalence Principle
-message: If you use this software, please cite it as below.
+message: If you use this work, please cite it as below.
 type: article
 authors:
 - family-names: Smawfield
   given-names: Matthew Lukin
   orcid: https://orcid.org/0009-0003-8219-3159
-abstract: 'For nearly a century, the standard cosmological model (LCDM) has interpreted
-  extragalactic redshift as a signature of spatial expansion. This interpretation,
-  originating from Hubble''s initial spatial projection of Humason''s spectrographic
-  data, relies entirely upon the unverified isochrony axiom—the assumption that the
-  baseline chronometry of proper time is universally static across all cosmological
-  epochs. This paper demonstrates that by adhering to a rigid temporal parameter,
-  standard cosmology enforces a mathematical degeneracy that artificially projects
-  temporal dynamics onto spatial geometry.
-
-  Utilizing the Temporal Equivalence Principle (TEP)—a bi-metric scalar-tensor framework
-  where proper time is treated as a dynamical scalar field—this work formally dismantles the
-  necessity of spatial expansion. Cosmological redshift is reinterpreted not as a
-  spatial velocity or scale-factor stretching, but as the accumulated synchronization
-  holonomy of photons crossing a gradient in the proper time field. By reassigning
-  these dynamics from the spatial metric to the temporal field, TEP offers a classical,
-  field-based resolution to multiple modern astrophysical crises without requiring
-  the invention of dark physics.
-
-  '
-license: CC-BY-4.0
+title: 'The Mount Wilson Paradigm: Restoring the Eternal Universe via the Temporal Equivalence Principle'
+abstract: |
+  Cosmological redshift is standardly interpreted as a geometric signature of spatial expansion. This interpretation requires a fundamental assumption that is defined herein as the Isochrony Axiom: the premise that, after gravitational and kinematic effects derived from the spacetime metric have been included, the calibration of every matter clock is fully exhausted by that single metric, so that no independently dynamical field may rescale matter proper time across cosmological epochs. Standard single-metric cosmology closed the temporal sector before the redshift was interpreted. In this paper, it is demonstrated that when matter-clock calibration is permitted an independent dynamical scalar degree of freedom (φ), the measured cosmological redshift (z) can be rigorously derived from the ratio of matter-clock calibrations between emission and observation on a static spatial manifold. The scalar field defines a spatiotemporal clock geometry—the Temporal Topology—whose homogeneous evolution governs cosmological calibration and whose inhomogeneous disformal connection can become non-integrable, producing synchronization holonomy. Using the canonical matter metric of the Temporal Equivalence Principle (TEP), g̃_{μν} = A²(φ) g_{μν} + B(φ) ∇_μ φ ∇_ν φ, the Mount Wilson Equivalence Theorem is proven: on a homogeneous, spatially flat, static gravitational background, with universal matter coupling and A² − B φ̇² > 0, the endpoint redshift 1 + z = A₀/A_em is observationally degenerate with the FLRW relation 1 + z = a₀/a_em at the level of the redshift observable alone. TEP is distinguished from a mere conformal rewriting by its separate matter and gravitational propagation sectors, making multi-messenger observations a principal inter-sector discriminator. The historical data from Mount Wilson Observatory are re-examined to separate the documented spectral displacements from the subsequent spatial inferences, demonstrating that the observed dynamics are consistent with a temporal reinterpretation on a static spatial manifold. Precision GNSS chronometry, pulsar scintillation, and Lunar Laser Ranging are identified as the empirical instruments capable of testing the temporal sector locally. Consequently, a globally consistent framework for an eternal, deterministic continuum is presented, supplying the common mathematical resolution to the questions that Einstein separated.
 version: v0.1 (Harare)
 date-released: 2026-08-15
+url: https://mlsmawfield.com/tep/hub/
+repository-code: https://github.com/matthewsmawfield/TEP-HUB
+doi: 10.5281/zenodo.21954258
+license: CC-BY-4.0
 keywords:
 - Temporal Equivalence Principle
 - isochrony axiom
 - cosmological redshift
 - spatial expansion
+- expansion degeneracy
 - scalar-tensor theory
-- Hubble tension
-- JWST anomalies
+- static universe
 - eternal universe
 - synchronization holonomy
 - temporal shear
+- Hubble tension
+- JWST anomalies
 - dark matter
 - dark energy
 - Einstein
 - Hubble
-repository-code: https://github.com/matthewsmawfield/TEP-HUB
-url: https://mlsmawfield.com/tep/hub
-doi: DOI-PENDING
 preferred-citation:
   type: article
-  title: The Mount Wilson Paradigm: Restoring the Eternal Universe via the Temporal Equivalence Principle (Harare v0.1)
+  title: 'The Mount Wilson Paradigm: Restoring the Eternal Universe via the Temporal Equivalence Principle'
   authors:
   - family-names: Smawfield
     given-names: Matthew Lukin
     orcid: https://orcid.org/0009-0003-8219-3159
   year: 2026
   journal: Zenodo
-  doi: DOI-PENDING
-  identifiers:
-  - type: doi
-    value: DOI-PENDING
-    description: Pre-print DOI
-  url: https://doi.org/DOI-PENDING
-  notes: Preprint
+  doi: 10.5281/zenodo.21954258
+  url: https://mlsmawfield.com/tep/hub/
+  notes: Preprint v0.1 (Harare)

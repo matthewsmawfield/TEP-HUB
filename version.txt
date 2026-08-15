@@ -1,1 +1,1 @@
-v0.1 (Harare) — 15 August 2026 — Initial TEP-HUB release
+v0.1 (Harare) — 15 August 2026

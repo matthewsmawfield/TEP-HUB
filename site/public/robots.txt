@@ -5,7 +5,8 @@ Allow: /
 # Sitemap location
 Sitemap: https://mlsmawfield.com/tep/hub/sitemap.xml
 
-# Disallow access to hidden directories and files
+# Disallow access to hidden directories and files (except .well-known)
+Allow: /.well-known/
 Disallow: /.*
 
 # Allow all files with these extensions

@@ -4,80 +4,80 @@
     {
       "id": "section-abstract",
       "title": "Abstract",
-      "file": "1_abstract.html",
+      "file": "0_abstract.html",
+      "order": 0
+    },
+    {
+      "id": "section-prologue",
+      "title": "Prologue: The Photograph",
+      "file": "1_prologue.html",
       "order": 1
     },
     {
-      "id": "section-intro",
-      "title": "1. Introduction: The Chronometric Blindness of 1931",
-      "file": "2_introduction.html",
+      "id": "section-evidence",
+      "title": "1. The Evidence",
+      "file": "2_evidence.html",
       "order": 2
     },
     {
-      "id": "section-hubble",
-      "title": "2. Hubble's Resistance and the Hijacked Data",
-      "file": "3_hubble_resistance.html",
+      "id": "section-interpretation",
+      "title": "2. The Interpretation",
+      "file": "3_interpretation.html",
       "order": 3
     },
     {
-      "id": "section-einstein",
-      "title": "3. The Wilderness Years: Einstein's Desperate Search for the Temporal Field",
-      "file": "4_einstein_wilderness.html",
+      "id": "section-isochrony",
+      "title": "3. The Hidden Closure",
+      "file": "5_isochrony.html",
       "order": 4
     },
     {
-      "id": "section-bimetric",
-      "title": "4. The TEP Architecture: Formalizing the Bi-Metric Continuum",
-      "file": "5_bimetric_framework.html",
+      "id": "section-tep-theorem",
+      "title": "4. The Mount Wilson Equivalence Theorem",
+      "file": "6_tep_theorem.html",
       "order": 5
     },
     {
-      "id": "section-holonomy",
-      "title": "5. Synchronization Holonomy and the Redshift Degeneracy",
-      "file": "6_synchronization_holonomy.html",
+      "id": "section-einstein-continuum",
+      "title": "5. Einstein's Unfinished Continuum",
+      "file": "4_einstein_continuum.html",
       "order": 6
     },
     {
-      "id": "section-jwst",
-      "title": "6. The JWST Crisis and the Illusion of the Cosmic Dawn",
-      "file": "7_jwst_eternal.html",
+      "id": "section-eternal-branch",
+      "title": "6. From Degeneracy to the Eternal Branch",
+      "file": "7_eternal_branch.html",
       "order": 7
     },
     {
-      "id": "section-dark-sector",
-      "title": "7. Erasing the Dark Sector and Fulfilling Eddington's Law",
-      "file": "8_dark_sector_singularities.html",
+      "id": "section-chronometric",
+      "title": "7. The Arrival of Chronometric Astronomy",
+      "file": "8_chronometric.html",
       "order": 8
     },
     {
-      "id": "section-h0",
-      "title": "8. The Cepheid Bias: Resolving the $H_0$ Tension via Local Temporal Topology",
-      "file": "9_h0_cepheid.html",
+      "id": "section-epilogue",
+      "title": "Epilogue: Return to Mount Wilson",
+      "file": "9_epilogue.html",
       "order": 9
     },
     {
-      "id": "section-gnss",
-      "title": "9. The Terrestrial Chronometric Proof",
-      "file": "10_gnss_proof.html",
+      "id": "section-appendices",
+      "title": "Appendices",
+      "file": "10_appendix.html",
       "order": 10
-    },
-    {
-      "id": "section-conclusions",
-      "title": "10. Conclusions: The Eternal Continuum Restored",
-      "file": "11_conclusions.html",
-      "order": 11
     },
     {
       "id": "section-references",
       "title": "References",
-      "file": "12_references.html",
-      "order": 12
+      "file": "11_references.html",
+      "order": 11
     },
     {
       "id": "section-reproducibility",
       "title": "Data Availability & Reproducibility",
-      "file": "13_reproducibility.html",
-      "order": 13
+      "file": "12_reproducibility.html",
+      "order": 12
     }
   ],
   "icons": [

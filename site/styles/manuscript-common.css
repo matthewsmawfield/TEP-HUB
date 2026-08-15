@@ -465,4 +465,19 @@
         background: white;
         border: 2px solid #ccc;
     }
+
+    .section-header {
+        break-after: avoid;
+        page-break-after: avoid;
+    }
+
+    .section-header + p {
+        break-before: avoid;
+        page-break-before: avoid;
+    }
+
+    h2, h3 {
+        break-after: avoid;
+        page-break-after: avoid;
+    }
 }
