@@ -1,4 +1,4 @@
-# robots.txt for TEP-HUB: The Chronometric Illusion
+# robots.txt for TEP-HUB: The Mount Wilson Paradigm
 User-agent: *
 Allow: /
 
