@@ -1,0 +1,76 @@
+cff-version: 1.2.0
+title: What Do Precision Tests of General Relativity Actually Measure?
+message: If you use this software, please cite it as below.
+type: article
+authors:
+- family-names: Smawfield
+  given-names: Matthew Lukin
+  orcid: https://orcid.org/0009-0003-8219-3159
+abstract: 'Most high-precision tests of general relativity constrain reciprocity-even,
+  largely local observables within single-metric frameworks. This leaves open a specific
+  underdetermination between General Relativity (GR) and a class of two-metric disformal
+  scalar-tensor modifications, exemplified here by the Temporal Equivalence Principle
+  (TEP).
+
+  This paper formalizes a measurement taxonomy distinguishing gauge-invariant from
+  convention-dependent observables and identifies six recurring scope limitations
+  in the experimental canon: (1) two-way measurement dominance; (2) local/global conflation;
+  (3) model-dependent calibration; (4) single-path multi-messenger constraints on
+  differential propagation that do not directly test common-mode conformal clock-sector
+  structure; (5) theory-laden data reduction; and (6) the proximity-regime screening
+  blind spot, whereby tests performed in deep potential wells probe only the screened
+  regime where scalar-field gradients are continuously suppressed, leaving the active-shear
+  dilute regime unexplored. These characteristics do not diminish the experimental
+  achievements but indicate that, in many cases, the tests primarily constrain parameter
+  space within assumed frameworks rather than systematically discriminating between
+  alternatives.
+
+  Discriminating observables—specifically loop asymmetries, spatial correlations,
+  and proximity-regime screening transitions—are proposed, together with experimental
+  configurations capable of resolving the underdetermination. These include large-area
+  triangle holonomy tests (targeting residual synchronization holonomy H_resid), interplanetary
+  closed-loop timing, altitude-varying optical clock networks to map continuous geometric
+  screening, and matter-wave interferometry.
+
+  '
+license: CC-BY-4.0
+version: v0.5 (Istanbul)
+date-released: 2025-12-31
+keywords:
+- Temporal Equivalence Principle
+- Temporal Shear
+- Temporal Topology
+- proper time
+- conformal metric
+- disformal metric
+- synchronization holonomy
+- clock-sector gravity
+- scalar-tensor theory
+- general relativity
+- experimental tests
+- underdetermination
+- synchronization
+- GPS
+- gravitational redshift
+- Shapiro delay
+- multi-messenger astronomy
+repository-code: https://github.com/matthewsmawfield/TEP-EXP
+url: https://mlsmawfield.com/tep/exp
+doi: 10.5281/zenodo.18109760
+preferred-citation:
+  type: article
+  title: What Do Precision Tests of General Relativity Actually Measure? (Istanbul
+    v0.5)
+  authors:
+  - family-names: Smawfield
+    given-names: Matthew Lukin
+    orcid: https://orcid.org/0009-0003-8219-3159
+  year: 2025
+  journal: Zenodo
+  doi: 10.5281/zenodo.18109760
+  identifiers:
+  - type: doi
+    value: 10.5281/zenodo.18109760
+    description: Pre-print DOI
+  url: https://doi.org/10.5281/zenodo.18109760
+  notes: Preprint

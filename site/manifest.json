@@ -1,0 +1,99 @@
+{
+  "title": "What Do Precision Tests of General Relativity Actually Measure?",
+  "sections": [
+    {
+      "id": "section-abstract",
+      "title": "Abstract",
+      "file": "1_abstract.html",
+      "order": 1
+    },
+    {
+      "id": "section-intro",
+      "title": "1. Introduction: The Experimental Canon",
+      "file": "2_introduction.html",
+      "order": 2
+    },
+    {
+      "id": "section-methodology",
+      "title": "2. Methodological Framework",
+      "file": "3_methodology.html",
+      "order": 3
+    },
+    {
+      "id": "section-redshift",
+      "title": "3. The Gravitational Redshift Tests",
+      "file": "4_redshift_tests.html",
+      "order": 4
+    },
+    {
+      "id": "section-time-dilation",
+      "title": "4. The Time Dilation Tests",
+      "file": "5_time_dilation_tests.html",
+      "order": 5
+    },
+    {
+      "id": "section-light-propagation",
+      "title": "5. The Light Propagation Tests",
+      "file": "6_light_propagation_tests.html",
+      "order": 6
+    },
+    {
+      "id": "section-multimessenger",
+      "title": "6. The Multi-Messenger Constraints",
+      "file": "7_multimessenger.html",
+      "order": 7
+    },
+    {
+      "id": "section-resonator",
+      "title": "7. The Resonator Tests",
+      "file": "8_resonator_tests.html",
+      "order": 8
+    },
+    {
+      "id": "section-discriminating",
+      "title": "8. What Would Actually Discriminate?",
+      "file": "9_discriminating_tests.html",
+      "order": 9
+    },
+    {
+      "id": "section-discussion",
+      "title": "9. Discussion: The Underdetermination Problem",
+      "file": "10_discussion.html",
+      "order": 10
+    },
+    {
+      "id": "section-conclusion",
+      "title": "10. Conclusions",
+      "file": "11_conclusions.html",
+      "order": 11
+    },
+    {
+      "id": "section-references",
+      "title": "References",
+      "file": "12_references.html",
+      "order": 12
+    },
+    {
+      "id": "section-reproducibility",
+      "title": "Data Availability & Reproducibility",
+      "file": "13_reproducibility.html",
+      "order": 13
+    }
+  ],
+  "icons": [
+    {
+      "src": "public/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "public/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#220126"
+}

@@ -1,0 +1,475 @@
+<h2>1. Introduction: The Experimental Canon</h2>
+
+<p>
+    General relativity stands as one of the most precisely tested theories in
+    physics. From the gravitational redshift measurements of Pound and Rebka
+    (1960) to the multi-messenger observations of GW170817 (2017), a century of
+    experiments has confirmed GR's predictions with high precision.
+    Modern optical lattice clocks achieve fractional frequency comparisons at
+    the 10<sup>−18</sup> level and below, detecting gravitational time dilation
+    across millimeter height differences. The Cassini spacecraft measured the
+    Shapiro delay to constrain the PPN parameter γ to within 2 × 10<sup>−5</sup>
+    of unity. The Global Positioning System, which incorporates relativistic
+    corrections as a matter of routine engineering, is often cited as the most
+    practical demonstration that "GR works."
+</p>
+
+<p>
+    The standard narrative concludes that these tests leave no room for
+    alternatives to GR. Any modification of gravity, the argument goes, would
+    have been detected by now. The experimental foundations are secure.
+</p>
+
+<p>
+    This paper challenges that conclusion—not by disputing the experimental
+    results, but by examining what those results actually constrain. A
+    systematic methodological analysis reveals that the canonical precision
+    tests share structural features that render them, as currently configured,
+    unable to directly distinguish between general relativity and certain
+    classes of alternatives, including the Temporal Equivalence Principle (TEP).
+</p>
+
+<h3>1.1 The Textbook Narrative</h3>
+
+<p>
+    The experimental confirmation of GR is typically presented as a progression
+    of increasingly precise tests:
+</p>
+
+<table class="data-table">
+    <thead>
+        <tr>
+            <th>Experiment</th>
+            <th>Year</th>
+            <th>Claimed Precision</th>
+            <th>Result</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Pound-Rebka (redshift)</td>
+            <td>1960</td>
+            <td>1%</td>
+            <td>Confirms GR</td>
+        </tr>
+        <tr>
+            <td>Hafele-Keating (time dilation)</td>
+            <td>1971</td>
+            <td>10%</td>
+            <td>Confirms GR</td>
+        </tr>
+        <tr>
+            <td>Gravity Probe A</td>
+            <td>1976</td>
+            <td>7 × 10⁻⁵</td>
+            <td>Confirms GR</td>
+        </tr>
+        <tr>
+            <td>GPS (operational)</td>
+            <td>1978–</td>
+            <td>Meter-level positioning</td>
+            <td>Confirms GR</td>
+        </tr>
+        <tr>
+            <td>Cassini (Shapiro delay)</td>
+            <td>2003</td>
+            <td>2 × 10⁻⁵</td>
+            <td>γ = 1</td>
+        </tr>
+        <tr>
+            <td>Gravity Probe B</td>
+            <td>2011</td>
+            <td>0.3%</td>
+            <td>Confirms frame-dragging</td>
+        </tr>
+        <tr>
+            <td>LIGO/Virgo (GW detection)</td>
+            <td>2015–</td>
+            <td>—</td>
+            <td>GWs exist</td>
+        </tr>
+        <tr>
+            <td>GW170817 (multi-messenger)</td>
+            <td>2017</td>
+            <td>few × 10⁻¹⁵ (under standard emission-time assumptions)</td>
+            <td>c<sub>γ</sub> = c<sub>g</sub></td>
+        </tr>
+        <tr>
+            <td>Optical clocks (JILA)</td>
+            <td>2022</td>
+            <td>10⁻¹⁸</td>
+            <td>Confirms redshift</td>
+        </tr>
+    </tbody>
+</table>
+
+<p>
+    Each entry represents a genuine experimental achievement. The question is
+    not whether these experiments were performed correctly, but what they
+    actually test.
+</p>
+
+<h3>1.2 The Central Question</h3>
+
+<p>
+    This paper asks: What do precision tests of relativity actually constrain?
+</p>
+
+<p>
+    The analysis identifies six structural limitations shared by the
+    experimental canon:
+</p>
+
+<ol>
+    <li>
+        <em>Two-Way Measurement Dominance:</em> Nearly all tests use round-trip
+        or reciprocity-even measurements, which are mathematically blind to
+        direction-dependent effects.
+    </li>
+    <li>
+        <em>Local/Global Conflation:</em> Tests of local Lorentz invariance are
+        extrapolated to claims about global spacetime structure.
+    </li>
+    <li>
+        <em>Model-Dependent Calibration:</em> Systems like GPS use GR-derived
+        corrections to validate GR— demonstrating self-consistency within the
+        framework, not independent confirmation.
+    </li>
+    <li>
+        <em>Single-Path Multi-Messenger Limitations:</em> GW170817-type observations
+        primarily constrain differential photon–graviton propagation and hence
+        disformal cone tilt. They do not directly constrain common-mode conformal
+        clock-rate structure along a shared path, although conformal scalar sectors
+        remain indirectly constrained by PPN, equivalence-principle, and
+        clock-comparison tests.
+    </li>
+    <li>
+        <em>Theory-Laden Data Reduction:</em> Systematic corrections assume the
+        framework being tested, making independent falsification practically
+        difficult within standard pipelines.
+    </li>
+    <li>
+        <em>The Proximity-Regime Screening Blind Spot:</em> Tests performed in deep
+        potential wells (Earth's surface, solar system) probe only the screened
+        regime where scalar-field gradients are continuously suppressed, leaving
+        the unscreened dilute regime unexplored.
+    </li>
+</ol>
+
+<p>
+    These limitations do not invalidate the experiments. They indicate that, in
+    many cases, the tests primarily constrain parameter space within an assumed
+    framework rather than systematically discriminating between alternatives.
+</p>
+
+<p>
+    The analysis throughout assumes a regime where disformal cone tilts are
+    already constrained by multi-messenger bounds, and focuses on clock-sector
+    structure that remains unconstrained within those limits.
+</p>
+
+<div class="scope-box">
+    <h4>Scope of Claim</h4>
+    <p>
+        This manuscript does not dispute the validity of canonical precision
+        tests within their modeled domains. It argues that many flagship tests
+        primarily constrain reciprocity-even (two-way / closed-path) observables
+        and therefore may not discriminate GR from a class of two-metric
+        disformal scalar-tensor frameworks that reproduce local redshift and
+        round-trip light-time relations. Discrimination requires observables
+        that are offset-invariant yet one-way and direction-reversing, or that
+        probe spatial clock-correlation structure.
+    </p>
+</div>
+
+<h3>1.3 The Temporal Equivalence Principle: Theory Definition</h3>
+
+<p>
+    The Temporal Equivalence Principle (TEP) is defined formally by a single
+    manifold endowed with two metrics and a universal matter coupling. It is not
+    an ad hoc modification but a systematic framework for dynamical time.
+</p>
+
+<div class="key-concept">
+    <h4>Formal Definition</h4>
+    <p>
+        Sector map: The conformal factor A(φ) governs clock
+        rates and spatial correlation structure; the disformal factor B(φ)
+        governs light-cone tilts and residual holonomy. GW170817 primarily
+        constrains photon–graviton differential propagation and hence disformal
+        cone tilt. It does not directly constrain common-mode conformal clock-rate
+        structure along a shared path, although conformal scalar sectors remain
+        indirectly constrained by PPN, equivalence-principle, source-screening,
+        and clock-comparison tests.
+    </p>
+
+    <p>
+        Screening and PPN compatibility: Rather than invoking
+        discrete thin-shell boundaries, screening operates via the continuous
+        spatial profile of the scalar time field, termed Temporal Topology.
+        The locally active gradient sector, Temporal Shear, is suppressed in
+        screened regimes by environmental state and boundary conditions, ensuring
+        short-range fifth-force suppression while leaving the field light
+        cosmologically. Near massive bodies, suppression of Temporal Shear
+        decouples local clock rates from the scalar field structure, cleanly
+        preserving PPN bounds without rigid boundary approximations.
+    </p>
+
+    <p>
+        1. The Action: The theory is defined in the Einstein
+        frame ($g_{\mu\nu}$) by:
+    </p>
+    <div class="equation">
+        $$S = \int d^4x \sqrt{-g} \left[ \frac{M_{\rm Pl}^2}{2} R - \frac{1}{2}
+        (\partial\phi)^2 - V(\phi) \right] + S_{matter}[\psi,
+        \tilde{g}_{\mu\nu}]$$
+    </div>
+
+    <p>
+        2. The Metrics: Gravity is governed by $g_{\mu\nu}$.
+        All matter fields $\psi$ and clocks couple universally to the
+        <em>matter metric</em> $\tilde{g}_{\mu\nu}$, related by a disformal map:
+    </p>
+    <div class="equation">
+        $$\tilde{g}_{\mu\nu} = A^2(\phi) g_{\mu\nu} + B(\phi) \nabla_\mu\phi
+        \nabla_\nu\phi$$
+    </div>
+
+    <p>3. The Coupling:</p>
+    <ul>
+        <li>
+            Clocks: Ideal clocks measure proper time $\tau$
+            defined by $d\tau^2 = -\tilde{g}_{\mu\nu} dx^\mu dx^\nu$.
+        </li>
+        <li>
+            Light: Photons propagate on null geodesics of
+            $\tilde{g}_{\mu\nu}$. (In the conformal limit $B=0$, these coincide
+            with $g_{\mu\nu}$ null geodesics).
+        </li>
+        <li>
+            Test Particles: Massive bodies follow geodesics of
+            $\tilde{g}_{\mu\nu}$.
+        </li>
+    </ul>
+</div>
+
+<p>
+    The key distinguishing predictions are therefore not local redshift or
+    two-way light-time relations (where TEP can agree with GR), but global and
+    statistical observables that probe synchronization integrability and spatial
+    structure:
+</p>
+
+<ul>
+    <li>
+        Local physics is identical to GR in freely falling laboratories (EEP;
+        locally invariant c)
+    </li>
+    <li>
+        Clock residuals can exhibit spatially structured correlations (e.g.,
+        exponential decay with distance) if the scalar field has a finite
+        correlation length
+    </li>
+    <li>
+        A convention-independent residual synchronization holonomy H<sub
+            >resid</sub
+        >
+        can be defined for direction-reversing, one-way closed loops after
+        subtracting modeled GR loop effects
+    </li>
+    <li>
+        Light and gravitational-wave propagation remain consistent with existing
+        constraints: conformal rescaling preserves null cones, and any disformal
+        cone tilt is bounded at the 10<sup>−15</sup> level
+    </li>
+    <li>
+        In dense environments, the suppression of Temporal Shear (vanishing
+        field gradient) reduces the effective scalar coupling, preserving PPN
+        bounds through continuous geometric screening rather than discrete
+        boundary cutoffs
+    </li>
+</ul>
+
+<p>
+    The existing experimental canon strongly constrains local Lorentz violation,
+    PPN departures in the gravitational/light-propagation sector, and disformal
+    cone tilts. In TEP, PPN compatibility is maintained through the continuous
+    suppression of Temporal Shear in dense environments rather than discrete
+    boundary approximations. The experimental canon does not yet directly probe
+    spatial clock-correlation structure or residual holonomy in genuinely
+    one-way, direction-reversing closed loops.
+</p>
+
+<div class="key-insight">
+    <h4>Candidate Discriminators and Current Status</h4>
+    <p>
+        To ensure falsifiability, TEP specifies candidate observables where it
+        can differ from GR. Where numerical values are quoted from the TEP
+        research program, they are treated as reported results requiring
+        independent replication.
+    </p>
+    <table class="data-table">
+        <thead>
+            <tr>
+                <th>Observable</th>
+                <th>GR Prediction</th>
+                <th>TEP Prediction</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Distance-structured clock correlations</td>
+                <td>None (or systematic origin)</td>
+                <td>λ = 1,000–10,000 km</td>
+                <td>
+                    Suggested in exploratory GNSS analyses (order
+                    10<sup>3</sup>–10<sup>4</sup> km scale) within the TEP
+                    program; requires independent, blinded replication using raw
+                    data
+                </td>
+            </tr>
+            <tr>
+                <td>Orbital velocity coupling</td>
+                <td>No correlation</td>
+                <td>|r| > 0.5 with Earth's orbital velocity</td>
+                <td>
+                    Suggested in exploratory GNSS analyses within the TEP
+                    program; requires independent, blinded replication
+                </td>
+            </tr>
+            <tr>
+                <td>CMB frame alignment</td>
+                <td>No preferred frame</td>
+                <td>< 30° from CMB dipole</td>
+                <td>
+                    Suggested in exploratory GNSS analyses within the TEP
+                    program; requires independent, blinded replication
+                </td>
+            </tr>
+            <tr>
+                <td>Residual holonomy H<sub>resid</sub></td>
+                <td>0</td>
+                <td>0 if B = 0 (conformal-only); ≠ 0 possible if B ≠ 0 (MEO Triangle). <em>Note: GW170817 bounds disformal coupling to B ≲ 10<sup>−19</sup>; triangle test probes whether B is nonzero at this level.</em></td>
+                <td>Untested (requires one-way closed loops)</td>
+            </tr>
+            <tr>
+                <td>Multi-constellation consistency</td>
+                <td>N/A</td>
+                <td>CV < 30% across GPS/GLONASS/Galileo/BeiDou</td>
+                <td>Untested (requires raw data analysis)</td>
+            </tr>
+            <tr>
+                <td>Proximity-regime screening transition</td>
+                <td>None (no regime change predicted)</td>
+                <td>Continuous active-to-screened recovery governed by \(\mathcal S_\Sigma(\mathcal E)\), with \(\rho_T\) as one macroscopic saturation/proximity proxy</td>
+                <td>Altitude-varying optical clock network, wide-binary systems</td>
+            </tr>
+        </tbody>
+    </table>
+    <p>
+        Critical note: The first three observables target conformal-sector
+        structure associated with A(φ), while the holonomy test targets
+        disformal structure associated with B(φ). The core argument of this
+        paper concerns measurement geometry and does not assume that any
+        specific GNSS-reported numerical value is correct.
+    </p>
+</div>
+
+<h3>1.4 Structure of This Paper</h3>
+
+<p>
+    Section 2 develops the methodological framework for analyzing precision
+    tests, introducing key distinctions between gauge-invariant and
+    convention-dependent observables, two-way and one-way measurements, and
+    local and global tests.
+</p>
+
+<p>Sections 3–7 examine the major categories of precision tests:</p>
+
+<ul>
+    <li>
+        Section 3: Gravitational redshift tests (Pound-Rebka, optical clocks)
+    </li>
+    <li>Section 4: Time dilation tests (Hafele-Keating, GPS)</li>
+    <li>Section 5: Light propagation tests (Shapiro delay, VLBI)</li>
+    <li>Section 6: Multi-messenger constraints (GW170817)</li>
+    <li>Section 7: Resonator tests (Michelson-Morley, cavity experiments)</li>
+</ul>
+
+<p>
+    Section 8 proposes experiments that could genuinely discriminate between GR
+    and TEP: triangle holonomy tests, interplanetary closed-loop timing, and
+    GNSS correlation replication.
+</p>
+
+<p>
+    Section 9 discusses the philosophical implications, situating the findings
+    within the broader context of underdetermination in physics. Section 10
+    concludes.
+</p>
+
+<h3>1.5 Related Work</h3>
+
+<p>
+    This analysis builds upon and extends several distinct strands of literature
+    in gravitational physics, metrology, and the philosophy of science.
+</p>
+
+<p>
+    <strong>Test Theories of Relativity:</strong> Frameworks for testing Lorentz
+    invariance, such as the Mansouri-Sexl (1977) formalism and the Standard
+    Model Extension (SME) (Colladay &amp; Kostelecký 1998), have long
+    parameterized deviations from relativity. These frameworks primarily focus
+    on local Lorentz violation (anisotropy, boost dependence) in single-metric
+    contexts. TEP differs by accepting exact local Lorentz invariance
+    (consistent with the tightest SME bounds) while introducing non-integrable
+    synchronization structure via a second metric.
+</p>
+
+<p>
+    <strong>Relativistic Metrology:</strong> The distinction between one-way and
+    two-way time transfer is foundational in metrology (Ashby 2003). While
+    two-way satellite time and frequency transfer (TWSTFT) and GPS Common-View
+    are standard techniques for clock comparison, they are explicitly designed
+    to cancel path delays. Recent proposals for "relativistic geodesy" with
+    optical clocks (Mehlstäubler et al. 2018) focus on measuring the
+    geopotential $W$, assuming GR. This work explores the inverse problem: using
+    clocks to test the framework that defines $W$.
+</p>
+
+<p>
+    <strong>Philosophy of Simultaneity:</strong> The conventionality of
+    simultaneity (Reichenbach 1928; Grünbaum 1973; Salmon 1977) establishes that
+    one-way light speed is a convention in special relativity. Malament (1977)
+    argued that causal connectivity makes standard synchronization unique, but
+    this uniqueness holds only if the causal structure is singular (one metric).
+    This paper operationalizes these philosophical insights in the context of
+    two-metric theories, where the interplay between causal (light) and temporal
+    (clock) structures makes the "convention" physically testable via holonomy.
+</p>
+
+<p>
+    Theory-Laden Experimentation: The challenge of "epistemological circularity"
+    in precision tests—where data reduction relies on the theory being
+    tested—has been discussed by Franklin (1986) and others. This analysis
+    extends that discussion to modern precision cosmology and GNSS data
+    processing, identifying specific pipelines (e.g., common-mode filtering)
+    that enforce theoretical priors.
+</p>
+
+<p>To forestall misunderstanding, this paper does not claim:</p>
+
+<ul>
+    <li>That GR is wrong</li>
+    <li>That precision tests are flawed or incompetent</li>
+    <li>That TEP is correct</li>
+    <li>That all alternatives to GR are viable</li>
+</ul>
+
+<p>
+    The claim is narrower and more specific: the existing experimental canon
+    does not directly probe the observables that distinguish GR from TEP. This
+    underdetermination is resolvable through new experimental configurations
+    that have not yet been performed.
+</p>

@@ -1,0 +1,317 @@
+<h2>6. The Multi-Messenger Constraints</h2>
+
+<p>
+    The event GW170817 detected gravitational waves from a binary neutron star merger, 
+    followed (+1.74 ± 0.05) s later by a gamma-ray burst (GRB 170817A). This timing coincidence yields an 
+    assumption-dependent constraint on the fractional speed difference between gravitational waves and light.
+</p>
+
+<h3>6.1 The GW170817 Event</h3>
+
+<p>
+    On August 17, 2017, the LIGO-Virgo collaboration detected gravitational waves from 
+    a binary neutron star inspiral in NGC 4993, with luminosity distance of order 40 Mpc (130 million light-years; conservative bounds use the lower end of the distance interval) 
+    distant. The Fermi Gamma-ray Burst Monitor detected GRB 170817A approximately (+1.74 ± 0.05) s 
+    after the gravitational wave signal.
+</p>
+
+<h5>6.1.1 The Speed Constraint</h5>
+
+<p>
+    Interpreting the observed delay as (at least partially) a propagation-time difference yields a bound on the 
+    fractional speed difference during the trip.
+</p>
+
+<div class="equation">$$-3\times 10^{-15} \lesssim \frac{c_g - c_\gamma}{c} \lesssim 7\times 10^{-16}$$</div>
+
+<p>
+    The numerical bounds depend on conservative assumptions about intrinsic emission-time offsets between the 
+    gravitational-wave and gamma-ray signals. In particular, the observable directly constrains differential 
+    propagation, while the emission-time difference is astrophysically model dependent (Abbott et al. 2017).
+</p>
+
+<h5>6.1.2 The Standard Interpretation</h5>
+
+<p>
+    The constraint has been used to rule out or severely constrain numerous modified 
+    gravity theories, including:
+</p>
+<ul>
+    <li>Scalar-tensor theories with disformal coupling</li>
+    <li>Massive gravity theories</li>
+    <li>Lorentz-violating gravity theories</li>
+    <li>Certain dark energy models</li>
+</ul>
+
+<h3>6.2 What GW170817 Constrains</h3>
+
+<div class="critical-analysis">
+    <h4>The Single-Path Problem</h4>
+    <p>
+        Both gravitational waves and gamma rays traveled the same path through spacetime 
+        from NGC 4993 to Earth. Any effect that modifies propagation along this path 
+        affects both signals identically.
+    </p>
+    <p>
+        The measurement constrains the differential propagation speed—how much faster 
+        or slower gravitational waves travel compared to light along the same path. It 
+        does not constrain effects that modify both signals equally.
+    </p>
+</div>
+
+<h5>6.2.1 Conformal Transformations and Single-Path Cancellation</h5>
+
+<p>
+    Understanding why GW170817 does not directly constrain TEP's conformal sector requires examining the two-metric 
+    structure explicitly. This section provides the mathematical derivation that shows 
+    conformal coupling cancels in arrival-time comparisons.
+</p>
+
+<div class="key-concept">
+    <h4>The Two-Metric Structure</h4>
+    <p>
+        In scalar-tensor theories like TEP, spacetime has two metrics:
+    </p>
+    
+    <p>Gravitational metric (Einstein frame):</p>
+    <div class="equation">$$g_{\mu\nu}^{\text{GW}} = g_{\mu\nu}$$</div>
+    <p>Gravitational waves propagate on null geodesics of this metric.</p>
+    
+    <p>Electromagnetic metric (Jordan frame):</p>
+    <div class="equation">$$g_{\mu\nu}^{\text{EM}} = A^2(\phi) g_{\mu\nu}^{\text{GW}} + B(\phi) \nabla_\mu\phi \nabla_\nu\phi$$</div>
+    <p>Photons propagate on null geodesics of this metric.</p>
+    
+    <p>
+        The conformal factor A(φ) = exp(β<sub>A</sub>φ/M<sub>Pl</sub>) rescales the metric uniformly. 
+        The disformal factor B(φ) introduces direction-dependent modifications.
+    </p>
+</div>
+
+<h5>6.2.2 The Flight Time Calculation</h5>
+
+<p>
+    Consider a signal (gravitational wave or photon) traveling from source S to detector D 
+    along a null geodesic. The coordinate flight time is:
+</p>
+
+<div class="equation">$$T = \int_S^D dt = \int_S^D \frac{dl}{c_{\text{eff}}}$$</div>
+
+<p>
+    where c<sub>eff</sub> is the effective propagation speed in the relevant metric.
+</p>
+
+<div class="critical-analysis">
+    <h4>Gravitational Wave Flight Time</h4>
+    <p>
+        For gravitational waves propagating on g<sub>μν</sub><sup>GW</sup>:
+    </p>
+    <div class="equation">$$T_{\text{GW}} = \int_S^D \frac{dl}{c}$$</div>
+    <p>
+        where c is the coordinate speed of light in the Einstein frame.
+    </p>
+    
+    <h4>Photon Flight Time (Conformal Only, B = 0)</h4>
+    <p>
+        For photons propagating on $g_{\mu\nu}^{\text{EM}} = A^2(\phi) g_{\mu\nu}^{\text{GW}}$:
+    </p>
+    <div class="equation">$$T_\gamma = \int_S^D \frac{\sqrt{A(\phi)} \, dl}{c \times \sqrt{A(\phi)}} = \int_S^D \frac{dl}{c} = T_{\text{GW}}$$</div>
+    <p>
+        The conformal factor A(φ) cancels in the differential time-of-flight observable under specific operational assumptions:
+    </p>
+    <ul>
+        <li>Co-spatial Endpoints: Source S and Detector D are identical for both signals.</li>
+        <li>Same Clock Standards: The flight time is measured using the same matter-sector clock definition at the detector.</li>
+        <li>Null Path Invariance: Conformal transformations preserve the null character of geodesics ($ds^2 = 0 \iff A ds^2 = 0$).</li>
+        <li>Emission-Time Nuisance: Intrinsic emission delays are treated as nuisance parameters to be modeled or marginalized.</li>
+    </ul>
+    <p>
+        Under these conditions, the observed EM–GW arrival-time difference is insensitive to purely conformal rescalings of the metric along the shared path. The empirical constraint therefore applies to differential propagation effects (for example, disformal cone tilts), not to common-mode rescalings.
+    </p>
+</div>
+
+<div class="key-insight">
+    <h4>Why Conformal Coupling Cancels</h4>
+    <p>
+        Under a conformal transformation g̃<sub>μν</sub> = A²(φ)g<sub>μν</sub>:
+    </p>
+    <ul>
+        <li>Null geodesics remain null: If g<sub>μν</sub>k<sup>μ</sup>k<sup>ν</sup> = 0, 
+            then g̃<sub>μν</sub>k<sup>μ</sup>k<sup>ν</sup> = A(φ) × 0 = 0</li>
+        <li>Path length scales: dl̃ = √A(φ) dl</li>
+        <li>Coordinate speed scales: c̃ = √A(φ) c</li>
+        <li>Flight time invariant: T̃ = dl̃/c̃ = dl/c = T</li>
+    </ul>
+    <p>
+        This cancellation concerns the differential arrival-time observable for two signals that follow the same null trajectory and are time-stamped by the same detector clock standard. In that configuration, a purely conformal rescaling does not generate a measurable EM–GW time-of-flight difference.
+    </p>
+</div>
+
+<h5>6.2.3 The Disformal Contribution</h5>
+
+<p>
+    The disformal term B(φ)∇<sub>μ</sub>φ∇<sub>ν</sub>φ does modify the relative propagation:
+</p>
+
+<div class="equation">$$c_\gamma^2 = c^2 \left[1 - \frac{B(\phi)(\partial\phi)^2}{A(\phi)}\right] \quad \text{(schematic parameterization)}$$</div>
+
+<p>
+    This introduces a genuine speed difference:
+</p>
+
+<div class="equation">$$\Delta T = T_\gamma - T_{\text{GW}} \approx \frac{D}{c} \times \frac{B(\phi)(\partial\phi)^2}{A(\phi)}$$</div>
+
+<p>
+    GW170817's observed coincidence (after accounting for astrophysical emission-time uncertainties) implies that any net differential propagation delay accumulated over the propagation distance must be small. Operationally, the observation bounds the fractional speed difference at the few × 10<sup>−15</sup> level under standard emission-time assumptions.
+</p>
+
+<p>
+    This is a real constraint on the disformal sector. It does not directly constrain the conformal factor A(φ) alone.
+</p>
+
+<div class="summary-box">
+    <h4>Single-Path Cancellation: Summary</h4>
+    <table class="data-table">
+        <thead>
+            <tr>
+                <th>Sector</th>
+                <th>Effect on Flight Time</th>
+                <th>GW170817 Constraint</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Conformal A(φ)</td>
+                <td>Cancels exactly (T<sub>γ</sub> = T<sub>GW</sub>)</td>
+                <td>Unconstrained</td>
+            </tr>
+            <tr>
+                <td>Disformal B(φ)</td>
+                <td>Modifies relative speed</td>
+                <td>Δc/c bounded at few × 10<sup>−15</sup> (assumption-dependent)</td>
+            </tr>
+        </tbody>
+    </table>
+    <p>
+        In a two-metric framework, the conformal factor A(φ) can modify matter-sector proper-time standards 
+        and thereby support spatial structure in clock residuals, while remaining invisible to single-path 
+        EM–GW arrival-time comparisons. By contrast, any disformal cone tilt sourced by B(φ) produces a 
+        differential propagation effect and is therefore directly constrained by GW170817. A residual 
+        synchronization holonomy beyond modeled GR loop effects (H<sub>resid</sub>) vanishes in the 
+        conformal-only limit (B = 0) and would require non-exact structure such as B(φ) ≠ 0 or more general 
+        non-metricity.
+    </p>
+</div>
+
+<h5>6.2.4 The Common-Mode Cancellation</h5>
+
+<p>
+    GW170817-type constraints compare two signals that traverse essentially the same spacetime path and are 
+    time-stamped by clocks in the matter sector at the detector. Any common-mode rescaling of the local 
+    proper-time standard cannot be isolated by an EM–GW arrival-time comparison along a single path. The 
+    observable is therefore primarily sensitive to differential propagation effects, such as a disformal 
+    cone tilt.
+</p>
+
+<h3>6.3 What Would Constrain Clock-Sector Structure?</h3>
+
+<p>
+    To constrain clock-sector structure (including spatial correlations) and to test for non-exact time transport 
+    beyond modeled GR loop effects, one needs measurements that do not reduce to single-path, common-mode comparisons:
+</p>
+
+<h5>6.3.1 Multipath Configurations</h5>
+
+<p>
+    Gravitational lensing produces multiple images that traverse different paths through 
+    the scalar field. If A(φ) varies spatially, different images experience different 
+    time delays—the "Shapiro delay" generalized to scalar fields.
+</p>
+
+<p>
+    This is the origin of TEP's "phantom mass" prediction: lensing time delays probe 
+    the integrated scalar field along different paths, potentially mimicking dark matter.
+</p>
+
+<h5>6.3.2 Statistical Correlations</h5>
+
+<p>
+    If the scalar field has spatial structure ⟨φ(x)φ(x')⟩ ~ exp(−r/λ), clocks at 
+    different locations will exhibit correlated fluctuations. This is the signature 
+    suggested by exploratory GNSS analysis—distance-structured correlations in clock behavior.
+</p>
+
+<p>
+    Single-path measurements like GW170817 do not directly probe this structure because they 
+    sample only one realization of the field along one path. The proposed spatial-correlation 
+    and loop tests should be seen as complementary additions to, not replacements for, 
+    multi-messenger constraints.
+</p>
+
+<h5>6.3.3 Closed-Loop Holonomy</h5>
+
+<p>
+    The experimentally relevant quantity is a GR-subtracted residual holonomy H<sub>resid</sub>, defined from 
+    one-way time transfer around a direction-reversing closed loop after subtracting modeled GR loop effects 
+    (Sagnac, Shapiro, and gravito-magnetic contributions). In the conformal-only limit (B = 0), the A(φ) 
+    contribution is an exact gradient and yields H<sub>resid</sub> = 0 on simply connected domains; a nonzero 
+    residual requires non-exact structure, for example a disformal coupling B(φ) ≠ 0 or more general 
+    non-metricity.
+</p>
+
+<p>
+    No single-path multi-messenger observation can probe H<sub>resid</sub> because the signals travel from 
+    source to detector, not around direction-reversing closed loops.
+</p>
+
+<h3>6.4 The Broader Multi-Messenger Context</h3>
+
+<h5>6.4.1 Future Events</h5>
+
+<p>
+    Additional multi-messenger detections will improve statistics but not change the 
+    fundamental limitation: single-path measurements constrain differential propagation, 
+    not common-mode effects.
+</p>
+
+<h5>6.4.2 Strongly Lensed Events</h5>
+
+<p>
+    A gravitationally lensed multi-messenger event would provide genuinely new information. 
+    If gravitational waves and electromagnetic signals from the same source arrive via 
+    different lensed paths, their relative timing probes the scalar field structure 
+    along different trajectories.
+</p>
+
+<p>
+    Such events are rare but would be transformative for constraining conformal coupling.
+</p>
+
+<h3>6.5 Summary: The Disformal Constraint</h3>
+
+<div class="summary-box">
+    <h4>What GW170817 Confirms</h4>
+    <ul>
+        <li>Under standard emission-time assumptions, the GW–EM speed difference is bounded at the few × 10⁻¹⁵ level</li>
+        <li>Disformal coupling B(φ) is tightly constrained</li>
+        <li>Lorentz violation in the gravity sector is bounded</li>
+        <li>Massive graviton scenarios are excluded or constrained</li>
+    </ul>
+    
+    <h4>What It Cannot Test</h4>
+    <ul>
+        <li>Conformal coupling A(φ) (preserves null cone)</li>
+        <li>Common-mode time dilation along the path</li>
+        <li>Spatial structure of scalar fields</li>
+        <li>Synchronization holonomy (requires closed loops)</li>
+        <li>Clock-sector correlation structure or residual loop observables (H<sub>resid</sub>)</li>
+    </ul>
+</div>
+
+<p>
+    GW170817 is a landmark observation that opened the era of multi-messenger astronomy. 
+    Its constraints on modified gravity are real and important—for the disformal sector. 
+    Single-path EM–GW coincidence measurements primarily constrain differential propagation (for example, disformal cone tilts) 
+    and do not directly probe clock-sector correlation structure or GR-subtracted residual holonomy H<sub>resid</sub>, which require 
+    multipath or direction-reversing closed-loop configurations. This is a statement about measurement geometry, not 
+    a criticism of the experimental achievement.
+</p>

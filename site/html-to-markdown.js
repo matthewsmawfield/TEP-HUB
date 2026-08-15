@@ -1,0 +1,371 @@
+#!/usr/bin/env node
+
+const fs = require('fs');
+const path = require('path');
+
+/**
+ * HTML to Markdown Converter for TEP-EXP Site
+ * Converts the built static HTML site into a clean markdown document
+ */
+
+class HTMLToMarkdownConverter {
+    constructor() {
+        this.output = '';
+        this.currentSection = '';
+    }
+
+    /**
+     * Convert HTML string to markdown with proper academic formatting
+     */
+    htmlToMarkdown(html) {
+        // Remove script tags and their content
+        html = html.replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi, '');
+        
+        // Remove style tags and their content
+        html = html.replace(/<style\b[^<]*(?:(?!<\/style>)<[^<]*)*<\/style>/gi, '');
+        
+        // Remove comments
+        html = html.replace(/<!--[\s\S]*?-->/g, '');
+        
+        // Preserve MathJax expressions before processing
+        const mathExpressions = [];
+        html = html.replace(/<span[^>]*class=["'][^"']*MathJax[^"']*["'][^>]*>.*?<\/span>/gi, (match) => {
+            mathExpressions.push(match);
+            return `__MATH_EXPRESSION_${mathExpressions.length - 1}__`;
+        });
+        
+        // Convert manuscript sections to proper markdown structure FIRST
+        html = html.replace(/<div[^>]*class=["'][^"']*manuscript-section[^"']*["'][^>]*data-section=["']([^"']*)["'][^>]*>/gi, '\n\n## $1\n\n');
+        
+        // Convert headers
+        html = html.replace(/<h1[^>]*>(.*?)<\/h1>/gi, '\n# $1\n\n');
+        html = html.replace(/<h2[^>]*>(.*?)<\/h2>/gi, '\n## $1\n\n');
+        html = html.replace(/<h3[^>]*>(.*?)<\/h3>/gi, '\n### $1\n\n');
+        html = html.replace(/<h4[^>]*>(.*?)<\/h4>/gi, '\n#### $1\n\n');
+        
+        // Convert paragraphs (collapse internal whitespace to avoid markdown code-block indentation)
+        html = html.replace(/<p[^>]*>(.*?)<\/p>/gis, (match, inner) => {
+            const cleaned = inner.replace(/\s+/g, ' ').trim();
+            return `${cleaned}\n\n`;
+        });
+
+        // Convert strong/bold (avoid mid-sentence bold in generated markdown)
+        html = html.replace(/<(strong|b)[^>]*>(.*?)<\/(strong|b)>/gis, '$2');
+        
+        // Convert images
+        html = html.replace(/<img[^>]*src=["']([^"']*)["'][^>]*alt=["']([^"']*)["'][^>]*>/gi, (match, src, alt) => {
+            // Fix path for root-level markdown
+            if (src.startsWith('figures/')) {
+                src = 'site/' + src;
+            }
+            return `\n![${alt}](${src})\n`;
+        });
+        
+        // Convert emphasis/italic
+        html = html.replace(/<(em|i)[^>]*>(.*?)<\/(em|i)>/gi, '*$2*');
+        
+        // Convert links
+        html = html.replace(/<a[^>]*href=["']([^"']*)["'][^>]*>(.*?)<\/a>/gi, '[$2]($1)');
+        
+        // Convert lists
+        html = html.replace(/<ul[^>]*>/gi, '\n');
+        html = html.replace(/<\/ul>/gi, '\n');
+        html = html.replace(/<ol[^>]*>/gi, '\n');
+        html = html.replace(/<\/ol>/gi, '\n');
+        html = html.replace(/<li[^>]*>([\s\S]*?)<\/li>/gi, (match, inner) => {
+            const cleaned = inner.replace(/\s+/g, ' ').trim();
+            return `- ${cleaned}\n`;
+        });
+        
+        // Convert blockquotes
+        html = html.replace(/<blockquote[^>]*>(.*?)<\/blockquote>/gi, '\n> $1\n\n');
+        
+        // Convert code blocks
+        html = html.replace(/<pre[^>]*><code[^>]*>(.*?)<\/code><\/pre>/gi, '\n```\n$1\n```\n\n');
+        html = html.replace(/<code[^>]*>(.*?)<\/code>/gi, '`$1`');
+        
+        // Convert line breaks
+        html = html.replace(/<br\s*\/?>/gi, '\n');
+        
+        // Convert horizontal rules
+        html = html.replace(/<hr\s*\/?>/gi, '\n---\n\n');
+        
+        // Convert divs with special classes to markdown equivalents
+        html = html.replace(/<div[^>]*class=["'][^"']*abstract[^"']*["'][^>]*>/gi, '');
+        html = html.replace(/<div[^>]*class=["'][^"']*theorem[^"']*["'][^>]*>/gi, '\n**Theorem:**\n');
+        html = html.replace(/<div[^>]*class=["'][^"']*principle[^"']*["'][^>]*>/gi, '\n');
+        html = html.replace(/<div[^>]*class=["'][^"']*proof[^"']*["'][^>]*>/gi, '\n*Proof:*\n');
+        html = html.replace(/<div[^>]*class=["'][^"']*experimental-section[^"']*["'][^>]*>/gi, '\n**Experimental Section:**\n');
+        html = html.replace(/<div[^>]*class=["'][^"']*critical-analysis[^"']*["'][^>]*>/gi, '\n**Critical Analysis:**\n');
+        html = html.replace(/<div[^>]*class=["'][^"']*significance[^"']*["'][^>]*>/gi, '\n**Significance:**\n');
+        html = html.replace(/<div[^>]*class=["'][^"']*key-finding[^"']*["'][^>]*>/gi, '\n**Key Finding:**\n');
+        html = html.replace(/<div[^>]*class=["'][^"']*validation-box[^"']*["'][^>]*>/gi, '\n**Validation:**\n');
+        
+        // Handle abstract section specially
+        html = html.replace(/## Abstract\s*\n\s*<h2>Abstract<\/h2>/gi, '## Abstract\n\n');
+        
+        // Convert tables
+        html = html.replace(/<table[^>]*>(.*?)<\/table>/gis, (match) => {
+            return this.convertTable(match);
+        });
+        
+        html = html.replace(/<(?!\/?[a-zA-Z!])/g, '&lt;');
+
+        // Preserve sub/sup tags before generic stripping
+        const subTags = [];
+        html = html.replace(/<sub>(.*?)<\/sub>/gi, (match, inner) => {
+            subTags.push(inner);
+            return `__SUB_${subTags.length - 1}__`;
+        });
+        const supTags = [];
+        html = html.replace(/<sup>(.*?)<\/sup>/gi, (match, inner) => {
+            supTags.push(inner);
+            return `__SUP_${supTags.length - 1}__`;
+        });
+
+        // Remove remaining HTML tags
+        html = html.replace(/<[^>]+>/g, '');
+        
+        // Restore MathJax expressions
+        mathExpressions.forEach((expr, index) => {
+            html = html.replace(`__MATH_EXPRESSION_${index}__`, expr);
+        });
+        
+        // Restore sub/sup tags
+        subTags.forEach((inner, index) => {
+            html = html.replace(`__SUB_${index}__`, `<sub>${inner}</sub>`);
+        });
+        supTags.forEach((inner, index) => {
+            html = html.replace(`__SUP_${index}__`, `<sup>${inner}</sup>`);
+        });
+        
+        // Decode HTML entities
+        html = html.replace(/&amp;/g, '&');
+        // Preserve &lt; and &gt; to avoid introducing raw angle brackets into markdown/math
+        // (raw '<' can be interpreted as HTML and can break LaTeX fragments like "\Xi_{AB} < 10^{-17}")
+        html = html.replace(/&gt;/g, '>');
+        html = html.replace(/&quot;/g, '"');
+        html = html.replace(/&#39;/g, "'");
+        html = html.replace(/&nbsp;/g, ' ');
+        html = html.replace(/&times;/g, '×');
+        html = html.replace(/&minus;/g, '−');
+        html = html.replace(/&plusmn;/g, '±');
+        html = html.replace(/&sup2;/g, '²');
+        html = html.replace(/&sup3;/g, '³');
+        html = html.replace(/&sup1;/g, '¹');
+        html = html.replace(/&deg;/g, '°');
+        html = html.replace(/&lambda;/g, 'λ');
+        html = html.replace(/&mu;/g, 'μ');
+        html = html.replace(/&sigma;/g, 'σ');
+
+        // Remove leading indentation on every line (prevents accidental markdown code blocks)
+        html = html.replace(/^[ \t]+/gm, '');
+        
+        // Clean up whitespace
+        html = html.replace(/\n\s*\n\s*\n/g, '\n\n');
+        html = html.replace(/^\s+|\s+$/g, '');
+        
+        // Remove duplicate headers (same header appearing consecutively)
+        html = html.replace(/(##\s+[^\n]+)\n+\1/g, '$1');
+        
+        // Clean up any remaining formatting issues
+        html = html.replace(/\n{3,}/g, '\n\n');
+        
+        return html;
+    }
+
+    /**
+     * Convert HTML table to markdown table
+     */
+    convertTable(tableHtml) {
+        const rows = [];
+        const rowMatches = tableHtml.match(/<tr[^>]*>(.*?)<\/tr>/gis);
+        
+        if (!rowMatches) return '';
+        
+        rowMatches.forEach((row, index) => {
+            const cells = row.match(/<t[dh][^>]*>(.*?)<\/t[dh]>/gis);
+            if (cells) {
+                const cellTexts = cells.map(cell => 
+                    cell.replace(/<[^>]+>/g, '').trim()
+                );
+                rows.push(cellTexts);
+            }
+        });
+        
+        if (rows.length === 0) return '';
+        
+        // Create markdown table (simple format like Jakarta)
+        let markdown = '\n';
+        rows.forEach((row, index) => {
+            markdown += '| ' + row.join(' | ') + ' |\n';
+            if (index === 0) {
+                // Add separator row
+                markdown += '|' + row.map(() => '---').join('|') + '|\n';
+            }
+        });
+        markdown += '\n';
+        
+        return markdown;
+    }
+
+    /**
+     * Extract title and metadata from HTML
+     */
+    extractMetadata(html) {
+        const titleMatch = html.match(/<title[^>]*>(.*?)<\/title>/i);
+        const title = titleMatch ? titleMatch[1] : 'What Do Precision Tests of General Relativity Actually Measure?';
+        
+        const authorMatch = html.match(/<meta[^>]*name=["']author["'][^>]*content=["']([^"']*)["']/i);
+        const author = authorMatch ? authorMatch[1] : 'Matthew Lukin Smawfield';
+        
+        const versionMatch = html.match(/<div[^>]*class=["'][^"']*version[^"']*["'][^>]*>(.*?)<\/div>/i);
+        const version = versionMatch ? versionMatch[1]
+            .replace(/<[^>]+>/g, '')
+            .replace(/^Version:\s*/i, '')
+            .trim() : 'v0.5 (Istanbul)';
+        
+        const dateMatch = html.match(/<div[^>]*class=["'][^"']*date[^"']*["'][^>]*>(.*?)<\/div>/i);
+        const date = dateMatch ? dateMatch[1].replace(/<[^>]+>/g, '').trim() : 'First published: 31 December 2025 · Last updated: 29 April 2026';
+        
+        const doiMatch = html.match(/DOI:\s*<a[^>]*href=["']([^"']*)["'][^>]*>\s*([^<]*?)\s*<\/a>/i);
+        const doi = doiMatch ? doiMatch[2] : '[DOI]';
+        
+        return { title, author, version, date, doi };
+    }
+
+    /**
+     * Extract main content from HTML
+     */
+    extractMainContent(html) {
+        // Find the manuscript-content div and extract only its contents (exclude navigation)
+        const startMatch = html.match(/<div[^>]*id=["']manuscript-content["'][^>]*>/i);
+        if (!startMatch) {
+            throw new Error('Could not find manuscript-content div');
+        }
+        
+        const startIndex = startMatch.index + startMatch[0].length;
+
+        // Prefer to stop before the manuscript navigation component, if present
+        const remainder = html.substring(startIndex);
+        const navMatch = remainder.match(/<nav[^>]*class=["'][^"']*manuscript-nav[^"']*["'][^>]*>/i);
+
+        let endIndex;
+        if (navMatch) {
+            endIndex = startIndex + navMatch.index;
+        } else {
+            // Fallback: stop at the closing main tag
+            const endMatch = html.match(/<\/main>/i);
+            if (!endMatch) {
+                throw new Error('Could not find closing main tag');
+            }
+            endIndex = endMatch.index;
+        }
+        
+        // Extract the content between these points
+        const content = html.substring(startIndex, endIndex);
+        
+        return content;
+    }
+
+    /**
+     * Convert the built HTML site to markdown
+     */
+    async convertSiteToMarkdown() {
+        console.log('🔄 Converting HTML site to markdown...');
+        
+        try {
+            // Read the built HTML file
+            const htmlPath = path.join(__dirname, 'dist', 'index.html');
+            if (!fs.existsSync(htmlPath)) {
+                throw new Error('Built HTML file not found. Please run "npm run build" first.');
+            }
+            
+            const html = fs.readFileSync(htmlPath, 'utf8');
+            
+            // Extract metadata
+            const metadata = this.extractMetadata(html);
+            
+            // Extract main content
+            const mainContent = this.extractMainContent(html);
+            
+            // Convert to markdown
+            const markdownContent = this.htmlToMarkdown(mainContent);
+            
+            // Build the complete markdown document
+            const markdown = this.buildMarkdownDocument(metadata, markdownContent);
+            
+            // Write to file
+            const outputPath = path.join(__dirname, '..', '9-TEP-EXP-v0.5-Istanbul.md');
+            fs.writeFileSync(outputPath, markdown, 'utf8');
+            
+            console.log('✅ Markdown conversion complete!');
+            console.log(`📄 Output: ${outputPath}`);
+            console.log(`📊 Document: ${metadata.title}`);
+            console.log(`👤 Author: ${metadata.author}`);
+            console.log(`📅 Version: ${metadata.version}`);
+            
+            return outputPath;
+            
+        } catch (error) {
+            console.error('❌ Markdown conversion failed:', error.message);
+            process.exit(1);
+        }
+    }
+
+    /**
+     * Build the complete markdown document with metadata
+     */
+    buildMarkdownDocument(metadata, content) {
+        const now = new Date();
+        const timestamp = now.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
+        
+        // Clean up the title to remove the author part
+        const cleanTitle = metadata.title.replace(' | Matthew Lukin Smawfield', '');
+        
+        // Format date: keep original publish date, add update date
+        let formattedDate = metadata.date;
+        if (formattedDate.includes('First published:')) {
+            formattedDate = formattedDate.replace('First published: ', '');
+        }
+        // Extract just the original date part before any separator
+        const dateParts = formattedDate.split(' · ');
+        const originalDate = dateParts[0].trim();
+        
+        return `# ${cleanTitle}
+**${metadata.author}**
+Version: ${metadata.version}
+First published: ${originalDate} · Last updated: ${timestamp}
+DOI: ${metadata.doi}
+
+---
+
+${content}
+
+---
+
+*This document was automatically generated from the TEP-EXP research site. For the interactive version with figures and enhanced formatting, visit: https://mlsmawfield.com/tep/exp/*
+
+*Related Work:*
+- [TEP Theory](https://doi.org/10.5281/zenodo.16921911) (Foundational framework)
+- [TEP-GNSS I](https://doi.org/10.5281/zenodo.17127229) (Multi-Center Analysis)
+- [TEP-GNSS II](https://doi.org/10.5281/zenodo.17517141) (25-Year Analysis)
+- [TEP-GNSS III](https://doi.org/10.5281/zenodo.17860166) (Raw RINEX Validation)
+
+*Source code available at: https://github.com/matthewsmawfield/TEP-EXP*
+`;
+    }
+}
+
+// Main execution
+async function main() {
+    const converter = new HTMLToMarkdownConverter();
+    await converter.convertSiteToMarkdown();
+}
+
+// Run if called directly
+if (require.main === module) {
+    main();
+}
+
+module.exports = { HTMLToMarkdownConverter };

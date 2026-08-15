@@ -1,0 +1,821 @@
+<h2>8. What Would Actually Discriminate?</h2>
+
+<p>
+    The preceding sections have established that canonical precision tests of GR share 
+    common methodological limitations: two-way measurements, local comparisons, single-path 
+    configurations, and theory-laden data reduction. This section proposes experiments 
+    that could genuinely discriminate between GR and TEP.
+</p>
+
+<p>
+    The following proposals are ordered by increasing baseline length and technological ambition, 
+    from terrestrial triangles to interplanetary loops.
+</p>
+
+<h3>8.1 Notation Summary</h3>
+
+<p>
+    The discriminating tests that follow involve several key quantities from the TEP framework.
+    For clarity, the primary notation used throughout this paper is summarized below.
+</p>
+
+<div class="summary-box">
+    <h4>Key TEP Quantities</h4>
+    <table class="data-table">
+        <thead>
+            <tr>
+                <th>Symbol</th>
+                <th>Definition</th>
+                <th>Role in Discrimination</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>$C_A(x,x')$</td>
+                <td>Covariance of conformal-factor fluctuations: $\langle \delta\ln A(x) \, \delta\ln A(x') \rangle$</td>
+                <td>Characterizes spatial correlations in clock residuals; measured through GNSS and optical clock networks</td>
+            </tr>
+            <tr>
+                <td>$\lambda_T$</td>
+                <td>Temporal Topology correlation length (characteristic scale of $C_A$ decay with distance)</td>
+                <td>Predicted range: $10^3$–$10^4$ km; falsifiable if outside 500–20,000 km</td>
+            </tr>
+            <tr>
+                <td>$\kappa_X$</td>
+                <td>Observable response coefficient for measurement channel $X$</td>
+                <td>Relates field fluctuations to observable residuals; distinguishes channel-specific sensitivity from microscopic coupling</td>
+            </tr>
+        </tbody>
+    </table>
+    <p>
+        The correlation function $C_A$ and its characteristic scale $\lambda_T$ are central to 
+        conformal-sector predictions. The response coefficients $\kappa_X$ parameterize how each 
+        experimental channel (clocks, interferometers, propagation) couples to the underlying field structure.
+    </p>
+</div>
+
+<h3>8.2 The Triangle Holonomy Test</h3>
+
+<p>
+    The most direct test of synchronization integrability is the measurement of holonomy 
+    around a closed loop using one-way signals. This test must explicitly distinguish TEP 
+    holonomy from the well-known Sagnac effect.
+</p>
+
+<h5>8.2.1 Formal Definition: The Loop Observable</h5>
+
+<p>
+    The loop observable $H$ is defined operationally as a concrete estimator constructed from time-tagged data. Consider three stations $i \in \{A, B, C\}$ exchanging optical pulses.
+</p>
+
+<div class="key-concept">
+    <h4>The Estimator</h4>
+    <p>
+        Let $\tau_i(t)$ be the proper time reading of clock $i$ at coordinate time $t$. A pulse emitted by $A$ at $\tau_A^e$ is received by $B$ at $\tau_B^r$. The raw one-way interval is $\Delta_{AB} = \tau_B^r - \tau_A^e$.
+    </p>
+    <p>
+        The Raw Loop Holonomy is the directional difference of the sum of intervals around the loop:
+    </p>
+    <div class="equation">
+        $$H_{\rm raw} \equiv \oint_{\circlearrowright} \Delta_{ij} - \oint_{\circlearrowleft} \Delta_{ji} = (\Delta_{AB} + \Delta_{BC} + \Delta_{CA}) - (\Delta_{AC} + \Delta_{CB} + \Delta_{BA})$$
+    </div>
+</div>
+
+<div class="critical-analysis">
+    <h4>Decomposition and Invariance</h4>
+    <p>
+        <strong>1. Invariance to Clock Offsets:</strong> Let each clock have a constant offset $\delta_i$ from coordinate time: $\tau_i(t) = t + \delta_i$. The term $\delta_i$ appears in one emission and one reception term in each direction.
+        <br>In $\circlearrowright$: $(\delta_B - \delta_A) + (\delta_C - \delta_B) + (\delta_A - \delta_C) = 0$.
+        <br>Thus, $H_{\rm raw}$ is strictly invariant to constant clock synchronization errors.
+    </p>
+    <p>
+        <strong>2. Decomposition:</strong> The observable decomposes into physical and systematic terms:
+    </p>
+    <div class="equation">
+        $$H_{\rm raw} = H_{\text{Sagnac}} + H_{\text{Shapiro}} + H_{\text{GM}} + H_{\text{atm}} + H_{\text{inst}} + H_{\rm TEP}$$
+    </div>
+    <ul>
+        <li>$H_{\text{Sagnac}} \propto \mathbf{\Omega} \cdot \mathbf{A}$: Earth rotation (dominant, $\sim 100$ ns).</li>
+        <li>$H_{\text{Shapiro}} \propto \sum GM/r$: Gravitational delay (cancels if path $AB$ same as $BA$, but nonzero if S/C motion makes paths differ).</li>
+        <li>$H_{\text{GM}}$: Gravito-magnetic/Lense-Thirring effects ($\sim 10^{-17}$ s).</li>
+        <li>$H_{\text{atm}}$: Non-reciprocal atmospheric delays (requires dual-frequency/radiometry).</li>
+        <li>$H_{\text{inst}}$: Non-reciprocal instrumental delays (fiber loops, transponders).</li>
+        <li><strong>$H_{\rm TEP}$:</strong> The signal of interest (residual synchronization holonomy).</li>
+    </ul>
+</div>
+
+<p>
+    The experimental challenge is to model or control the first five terms to isolate the sixth.
+</p>
+
+<div class="key-concept">
+    <h4>Measurement Recipe</h4>
+    <ol>
+        <li>Record emission and reception time tags for each directed link (A→B, B→C, C→A and reverse)</li>
+        <li>Compute $H_{\rm raw}$ from tags using the estimator definition above</li>
+        <li>Model $H_{\rm GR}$ using ephemerides, Earth-orientation parameters, and propagation models</li>
+        <li>Compute $H_{\rm resid} = H_{\rm raw} - H_{\rm GR}$</li>
+        <li>Repeat across geometries chosen to hold Sagnac projection fixed while varying field-gradient sensitivity</li>
+        <li>Report residual scaling with geometry; publish nuisance-model sensitivity</li>
+    </ol>
+</div>
+
+<div class="key-concept">
+    <h4>GR Prediction</h4>
+    <p>
+        In GR, after subtracting the modeled loop contributions H<sub>GR</sub>, the residual satisfies 
+        H<sub>resid</sub> = 0 (up to measurement uncertainty).
+    </p>
+    
+    <h4>TEP Prediction</h4>
+    <p>
+        In the conformal-only limit (B = 0), the A(φ) contribution to time transport is an exact gradient and yields 
+        H<sub>resid</sub> = 0 once GR loop effects are subtracted. A nonzero residual holonomy requires non-exact 
+        structure, for example disformal coupling B(φ) ≠ 0 or more general non-metricity. In that case, 
+        H<sub>resid</sub> can be nonzero with a magnitude that depends on loop geometry and field gradients.
+    </p>
+</div>
+
+<h5>8.2.2 Distinguishing TEP Holonomy from Sagnac Effect</h5>
+
+<p>
+    A skeptic will immediately note that any closed loop on a rotating Earth measures the 
+    Sagnac effect ($\Delta t = 4A\Omega/c^2$). The triangle holonomy test must explicitly 
+    distinguish TEP effects from Sagnac rotation.
+</p>
+
+<div class="critical-analysis">
+    <h4>Geometric vs Rotational Signatures</h4>
+    
+    <p><strong>Sagnac Effect:</strong></p>
+    <ul>
+        <li><strong>Area-dependent:</strong> $\Delta t_{Sagnac} = 4A\Omega/c^2$ where A is the enclosed area</li>
+        <li><strong>Rotation-axis dependent:</strong> Proportional to Earth's rotation rate $\Omega$</li>
+        <li><strong>Direction:</strong> Fixed sign determined by right-hand rule with rotation axis</li>
+        <li><strong>Magnitude:</strong> Order picoseconds for terrestrial-scale triangles (configuration-dependent)</li>
+    </ul>
+    
+    <p><strong>Residual Holonomy (TEP target):</strong></p>
+    <ul>
+        <li><strong>Area-dependent:</strong> $H_{\rm resid} \propto (B/A)|\nabla\phi|^2 \times \text{Area}$ (depends on loop flux)</li>
+        <li><strong>Field-gradient dependent:</strong> Proportional to scalar field gradient and disformal coupling</li>
+        <li><strong>Geometry:</strong> Optimized by large vertical or orbital loops sampling field gradients</li>
+        <li><strong>Magnitude:</strong> Order $H/T_{loop} \sim 10^{-18}$–$10^{-16}$ in the forecasts considered here (model- and geometry-dependent)</li>
+    </ul>
+</div>
+
+<p>
+    The numerical values quoted below are order-of-magnitude forecasts intended to clarify the experimental scale. In practice, the effective Sagnac term and the achievable subtraction residual depend on loop geometry, ephemerides and Earth-orientation modeling, link non-reciprocity control, and the time-transfer calibration strategy.
+</p>
+
+<h5>8.2.3 The Large-Area Strategy</h5>
+
+<p>
+    Contrary to "zero-area" approaches that eliminate signal along with noise, the original TEP framework 
+    (Smawfield 2025e) emphasizes that the holonomy $H$ scales with the loop area (flux of the time-transport curvature). 
+    To maximize the signal-to-noise ratio, a Large-Area MEO Strategy is proposed:
+</p>
+
+<div class="key-insight">
+    <h4>Ground-Satellite-Ground Triangle</h4>
+    <p>
+        Configure stations A and B on the ground separated by 1000–3000 km, with a Medium Earth Orbit (MEO) 
+        satellite S completing the triangle ($A \to S \to B \to A$):
+    </p>
+    
+    <ul>
+        <li><strong>Large Area:</strong> The loop extends to ~20,000 km altitude, enclosing a vast area to maximize TEP flux.</li>
+        <li><strong>Sagnac Modeling:</strong> The large Sagnac term is modeled and subtracted using precise IERS Earth orientation parameters (EOP) and GNSS/SLR ephemerides.</li>
+        <li><strong>TEP Discriminator:</strong> A non-zero residual $H_{\rm resid}$ after Sagnac subtraction.</li>
+        <li><strong>Implementation:</strong> Two-way optical time transfer (TWTTFT) links combined with one-way analysis.</li>
+    </ul>
+    
+    <p>
+        This configuration maximizes sensitivity to the disformal coupling $B(\phi)$, targeting the 
+        predicted $H/T_{loop} \sim 10^{-18}-10^{-16}$ fractional holonomy.
+    </p>
+</div>
+
+<div class="summary-box">
+    <h4>Numerical Predictions for MEO Configuration</h4>
+    <p>
+        For a ground-MEO triangle (effective loop duration $T_{loop} \approx 0.4$–0.5 s, including both directions in $H_{raw}$):
+    </p>
+    <table class="data-table">
+        <thead>
+            <tr>
+                <th>Parameter</th>
+                <th>Value</th>
+                <th>Derivation</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Loop time $T_{loop}$</td>
+                <td>0.5 s</td>
+                <td>Total path length ~120,000–150,000 km (six one-way links in $H_{raw}$)</td>
+            </tr>
+            <tr>
+                <td>Sagnac contribution</td>
+                <td>Order 10–100 ns</td>
+                <td>Large enclosed area; dominant background (configuration-dependent)</td>
+            </tr>
+            <tr>
+                <td>Residual holonomy $H_{\rm resid}$</td>
+                <td>Order 1–100 as</td>
+                <td>$H/T_{loop} \sim 10^{-18}$–$10^{-16}$ (forecast; model-dependent)</td>
+            </tr>
+            <tr>
+                <td>Required clock stability</td>
+                <td>$10^{-18}$</td>
+                <td>State-of-the-art optical lattice clocks</td>
+            </tr>
+            <tr>
+                <td>Detection threshold</td>
+                <td>Order 10<sup>2</sup> as</td>
+                <td>Set by subtraction residuals and link non-reciprocity (configuration-dependent)</td>
+            </tr>
+        </tbody>
+    </table>
+    <p>
+        The signal lies at the frontier of detectability. Isolating an attosecond-level residual from the ~100 ns Sagnac background requires differential measurements across multiple geometries. These targets should be regarded as indicative feasibility thresholds rather than finalized performance specifications.
+    </p>
+</div>
+
+<h5>8.2.4 Explicit Error Budget</h5>
+
+<p>
+    The experimental design relies on precise modeling to isolate the TEP residual. The Sagnac effect poses the most significant challenge:
+</p>
+
+<div class="summary-box">
+    <h4>Sagnac Modeling and Subtraction</h4>
+    
+    <table class="data-table">
+        <thead>
+            <tr>
+                <th>Source</th>
+                <th>Contribution</th>
+                <th>Uncertainty</th>
+                <th>Subtraction Method</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Earth rotation (IERS)</td>
+                <td>~100 ns</td>
+                <td>Order 10<sup>2</sup> as (after modeling)</td>
+                <td>Precise ephemerides + IERS EOP</td>
+            </tr>
+            <tr>
+                <td>Polar motion</td>
+                <td>0.5 ns</td>
+                <td>Order 10<sup>2</sup>–10<sup>3</sup> as (after modeling)</td>
+                <td>IERS polar motion parameters</td>
+            </tr>
+            <tr>
+                <td>Geodetic effects</td>
+                <td>0.1 ns</td>
+                <td>Order 10<sup>2</sup>–10<sup>3</sup> as (after modeling)</td>
+                <td>ITRF reference frame</td>
+            </tr>
+            <tr>
+                <td><strong>TEP signal</strong></td>
+                <td><strong>0.5–50 as</strong></td>
+                <td><strong>Signal of Interest</strong></td>
+                <td><strong>Differential Geometry</strong></td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <p>
+        Challenge: Absolute Sagnac subtraction is ultimately limited by geodetic and dynamical modeling (satellite orbits, Earth rotation, and link calibration). Detecting sub-femtosecond residuals therefore requires differential strategies (comparing loops with different field-gradient sensitivities but similar Sagnac projections) rather than relying solely on absolute subtraction. Feasibility depends on achieving the required link precision and systematic control.
+    </p>
+</div>
+
+<h5>8.2.5 Multiple Geometries for Cross-Validation</h5>
+
+<p>
+    To further distinguish TEP from Sagnac effects, use multiple triangle configurations:
+</p>
+
+<div class="validation-box">
+    <h4>Geometry Discrimination Strategy</h4>
+    
+    <ol>
+        <li><strong>Large-area triangle:</strong> Maximizes TEP signal (flux of time-transport curvature).</li>
+        <li><strong>Variable-area comparison:</strong> Signal should scale with loop area (unlike clock systematics).</li>
+        <li><strong>Opposite-orientation triangles:</strong> Sagnac changes sign; TEP holonomy sign depends on field gradient topology.</li>
+        <li><strong>Altitude variation:</strong> TEP depends on vertical field gradients ($\nabla\phi$); Sagnac depends only on rotation axis projection.</li>
+    </ol>
+    
+    <p>
+        Consistency across geometries provides robust discrimination between residual holonomy $H_{\rm resid}$ 
+        and Sagnac rotation effects.
+    </p>
+</div>
+
+<h5>8.2.6 Technical Requirements</h5>
+
+<table class="data-table">
+    <thead>
+        <tr>
+            <th>Parameter</th>
+            <th>Requirement</th>
+            <th>Current Technology</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Clock stability</td>
+            <td>10⁻¹⁸ over measurement period</td>
+            <td>Achievable with optical lattice clocks</td>
+        </tr>
+        <tr>
+            <td>One-way link precision</td>
+            <td>Femtosecond (averaging to as)</td>
+            <td>Optical links + carrier phase analysis</td>
+        </tr>
+        <tr>
+            <td>Baseline length</td>
+            <td>Large Area (MEO loop)</td>
+            <td>Ground-Satellite-Ground configuration</td>
+        </tr>
+        <tr>
+            <td>Atmospheric correction</td>
+            <td>Must not assume GR propagation</td>
+            <td>Requires independent calibration</td>
+        </tr>
+    </tbody>
+</table>
+
+<h5>8.2.7 The Critical Innovation</h5>
+ 
+<p>
+    The key requirement is genuinely one-way links. Current time transfer methods 
+    (two-way satellite time transfer, GPS common-view) use round-trip or common-mode 
+    techniques that cancel holonomy by construction.
+</p>
+ 
+<p>
+    One-way optical links between ground stations and satellites (or between satellites) 
+    could provide the required configuration. The European Space Agency's ACES mission 
+    includes a one-way link capability that could, in principle, be used for holonomy 
+    measurements—though this is not part of the planned science program.
+</p>
+
+<h5>8.2.8 Objections and Replies</h5>
+
+<div class="critical-analysis">
+    <h4>Common Objections</h4>
+    <ul>
+        <li>Objection: One-way times are convention-dependent; the observable is not physical.</li>
+        <li>Objection: Any loop timing signal is just the Sagnac effect (Earth rotation).</li>
+        <li>Objection: Atmospheric and link delays dominate the femtosecond/attosecond signal.</li>
+        <li>Objection: Subtracting $H_{GR}$ assumes GR and makes the test circular.</li>
+    </ul>
+</div>
+
+<div class="key-insight">
+    <h4>Replies (Operational and Falsifiable)</h4>
+    <ul>
+        <li>Reply: The loop observable $H_{raw}$ is constructed from recorded emission time tags and reception clock readouts; constant clock offsets cancel exactly in the direction-reversed loop difference.</li>
+        <li>Reply: Sagnac contributions are geometry-controlled. Using precise IERS Earth-orientation parameters and satellite ephemerides, the modeled Sagnac term can be subtracted to the level set by geodetic uncertainty. The key discriminator is a residual with the predicted geometry dependence, testable across multiple loop configurations.</li>
+        <li>Reply: Link systematics are handled by two-way optical time transfer (TWTTFT) for synchronization and one-way analysis, plus dual-frequency links. The signal scales with loop area (flux), while many systematics scale with path length or are geometry-independent.</li>
+        <li>Reply: $H_{GR}$ subtraction is treated as a modeled calibration. The discriminator is whether a <em>residual</em> remains that scales with field gradients (TEP) rather than rotation (Sagnac).</li>
+    </ul>
+</div>
+
+<h5>8.2.9 Formal Note: Why Conformal-Only Models Give H<sub>resid</sub> = 0</h5>
+
+<div class="key-concept">
+    <h4>Exactness and Residual Holonomy</h4>
+    <p>
+        In the theory formulation, time transport along a link can be represented by an effective one-form Ω. In the conformal-only limit (B = 0), Ω reduces to an exact gradient term, Ω ∝ d(ln A)/2, whose curl vanishes. After subtracting modeled GR loop effects (Sagnac, Shapiro, gravito-magnetic terms), the residual loop integral therefore satisfies H<sub>resid</sub> = ∮Ω = 0 on simply connected domains. A nonzero residual requires a non-exact contribution, for example a disformal term B(φ) ≠ 0 or more general non-metricity.
+    </p>
+    <p>
+        Throughout the paper, references to H<sub>resid</sub> as a discriminator should therefore be understood as targeting disformal or non-metric structure in the clock sector, not the purely conformal limit.
+    </p>
+</div>
+
+<h5>8.2.10 The Conformal-Only Limit and TEP Testability</h5>
+
+<p>
+    The preceding analysis raises a critical question: if conformal-only TEP (B = 0) predicts H<sub>resid</sub> = 0 
+    after GR subtraction—identical to GR—how can the triangle holonomy test discriminate between the theories?
+</p>
+
+<div class="critical-analysis">
+    <h4>Resolution: Multi-Signature Discrimination Strategy</h4>
+    
+    <p>
+        The holonomy test primarily constrains disformal coupling B(φ), while GNSS and clock-correlation 
+        observables provide sensitivity to conformal-sector structure via A(φ). TEP remains 
+        testable in the conformal-only limit through complementary observables:
+    </p>
+    
+    <p>
+        The following signatures are currently best viewed as hypotheses motivated by preliminary 
+        analyses rather than established empirical facts:
+    </p>
+    
+    <ol>
+        <li><strong>GNSS Distance Correlations:</strong> Exponential-like distance structure in clock residual correlations on continental-to-global baselines (order 10<sup>3</sup>–10<sup>4</sup> km) has been reported in GNSS clock products. This claim requires independent replication using raw data and explicit systematic controls.</li>
+        
+        <li><strong>Orbital Velocity Coupling:</strong> A correlation between GNSS-derived metrics and Earth's orbital dynamics has been reported. Establishing whether this reflects physics or analysis artifacts requires independent replication with pre-specified endpoints and null tests.</li>
+        
+        <li><strong>CMB Frame Alignment:</strong> Approximate alignment of an inferred anisotropy direction with the CMB dipole has been reported. This claim, if robustly replicated, would discriminate preferred-frame structure in the clock sector from standard GR expectations.</li>
+        
+        <li><strong>Multi-Constellation Consistency:</strong> If the signal is physical (conformal coupling 
+        to matter), it must appear identically across GPS, GLONASS, Galileo, and BeiDou. Systematic artifacts 
+        would show constellation-dependent variations.</li>
+    </ol>
+    
+    <p>
+        The triangle holonomy test serves a different purpose: it constrains or detects 
+        <em>disformal</em> coupling B(φ). GW170817 bounds the fractional GW–EM speed difference |c<sub>g</sub> − c<sub>γ</sub>|/c at the few × 10<sup>−15</sup> level under standard emission-time assumptions, strongly constraining disformal cone tilts in many scalar-tensor models (e.g., Ezquiaga &amp; 
+        Zumalacárregui 2017). Clock-sector disformal 
+        coupling could differ and remain detectable at the attosecond-level residuals targeted in Table 8.1.3. 
+        These residual levels should be regarded as indicative feasibility thresholds rather than finalized performance specifications.
+    </p>
+</div>
+
+<div class="key-insight">
+    <h4>Testability Hierarchy</h4>
+    
+    <table class="data-table">
+        <thead>
+            <tr>
+                <th>TEP Sector</th>
+                <th>Coupling Type</th>
+                <th>Primary Test</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Conformal</td>
+                <td>A(φ) clock rates</td>
+                <td>GNSS correlations, orbital coupling, CMB alignment</td>
+                <td>Suggested in exploratory analyses; requires independent replication</td>
+            </tr>
+            <tr>
+                <td>Disformal</td>
+                <td>B(φ) propagation</td>
+                <td>Triangle holonomy, GW speed</td>
+                <td>GW sector constrained; clock sector untested</td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <p>
+        Bottom line: TEP is falsifiable even if B = 0. The conformal sector makes distinct 
+        predictions (distance correlations, velocity coupling, frame alignment) that GR does not. The holonomy 
+        test adds sensitivity to disformal structure if present, but is not the sole discriminator.
+    </p>
+</div>
+
+<h3>8.3 Interplanetary Closed-Loop Timing</h3>
+
+<p>
+    Deep space baselines are attractive for probing disformal structure because they accumulate propagation effects over long paths. However, a two-point one-way asymmetry is not, by itself, an operational observable because it depends on unknown clock offsets and drifts between endpoints. An interplanetary discriminator therefore requires an explicitly offset-invariant, direction-reversing closed-loop construction.
+</p>
+
+<h5>8.3.1 The Observable: AU-Scale Loop Holonomy</h5>
+
+<div class="key-concept">
+    <h4>Estimator</h4>
+    <p>
+        Consider three nodes, such as an Earth station A and two spacecraft B and C. Each link is a one-way, time-tagged optical transfer giving $\Delta_{ij} = \tau_j^r - \tau_i^e$.
+    </p>
+    <p>
+        The raw AU-scale loop holonomy is defined by the direction-reversed loop difference:
+    </p>
+    <div class="equation">
+        $$H_{\rm AU,raw} \equiv (\Delta_{AB} + \Delta_{BC} + \Delta_{CA}) - (\Delta_{AC} + \Delta_{CB} + \Delta_{BA}).$$
+    </div>
+</div>
+
+<div class="critical-analysis">
+    <h4>Operational Invariance</h4>
+    <p>
+        Constant clock offsets cancel algebraically in $H_{\rm AU,raw}$ by the same mechanism as in the terrestrial triangle test. The observable is therefore well-defined without assuming an external synchronization convention, provided that emission and reception time tags are recorded for each one-way link.
+    </p>
+</div>
+
+<h5>8.3.2 Physical Content</h5>
+
+<p>
+    The signal of interest is the GR-subtracted residual holonomy $H_{\rm AU,resid} = H_{\rm AU,raw} - H_{\rm AU,GR}$. The modeled GR term includes Shapiro delay contributions from solar-system bodies, kinematic loop terms from platform motion, and plasma dispersion. A nonzero residual with the predicted geometry dependence would indicate non-exact time transport beyond the modeled GR loop effects.
+</p>
+
+<h5>8.3.3 Proposed Configuration</h5>
+
+<ul>
+    <li>Three-node geometry using one Earth terminal and two spacecraft (or one spacecraft plus a second Earth terminal), enabling both loop orientations.</li>
+    <li>Optical time transfer with recorded emission and reception time tags for each directed link.</li>
+    <li>Dual-frequency calibration (or independent plasma monitoring) to control dispersive delays.</li>
+    <li>End-to-end modeling of ephemerides and Shapiro delays to construct $H_{\rm AU,GR}$.</li>
+</ul>
+
+<h5>8.3.4 Forecast and Feasibility</h5>
+
+<div class="summary-box">
+    <h4>Interplanetary Forecast</h4>
+    <table class="data-table">
+        <thead>
+            <tr>
+                <th>Parameter</th>
+                <th>Target Value</th>
+                <th>Physical Implication</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Baseline</td>
+                <td>0.5–2 AU</td>
+                <td>Long integration path and large loop geometry</td>
+            </tr>
+            <tr>
+                <td>Loop time scale</td>
+                <td>$T_{\text{loop}} \sim 10^3$ s</td>
+                <td>Six one-way links contribute to $H_{\rm AU,raw}$</td>
+            </tr>
+            <tr>
+                <td>Residual target</td>
+                <td>$H_{\rm AU,resid} \sim 0.1$–10 ps (indicative)</td>
+                <td>AU-scale analogue of the triangle-holonomy discriminator; feasibility depends on plasma and ephemeris calibration</td>
+            </tr>
+        </tbody>
+    </table>
+    <p>
+        This test is technologically demanding because it couples precision time transfer to deep-space navigation and plasma calibration. Its primary value is conceptual: it upgrades interplanetary timing from a convention-dependent two-node asymmetry to an offset-invariant, closed-loop observable.
+    </p>
+</div>
+
+<h3>8.4 GNSS Correlation Replication</h3>
+
+<p>
+    Exploratory analyses within the TEP research program have suggested distance-structured correlations in GNSS 
+    clock data with correlation length on the order of 10<sup>3</sup>–10<sup>4</sup> km. Independent, blinded replication of 
+    this analysis would provide strong evidence for or against the TEP interpretation.
+</p>
+
+<h5>8.4.1 The Existing Evidence</h5>
+
+<p>
+    Exploratory analysis from the TEP research program, using 25 years of CODE clock products 
+    and cross-validated with IGS and ESA analysis centers, suggests:
+</p>
+
+<ul>
+    <li>Exponential decay of clock correlations with distance</li>
+    <li>Correlation length of order a few × 10<sup>3</sup> km (reported example: λ ≈ few × 10<sup>3</sup> km under one estimator)</li>
+    <li>Consistency across three independent analysis centers (R² = 0.92–0.97)</li>
+    <li>Orbital-dynamics coupling (reported correlation with Earth's orbital velocity)</li>
+    <li>Approximate alignment with the CMB frame (reported within tens of degrees)</li>
+</ul>
+
+<p>
+    <strong>Status:</strong> These findings constitute preliminary evidence requiring independent 
+    replication. This paper treats them as a motivating hypothesis and does not assume their numerical values when specifying the discriminating measurement geometries.
+</p>
+
+<h5>8.4.2 The Reproducibility Mandate</h5>
+
+<p>
+    For these claims to be scientifically accepted, future analysis must move beyond preliminary 
+    reports to a fully transparent <strong>Reproducibility Package</strong>. Any confirming study must provide:
+</p>
+
+<div class="key-concept">
+    <h4>Required Reproducibility Standards</h4>
+    <ul>
+        <li><strong>Exact Datasets:</strong> Specification of precise products (e.g., IGS `clk` 30s vs 5m), specific stations (IGS site IDs), and exact time windows used.</li>
+        <li><strong>Preprocessing Pipeline:</strong> Full code or algorithmic description of outlier removal, reference clock definition, and detrending methods (linear vs polynomial).</li>
+        <li><strong>Null Simulations:</strong> Injection/recovery tests where synthetic TEP signals are added to noise to verify detection efficiency, and "scrambled" null tests (randomizing station locations) to verify zero signal.</li>
+        <li><strong>Multiple-Testing Corrections:</strong> Statistical penalties for searching across multiple correlation lengths ($\lambda$) and lag times.</li>
+    </ul>
+    <p>
+        Without these controls, exponential fits to noisy residuals can be spurious. The TEP program commits to releasing a public codebase (TEP-GNSS-Open) meeting these standards.
+    </p>
+</div>
+
+<h5>8.4.3 Replication Requirements</h5>
+
+<p>
+    Independent replication should:
+</p>
+
+<ol>
+    <li>Use raw GNSS data (not processed clock products) to avoid filtering artifacts</li>
+    <li>Apply minimal processing to preserve spatial correlations</li>
+    <li>Test multiple constellations (GPS, GLONASS, Galileo, BeiDou)</li>
+    <li>Verify the correlation length is consistent across datasets</li>
+    <li>Test for systematic artifacts (ionospheric, tropospheric, orbital)</li>
+</ol>
+
+<h5>8.4.4 Falsification Criteria</h5>
+
+<p>
+    The TEP interpretation would be falsified if:
+</p>
+
+<ul>
+    <li>Correlation length falls outside 500-20,000 km range</li>
+    <li>Correlations disappear in raw (unprocessed) data</li>
+    <li>Correlations are explained by known systematic effects</li>
+    <li>Different constellations show inconsistent correlation lengths</li>
+    <li>Conformal-only TEP (B = 0) is not falsified by null holonomy alone; the conformal sector requires independent disconfirmation via clock-correlation or distance-structured observables</li>
+</ul>
+
+<h3>8.5 Optical Clock Networks and Environmental Screening</h3>
+
+<p>
+    The next generation of optical clock networks—connected by optical fiber or 
+    free-space links—could provide unprecedented sensitivity to synchronization structure 
+    and environmental screening mechanisms.
+</p>
+
+<h5>8.5.1 Current Developments</h5>
+
+<p>
+    Several projects are developing continental-scale optical clock networks:
+</p>
+
+<ul>
+    <li>European fiber network connecting national metrology institutes</li>
+    <li>NIST-JILA optical link in Boulder, Colorado</li>
+    <li>Proposed intercontinental optical links</li>
+</ul>
+
+<h5>8.5.2 TEP Sensitivity: Two Phases</h5>
+
+<p>
+    <strong>Phase I: Distance Correlations.</strong> Optical clocks achieve $10^{-18}$ stability, 
+    potentially sensitive to distance-dependent correlations at the 
+    $\delta\tau/\tau \sim 10^{-18}$ level over 1000 km baselines.
+</p>
+
+<p>
+    <strong>Phase II: Environmental Screening Maps.</strong> TEP predicts that the scalar field profile $\phi(x)$ 
+    is screened by local matter density. Comparing clocks at different altitudes (sea level vs mountain vs LEO) 
+    allows mapping the screening profile. After subtracting GR redshift, TEP predicts residual frequency shifts 
+    of $10^{-19}$–$10^{-18}$ over tens of kilometers for a screening length $\lambda_{scr} \sim 10$ km.
+</p>
+
+<h5>8.5.3 Critical Design Considerations</h5>
+
+<p>
+    To test TEP, optical clock networks must:
+</p>
+
+<ul>
+    <li>Use one-way comparisons (not just common-mode rejection)</li>
+    <li>Span continental-to-global baselines (order 10<sup>3</sup>–10<sup>4</sup> km)</li>
+    <li>Operate continuously to detect temporal variations</li>
+    <li>Deploy transportable clocks to varying environments (density/altitude) to test screening</li>
+</ul>
+
+<h3>8.6 Matter-Wave Interferometry</h3>
+
+<p>
+    Atom interferometers provide a complementary probe sensitive to the gradients of the conformal factor $\nabla \ln A(\phi)$.
+</p>
+
+<ul>
+    <li><strong>Objective:</strong> Measure $\nabla\nabla \ln A(\phi)$ via differential phases in atom interferometers.</li>
+    <li><strong>Design:</strong> Long-baseline or tall fountain interferometers (Sr, Rb) in gradiometric configurations.</li>
+    <li><strong>Discrimination:</strong> Combine with mechanical gravimeters. GR affects both; TEP scalar gradients affect atoms (via $A(\phi)$) differently from bulk mass (if composition-dependent couplings exist, though A is universal at leading order).</li>
+</ul>
+
+<h3>8.7 Explicit TEP Predictions</h3>
+
+<p>
+    To ensure falsifiability, TEP makes specific numerical predictions for each proposed test. 
+    These predictions are derived from the theoretical framework (Smawfield 2025a). Numerical ranges are order-of-magnitude targets; where they are informed by reported GNSS analyses, they are treated as provisional pending independent replication.
+</p>
+
+<div class="summary-box">
+    <h4>Quantitative TEP Predictions</h4>
+    <table class="data-table">
+        <thead>
+            <tr>
+                <th>Observable</th>
+                <th>TEP Prediction</th>
+                <th>Derivation</th>
+                <th>Falsification Criterion</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Correlation length λ</td>
+                <td>1,000–10,000 km</td>
+                <td>Screening theory: λ ~ (M<sub>Pl</sub>/ρ)^(1/(n+1)) × Λ</td>
+                <td>λ < 500 km or λ > 20,000 km</td>
+            </tr>
+            <tr>
+                <td>Residual holonomy H<sub>resid</sub></td>
+                <td>0.5–50 as (MEO Triangle)</td>
+                <td>H<sub>resid</sub>/T<sub>loop</sub> ~ 10⁻¹⁸–10⁻¹⁶ (TEP-GL Forecast)</td>
+                <td>|H<sub>resid</sub>| < 0.1 as after GR subtraction</td>
+            </tr>
+            <tr>
+                <td>Interplanetary Closed-Loop Residual</td>
+                <td>0.1–10 ps (AU-scale loop)</td>
+                <td>Direction-reversed loop: $H_{\rm AU,resid} = H_{\rm AU,raw} - H_{\rm AU,GR}$</td>
+                <td>|H<sub>AU,resid</sub>| < 0.01 ps after GR subtraction</td>
+            </tr>
+            <tr>
+                <td>Anisotropy ratio (EW/NS)</td>
+                <td>1.5–3.0</td>
+                <td>CMB velocity v ~ 369 km/s modulates screening</td>
+                <td>Ratio < 1.2 or > 5.0</td>
+            </tr>
+            <tr>
+                <td>Orbital coupling</td>
+                <td>|r| > 0.5 with orbital velocity</td>
+                <td>Velocity-dependent screening length</td>
+                <td>|r| < 0.3 or wrong phase</td>
+            </tr>
+            <tr>
+                <td>CMB alignment</td>
+                <td>< 30° from CMB dipole</td>
+                <td>Cosmic rest frame defines field gradient</td>
+                <td>> 60° separation</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="key-insight">
+    <h4>Phenomenological Benchmark</h4>
+    <p>
+        Some phenomenological discussions adopt a working benchmark correlation length on the order of 10<sup>3</sup>–10<sup>4</sup> km (as reported in GNSS analyses) to illustrate experimental sensitivity and to parameterize a representative screening scale. This manuscript does not rely on that benchmark: the underdetermination and the proposed discriminating observables are defined independently of any particular GNSS-derived parameter value.
+    </p>
+    <p>
+        Independent replication remains essential. If replication fails to confirm a robust distance-structured correlation in raw GNSS observables, any GNSS-informed parameter inference (including mapping an effective correlation length to a field mass scale) would require revision.
+    </p>
+</div>
+
+<h3>8.8 Summary: The Experimental Frontier</h3>
+
+<div class="summary-box">
+    <h4>Discriminating Tests</h4>
+    <table class="data-table">
+        <thead>
+            <tr>
+                <th>Test</th>
+                <th>Configuration</th>
+                <th>GR Prediction</th>
+                <th>TEP Prediction</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Triangle Holonomy</td>
+                <td>One-way closed loop (MEO)</td>
+                <td>H<sub>resid</sub> = 0</td>
+                <td>H<sub>resid</sub> ~ 50 as</td>
+            </tr>
+            <tr>
+                <td>Interplanetary Closed-Loop</td>
+                <td>AU-scale direction-reversed loop</td>
+                <td>H<sub>resid</sub> = 0</td>
+                <td>H<sub>AU,resid</sub> ~ 0.1–10 ps</td>
+            </tr>
+            <tr>
+                <td>GNSS Replication</td>
+                <td>Raw data analysis</td>
+                <td>No correlations (or systematic origin)</td>
+                <td>Distance-structured correlations (characteristic scale to be established by replication)</td>
+            </tr>
+            <tr>
+                <td>Optical Clock Network</td>
+                <td>Continental one-way</td>
+                <td>No spatial structure</td>
+                <td>Screening maps / Correlations</td>
+            </tr>
+            <tr>
+                <td>Matter-Wave Interferometry</td>
+                <td>Gradiometer</td>
+                <td>Depends on $g_{\mu\nu}$</td>
+                <td>Depends on $g_{\mu\nu}$ AND $\nabla A(\phi)$</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<p>
+    These experiments share a common feature: they break the two-way symmetry that 
+    characterizes existing precision tests. By measuring one-way propagation, closed-loop 
+    residual holonomy H<sub>resid</sub>, or spatial correlations, they probe the synchronization structure that 
+    distinguishes GR from TEP.
+</p>
+
+<p>
+    None of these experiments has been performed with the explicit goal of testing 
+    synchronization integrability. The experimental frontier lies not in achieving 
+    greater precision within existing paradigms but in designing fundamentally new 
+    measurement configurations.
+</p>

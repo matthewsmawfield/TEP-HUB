@@ -1,0 +1,38 @@
+{
+  "@context": "https://doi.org/10.5063/schema/codemeta-2.0",
+  "@type": [
+    "ScholarlyArticle",
+    "SoftwareSourceCode"
+  ],
+  "identifier": "https://doi.org/10.5281/zenodo.18109760",
+  "doi": "10.5281/zenodo.18109760",
+  "name": "What Do Precision Tests of General Relativity Actually Measure?",
+  "description": "Most high-precision tests of general relativity constrain reciprocity-even, largely local observables within single-metric frameworks. This leaves open a specific underdetermination between General Relativity (GR) and a class of two-metric disformal scalar-tensor modifications, exemplified here by the Temporal Equivalence Principle (TEP). This paper formalizes a measurement taxonomy distinguishing gauge-invariant from convention-dependent observables and identifies six recurring scope limitations in the experimental canon: (1) two-way measurement dominance; (2) local/global conflation; (3) model-dependent calibration; (4) single-path multi-messenger constraints on differential propagation that do not directly test common-mode conformal clock-sector structure; (5) theory-laden data reduction; and (6) the proximity-regime screening blind spot, whereby tests performed in deep potential wells probe only the screened regime where scalar-field gradients are continuously suppressed, leaving the active-shear dilute regime unexplored. These characteristics do not diminish the experimental achievements but indicate that, in many cases, the tests primarily constrain parameter space within assumed frameworks rather than systematically discriminating between alternatives. Discriminating observables—specifically loop asymmetries, spatial correlations, and proximity-regime screening transitions—are proposed, together with experimental configurations capable of resolving the underdetermination.",
+  "author": [
+    {
+      "@type": "Person",
+      "givenName": "Matthew Lukin",
+      "familyName": "Smawfield",
+      "@id": "https://orcid.org/0009-0003-8219-3159"
+    }
+  ],
+  "datePublished": "2025-12-31",
+  "dateModified": "2026-08-08",
+  "version": "0.5",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "codeRepository": "https://github.com/matthewsmawfield/TEP-EXP",
+  "url": "https://mlsmawfield.com/tep/exp/",
+  "keywords": [
+    "general relativity",
+    "experimental tests",
+    "underdetermination",
+    "synchronization",
+    "GPS",
+    "gravitational redshift",
+    "Shapiro delay",
+    "multi-messenger astronomy"
+  ],
+  "developmentStatus": "active",
+  "runtimePlatform": "Python",
+  "applicationCategory": "Scientific/Research"
+}

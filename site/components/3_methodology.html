@@ -1,0 +1,356 @@
+<h2>2. Methodological Framework</h2>
+
+<p>
+    Before examining individual experiments, it is essential to establish the
+    conceptual tools required to distinguish what precision tests actually
+    measure from what they are commonly claimed to measure. This section
+    develops five key distinctions that structure the subsequent analysis.
+</p>
+
+<!-- include: screening_projection_notice.html -->
+
+
+<h3>2.1 Gauge-Invariant vs. Convention-Dependent Observables</h3>
+
+<p>
+    Not all physical quantities carry the same epistemological weight. A
+    fundamental distinction exists between gauge-invariant
+    observables—quantities that remain unchanged under coordinate
+    transformations—and convention-dependent quantities that depend on arbitrary
+    choices.
+</p>
+
+<div class="key-concept">
+    <h4>Definition 2.1: Gauge-Invariant Observable</h4>
+    <p>
+        An observable O is gauge-invariant if and only if its value is
+        independent of the coordinate system, synchronization convention, or
+        reference frame used to compute it.
+    </p>
+</div>
+
+<p>Examples of gauge-invariant observables include:</p>
+<ul>
+    <li>Proper time elapsed along a worldline: τ = ∫ ds</li>
+    <li>Round-trip light travel time between two events</li>
+    <li>Frequency ratio of co-located clocks</li>
+    <li>Interference fringe count in closed optical paths</li>
+</ul>
+
+<p>Examples of convention-dependent quantities include:</p>
+<ul>
+    <li>One-way speed of light (depends on synchronization)</li>
+    <li>Coordinate time difference between spatially separated events</li>
+    <li>Simultaneity of distant events</li>
+</ul>
+
+<p>
+    The critical insight is that most precision tests measure gauge-invariant
+    quantities, which by construction do not directly probe the specific loop
+    and correlation observables that differ between GR and TEP in the regime
+    considered here.
+</p>
+
+<p>
+    The central claim of this paper is that most high-precision tests to date
+    access only the gauge-invariant subset of observables on which GR and TEP
+    explicitly agree.
+</p>
+
+<h3>2.2 Two-Way vs. One-Way Measurements</h3>
+
+<p>
+    The distinction between two-way (round-trip) and one-way measurements is not
+    merely technical but fundamental to what can be tested.
+</p>
+
+<div class="key-concept">
+    <h4>The Reichenbach Synchronization Problem</h4>
+    <p>
+        The one-way speed of light cannot be measured without first establishing
+        a synchronization convention between spatially separated clocks. But any
+        synchronization convention presupposes a one-way speed of light. This
+        circularity means the one-way speed is convention-dependent, not
+        empirically determinable.
+    </p>
+</div>
+
+<p>Two-way measurements avoid this circularity by using a single clock:</p>
+
+<div class="equation">
+    $$t_{\text{round-trip}} = t_{\text{return}} - t_{\text{emit}} \quad
+    \text{(single clock, gauge-invariant)}$$
+</div>
+
+<p>
+    However, this gauge-invariance comes at a cost: two-way measurements are
+    inherently insensitive to direction-dependent effects. If light travels at c
+    + v in one direction and c − v in the return direction, the round-trip time
+    is:
+</p>
+
+<div class="equation">
+    $$t_{RT} = \frac{L}{c+v} + \frac{L}{c-v} = \frac{2Lc}{c^2 - v^2} \approx
+    \frac{2L}{c} + O\left(\frac{v^2}{c^2}\right)$$
+</div>
+
+<p>
+    The first-order direction-dependent term cancels exactly. This is not a
+    limitation of experimental precision but a mathematical necessity:
+    round-trip measurements are reciprocity-even and cannot probe
+    reciprocity-odd effects.
+</p>
+
+<h3>2.3 Local vs. Global Tests</h3>
+
+<p>
+    A second crucial distinction separates local tests—performed within a single
+    freely falling frame—from global tests that probe the structure of spacetime
+    across extended regions.
+</p>
+
+<div class="key-concept">
+    <h4>The Equivalence Principle Hierarchy</h4>
+    <ul>
+        <li>
+            <em>Weak Equivalence Principle (WEP):</em> All bodies fall with the
+            same acceleration in a gravitational field.
+        </li>
+        <li>
+            <em>Einstein Equivalence Principle (EEP):</em> In local freely
+            falling frames, non-gravitational physics is Lorentz-invariant.
+        </li>
+        <li>
+            <em>Strong Equivalence Principle (SEP):</em> EEP extends to
+            gravitational physics; local gravitational experiments are
+            position-independent.
+        </li>
+    </ul>
+</div>
+
+<p>
+    The TEP framework satisfies EEP exactly: in local freely falling frames,
+    physics reduces to special relativity with invariant c. This means local
+    tests—no matter how precise—cannot distinguish TEP from GR. The distinction
+    arises in global and statistical observables: spatial structure in clock
+    residuals and a GR-subtracted residual holonomy H<sub>resid</sub> defined by
+    genuinely one-way, direction-reversing closed loops.
+</p>
+
+<p>
+    The operational criterion for "local" is whether the measurement region is
+    small compared to the curvature scale. Modern optical clock experiments
+    operate at millimeter scales where spacetime curvature is negligible—they
+    are quintessentially local tests.
+</p>
+
+<h3>2.4 The Screening Blind Spot: Temporal Topology and Proximity Regimes</h3>
+
+<p>
+    A fifth distinction concerns the density environment in which experiments
+    are performed. The canonical precision tests are overwhelmingly conducted in
+    dense gravitational environments: Earth's surface, the solar system, or
+    laboratory frames embedded in screened-source or locally constrained regimes. In scalar-tensor
+    frameworks with environment-dependent screening, these locations correspond to
+    regimes where the scalar field gradient is strongly suppressed.
+</p>
+
+<div class="key-concept">
+    <h4>Temporal Topology and Temporal Shear</h4>
+    <p>
+        In TEP, screening is formulated as a continuous geometric effect rather
+        than a discrete thin-shell boundary. The spatial profile of the scalar
+        field φ(r; ρ) — termed Temporal Topology — is shaped by the ambient
+        density through the effective potential V_eff(φ; ρ). In deep potential
+        wells, high ambient matter density suppresses the field gradient (Temporal
+        Shear, ∇φ), driving ∇φ toward zero while the Temporal Topology persists.
+        This continuous suppression reconciles local null tests with cosmological dynamics
+        without invoking step-function boundary conditions.
+    </p>
+    <p>
+        The operative quantity for fifth-force coupling and clock-sector effects
+        is the local field gradient (Temporal Shear). In dense environments,
+        suppression of Temporal Shear by environmental state and boundary conditions
+        decouples local clock rates from the scalar field, cleanly preserving PPN
+        bounds. In dilute regions, the gradient recovers and the field becomes
+        cosmologically active.
+    </p>
+</div>
+
+<div class="equation">
+    $$\Sigma_\mu^{\text{obs}} = \mathcal{S}_\Sigma(\mathcal{E}) \, \nabla_\mu \ln A(\phi),$$
+</div>
+
+<p>where the environmental state is
+$$\mathcal{E} = \{\rho, \Phi/c^2, \nabla\rho, \nabla\Phi, \text{compactness}, R_T(M), \text{proximity}, T, z, \text{boundary geometry}, \text{coherence volume}\}.$$
+This single operator unifies density screening, compactness screening, proximity screening, thermodynamic/environmental-state response, lensing/cosmological covariance screening, and wide-binary environmental screening across the entire TEP corpus.</p>
+
+<p>
+    The experimental consequence is that existing precision tests probe the
+    deeply screened regime, where Temporal Shear vanishes continuously. They are
+    insensitive to the field's behavior in the unscreened dilute regime
+    where large-scale structural effects originate. This creates a
+    proximity-regime blind spot: experiments constrain the screened limit while
+    leaving the unscreened limit largely unexplored.
+</p>
+
+<p>
+    Discriminating tests must therefore either probe dilute environments
+    where Temporal Shear recovers (wide binary systems, galactic halos), map the
+    continuous transition using altitude-varying clock networks, or detect
+    spatial correlations on scales where the field gradient remains active.
+</p>
+
+<h3>2.5 Single-Path vs. Multipath Configurations</h3>
+
+<p>
+    The final distinction concerns whether signals traverse a single path or
+    multiple paths through spacetime.
+</p>
+
+<div class="key-concept">
+    <h4>Common-Mode Cancellation</h4>
+    <p>
+        When two signals traverse the same path, any path-dependent effects
+        cancel in their comparison. This is why GW170817—where photons and
+        gravitons traveled the same ~130 million light-year path—constrains only
+        their differential propagation speed, not their common-mode time
+        dilation.
+    </p>
+</div>
+
+<p>TEP phenomenology arises from:</p>
+<ul>
+    <li>
+        Multipath configurations (gravitational lensing, where rays sample
+        different field values)
+    </li>
+    <li>
+        Statistical correlations (GNSS, where spatial structure ⟨φ(x)φ(x')⟩ is
+        probed)
+    </li>
+    <li>
+        Closed loops with direction reversal (residual holonomy H<sub
+            >resid</sub
+        >
+        after subtracting modeled GR loop effects)
+    </li>
+</ul>
+
+<p>
+    Single-path, single-direction measurements—the dominant mode of precision
+    tests—are structurally incapable of detecting these signatures.
+</p>
+
+<h3>2.6 Summary: The Measurement Taxonomy</h3>
+
+<table class="data-table">
+    <thead>
+        <tr>
+            <th>Measurement Type</th>
+            <th>Gauge Status</th>
+            <th>Sensitive To</th>
+            <th>Blind To</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Two-way, local</td>
+            <td>Invariant</td>
+            <td>Local Lorentz violation</td>
+            <td>Direction-dependence, global structure</td>
+        </tr>
+        <tr>
+            <td>Two-way, global</td>
+            <td>Invariant</td>
+            <td>PPN parameters (γ, β)</td>
+            <td>Odd-parity effects, synchronization</td>
+        </tr>
+        <tr>
+            <td>One-way, single-path</td>
+            <td>Convention-dependent</td>
+            <td>Relative clock rates</td>
+            <td>Absolute synchronization</td>
+        </tr>
+        <tr>
+            <td>One-way, closed-loop</td>
+            <td>Invariant</td>
+            <td>Residual holonomy H<sub>resid</sub>, path-dependence</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td>Screened (dense environment)</td>
+            <td>Invariant</td>
+            <td>Screened PPN limits</td>
+            <td>Unscreened dilute behavior</td>
+        </tr>
+    </tbody>
+</table>
+
+<p>The 'proximity-regime' boundaries defined by deep local potential wells are physical manifestations of the abstract environmental operator $\mathcal{S}_\Sigma(\mathcal{E})$. Because standard precision tests overwhelmingly operate within deeply saturated macro-environments, they effectively probe only the screened limit of the continuous screening curve, fundamentally blinding these experimental protocols to the active temporal shear.</p>
+
+<p>
+    The final row—one-way closed-loop measurements—represents the only
+    configuration capable of testing synchronization integrability. No
+    high-precision relativistic-gravity test has directly targeted a
+    convention-independent, direction-reversing, one-way loop observable
+    designed to detect non-integrable synchronization beyond modeled GR terms.
+    Nor has any precision test directly probed the unscreened dilute regime
+    where Temporal Shear recovers and scalar-field spatial structure becomes
+    detectable.
+</p>
+
+<h3>2.7 Canonical Tests and Their Constrained Sectors</h3>
+
+<p>
+    The following table summarizes which theoretical sectors the canonical
+    precision tests actually constrain. Understanding these mappings clarifies
+    why TEP's clock-response sector (κ<sub>X</sub>) and residual holonomy
+    (H<sub>resid</sub>) remain largely untested.
+</p>
+
+<table class="data-table">
+    <thead>
+        <tr>
+            <th>Test</th>
+            <th>Sector Constrained</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Cassini (Shapiro delay)</td>
+            <td>Σ<sub>μ</sub><sup>obs</sup>, source charge, Shapiro sector</td>
+        </tr>
+        <tr>
+            <td>MICROSCOPE (Eötvös)</td>
+            <td>Composition-dependent scalar charge</td>
+        </tr>
+        <tr>
+            <td>GW170817/GRB170817A</td>
+            <td>Disformal cone tilt (differential photon-graviton speed)</td>
+        </tr>
+        <tr>
+            <td>GNSS/RINEX/SLR</td>
+            <td>Covariance sector (two-way clock comparisons)</td>
+        </tr>
+        <tr>
+            <td>Cepheids/pulsars/JWST</td>
+            <td>κ<sub>X</sub> clock-response sector (astronomical distance-ladder)</td>
+        </tr>
+        <tr>
+            <td>Triangle holonomy</td>
+            <td>H<sub>resid</sub> (residual synchronization holonomy)</td>
+        </tr>
+    </tbody>
+</table>
+
+<p>
+    The pattern is clear: existing tests constrain source-coupling, composition,
+    and light-propagation sectors, but do not directly probe the clock-response
+    coefficients κ<sub>X</sub> or the residual holonomy H<sub>resid</sub> that
+    discriminate TEP from GR. The cross-series consistency of κ<sub>Cep</sub> ≈
+    9.6 × 10<sup>5</sup> mag (Paper 11) and κ<sub>MSP</sub> ~ 10<sup>6</sup>–10<sup>7</sup>
+    (Paper 10) demonstrates that these response coefficients occupy the same
+    phenomenological regime, yet neither is directly comparable to Cassini's
+    γ constraint or MICROSCOPE's composition bounds.
+</p>
