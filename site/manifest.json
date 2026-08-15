@@ -1,5 +1,5 @@
 {
-  "title": "What Do Precision Tests of General Relativity Actually Measure?",
+  "title": "The Chronometric Autopsy of the Expanding Universe: Vindicating Hubble's Doubt and Einstein's Eternal Continuum via the Temporal Equivalence Principle",
   "sections": [
     {
       "id": "section-abstract",
@@ -9,61 +9,61 @@
     },
     {
       "id": "section-intro",
-      "title": "1. Introduction: The Experimental Canon",
+      "title": "1. Introduction: The Chronometric Blindness of 1931",
       "file": "2_introduction.html",
       "order": 2
     },
     {
-      "id": "section-methodology",
-      "title": "2. Methodological Framework",
-      "file": "3_methodology.html",
+      "id": "section-hubble-resistance",
+      "title": "2. Hubble's Resistance: The Data That Fought Back",
+      "file": "3_hubble_resistance.html",
       "order": 3
     },
     {
-      "id": "section-redshift",
-      "title": "3. The Gravitational Redshift Tests",
-      "file": "4_redshift_tests.html",
+      "id": "section-einstein-wilderness",
+      "title": "3. Einstein's Wilderness Years",
+      "file": "4_einstein_wilderness.html",
       "order": 4
     },
     {
-      "id": "section-time-dilation",
-      "title": "4. The Time Dilation Tests",
-      "file": "5_time_dilation_tests.html",
+      "id": "section-bimetric-framework",
+      "title": "4. The Bi-Metric Framework",
+      "file": "5_bimetric_framework.html",
       "order": 5
     },
     {
-      "id": "section-light-propagation",
-      "title": "5. The Light Propagation Tests",
-      "file": "6_light_propagation_tests.html",
+      "id": "section-synchronization-holonomy",
+      "title": "5. Synchronization Holonomy and the Redshift Degeneracy",
+      "file": "6_synchronization_holonomy.html",
       "order": 6
     },
     {
-      "id": "section-multimessenger",
-      "title": "6. The Multi-Messenger Constraints",
-      "file": "7_multimessenger.html",
+      "id": "section-jwst-cosmic-dawn",
+      "title": "6. The JWST Crisis and the Illusion of the Cosmic Dawn",
+      "file": "7_jwst_cosmic_dawn.html",
       "order": 7
     },
     {
-      "id": "section-resonator",
-      "title": "7. The Resonator Tests",
-      "file": "8_resonator_tests.html",
+      "id": "section-dark-sector-singularities",
+      "title": "7. Erasing the Dark Sector and Fulfilling Eddington's Law",
+      "file": "8_dark_sector_singularities.html",
       "order": 8
     },
     {
-      "id": "section-discriminating",
-      "title": "8. What Would Actually Discriminate?",
-      "file": "9_discriminating_tests.html",
+      "id": "section-h0-cepheid",
+      "title": "8. The Hubble Tension and the Cepheid Bias",
+      "file": "9_h0_cepheid.html",
       "order": 9
     },
     {
-      "id": "section-discussion",
-      "title": "9. Discussion: The Underdetermination Problem",
-      "file": "10_discussion.html",
+      "id": "section-gnss-proof",
+      "title": "9. The Terrestrial Chronometric Proof",
+      "file": "10_gnss_proof.html",
       "order": 10
     },
     {
       "id": "section-conclusion",
-      "title": "10. Conclusions",
+      "title": "10. Conclusions: The Eternal Continuum Restored",
       "file": "11_conclusions.html",
       "order": 11
     },

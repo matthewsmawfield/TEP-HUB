@@ -1,111 +1,36 @@
-<section id="reproducibility">
-    <h2>Data Availability & Reproducibility</h2>
-    
-    <div class="reproducibility-box" style="background: #f5f5f5; padding: 1.5em; margin: 1em 0; border-left: 4px solid #2c5aa0;">
-        <p>
-            This work follows open-science practices. All results are fully reproducible from the analysis code 
-            and documentation provided. As a theoretical/methodological analysis paper, this work synthesizes 
-            established experimental results from the published literature rather than generating new primary data.
-        </p>
-    </div>
+<section>
+    <h2>Data Availability &amp; Reproducibility</h2>
 
-    <h3>Repository & Code</h3>
     <p>
-        GitHub Repository: <a href="https://github.com/matthewsmawfield/TEP-EXP">github.com/matthewsmawfield/TEP-EXP</a>
-    </p>
-    <p>
-        The repository contains the complete manuscript source, methodological framework documentation, 
-        and citation bibliography for this theoretical analysis of precision tests of General Relativity.
+        All quantitative claims in this manuscript trace to open data and
+        reproducible pipelines within the TEP corpus. This capstone paper
+        introduces no new datasets; it synthesizes and routes to the
+        specialized analyses.
     </p>
 
-    <h4>Repository Structure</h4>
-    <pre><code>TEP-EXP/
-├── manuscripts/               # Markdown manuscript sources
-│   ├── 9-TEP-EXP-v0.5-Istanbul.md  # Primary manuscript
-│   └── [other versions]
-├── site/
-│   ├── components/            # HTML manuscript sections
-│   │   ├── 1_abstract.html
-│   │   ├── 2_introduction.html
-│   │   ├── 3_methodology.html
-│   │   ├── 4_redshift_tests.html
-│   │   ├── 5_time_dilation_tests.html
-│   │   ├── 6_light_propagation_tests.html
-│   │   ├── 7_multimessenger.html
-│   │   ├── 8_resonator_tests.html
-│   │   ├── 9_discriminating_tests.html
-│   │   ├── 10_discussion.html
-│   │   ├── 11_conclusions.html
-│   │   └── 12_references.html
-│   ├── public/                # Static assets
-│   └── manifest.json          # Site configuration
-├── scripts/
-│   └── utils/                 # Utility scripts
-│       └── process_pdf.py     # PDF generation helper
-├── requirements.txt           # Python dependencies
-├── CITATION.cff               # Citation metadata
-└── README.md                  # Repository documentation</code></pre>
-
-    <h3>Data Provenance</h3>
+    <h3>Corpus Routing</h3>
     <p>
-        This is a theoretical and methodological analysis paper. All experimental data referenced is from 
-        published literature with full citations provided. Key referenced experiments include:
+        <!-- Table mapping each claim in Sections 4–9 to the specialized
+             manuscript carrying its full derivation and data products
+             (0-TEP, 4-TEP-GL, 18-TEP-HC, the GNSS chronometry papers). -->
     </p>
-    <ul>
-        <li>Pound-Rebka-Snider (1960): Gravitational redshift measurements</li>
-        <li>Hafele-Keating (1971): Atomic clock transport experiments</li>
-        <li>Vessot et al. (1980): Gravity Probe A rocket experiment</li>
-        <li>Gravity Probe B (2011): Frame-dragging and geodetic precession</li>
-        <li>GW170817 (2017): Gravitational wave multi-messenger event</li>
-        <li>Modern cavity experiments: Lorentz invariance tests</li>
-    </ul>
 
-    <h3>Reproduction Instructions</h3>
-    
-    <h4>Quick Start (Manuscript Build)</h4>
-    <pre><code># 1. Clone repository
-git clone https://github.com/matthewsmawfield/TEP-EXP.git
-cd TEP-EXP
-
-# 2. Install dependencies (for PDF generation)
-pip install -r requirements.txt
-
-# 3. Build manuscript website
-cd site
-npm install
-npm run build
-
-# 4. Output will be in site/dist/</code></pre>
-
-    <h4>System Requirements</h4>
-    <ul>
-        <li>Node.js 16+ (for site building)</li>
-        <li>Python 3.8+ (optional, for PDF processing utilities)</li>
-        <li>Storage: < 100 MB</li>
-    </ul>
-
-    <h4>Manuscript Generation</h4>
+    <h3>GNSS Chronometry Pipeline</h3>
     <p>
-        The manuscript is built from modular HTML components defined in <code>site/manifest.json</code>. 
-        To modify content, edit the relevant component files in <code>site/components/</code> and rebuild:
+        <!-- 25-year CODE Precise Clock Products; RINEX processing;
+             Galileo exclusion policy; repository and environment links. -->
     </p>
-    <pre><code>cd site
-npm run build</code></pre>
 
-    <h3>Methodological Documentation</h3>
+    <h3>Pulsar Chronometry</h3>
     <p>
-        This paper provides a taxonomical analysis of precision GR tests, examining:
+        <!-- Globular cluster pulsar spin-down datasets underlying the
+             0.40 dex residual analysis. -->
     </p>
-    <ol>
-        <li>Gauge-invariant vs. convention-dependent observables — what experiments actually measure</li>
-        <li>Two-way vs. one-way measurement protocols — differential vs. absolute tests</li>
-        <li>Local vs. global test geometries — closed-loop vs. open-path configurations</li>
-        <li>Single-path vs. multipath configurations — holonomy-sensitive tests</li>
-    </ol>
 
-    <h3>Software Versions</h3>
-    <ul>
-        <li>Node.js 16+</li>
-        <li>Python 3.8+ (optional)</li>
-    </ul>
+    <h3>Historical Sources</h3>
+    <p>
+        <!-- Digitized primary sources: Hubble 1929/1936/1937, Humason's
+             plates, the 1931 Einstein steady-state manuscript
+             (O'Raifeartaigh et al. 2014 transcription). -->
+    </p>
 </section>

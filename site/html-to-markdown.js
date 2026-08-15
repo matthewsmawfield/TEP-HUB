@@ -214,7 +214,7 @@ class HTMLToMarkdownConverter {
      */
     extractMetadata(html) {
         const titleMatch = html.match(/<title[^>]*>(.*?)<\/title>/i);
-        const title = titleMatch ? titleMatch[1] : 'What Do Precision Tests of General Relativity Actually Measure?';
+        const title = titleMatch ? titleMatch[1] : 'The Chronometric Autopsy of the Expanding Universe';
         
         const authorMatch = html.match(/<meta[^>]*name=["']author["'][^>]*content=["']([^"']*)["']/i);
         const author = authorMatch ? authorMatch[1] : 'Matthew Lukin Smawfield';
@@ -223,7 +223,7 @@ class HTMLToMarkdownConverter {
         const version = versionMatch ? versionMatch[1]
             .replace(/<[^>]+>/g, '')
             .replace(/^Version:\s*/i, '')
-            .trim() : 'v0.5 (Istanbul)';
+            .trim() : 'v0.1 (Harare)';
         
         const dateMatch = html.match(/<div[^>]*class=["'][^"']*date[^"']*["'][^>]*>(.*?)<\/div>/i);
         const date = dateMatch ? dateMatch[1].replace(/<[^>]+>/g, '').trim() : 'First published: 31 December 2025 · Last updated: 29 April 2026';
@@ -296,7 +296,7 @@ class HTMLToMarkdownConverter {
             const markdown = this.buildMarkdownDocument(metadata, markdownContent);
             
             // Write to file
-            const outputPath = path.join(__dirname, '..', '9-TEP-EXP-v0.5-Istanbul.md');
+            const outputPath = path.join(__dirname, '..', 'TEP-HUB-v0.1-Harare.md');
             fs.writeFileSync(outputPath, markdown, 'utf8');
             
             console.log('✅ Markdown conversion complete!');
@@ -344,15 +344,13 @@ ${content}
 
 ---
 
-*This document was automatically generated from the TEP-EXP research site. For the interactive version with figures and enhanced formatting, visit: https://mlsmawfield.com/tep/exp/*
+*This document was automatically generated from the TEP-HUB research site.*
 
 *Related Work:*
 - [TEP Theory](https://doi.org/10.5281/zenodo.16921911) (Foundational framework)
 - [TEP-GNSS I](https://doi.org/10.5281/zenodo.17127229) (Multi-Center Analysis)
 - [TEP-GNSS II](https://doi.org/10.5281/zenodo.17517141) (25-Year Analysis)
 - [TEP-GNSS III](https://doi.org/10.5281/zenodo.17860166) (Raw RINEX Validation)
-
-*Source code available at: https://github.com/matthewsmawfield/TEP-EXP*
 `;
     }
 }

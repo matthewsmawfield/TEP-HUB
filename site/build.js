@@ -171,9 +171,9 @@ async function buildStaticSite() {
         
         console.log('✅ Static site built successfully!');
         console.log(`📁 Output: ${outputPath}`);
-        console.log('📄 Markdown: 9-TEP-EXP-v0.5-Istanbul.md (in root)');
-        console.log(`📊 Generated ${manifest.sections.length} sections (TEP-EXP)`);
-        console.log('🚀 TEP-EXP ready for deployment');
+        console.log('📄 Markdown: TEP-HUB-v0.1-Harare.md (in root)');
+        console.log(`📊 Generated ${manifest.sections.length} sections (TEP-HUB)`);
+        console.log('🚀 TEP-HUB ready for deployment');
         
     } catch (error) {
         console.error('❌ Build failed:', error);
