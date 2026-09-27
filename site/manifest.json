@@ -95,5 +95,12 @@
   "start_url": ".",
   "display": "standalone",
   "background_color": "#ffffff",
-  "theme_color": "#1a3a3a"
+  "theme_color": "#1a3a3a",
+  "name": "TEP-HUB",
+  "short_name": "TEP-HUB",
+  "paper_number": "30",
+  "author": "Matthew Lukin Smawfield",
+  "version": "v0.2 (Harare)",
+  "codename": "Harare",
+  "date": "13 September 2026"
 }

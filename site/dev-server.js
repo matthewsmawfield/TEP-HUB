@@ -14,7 +14,7 @@ class DevServer {
         this.liveServerProcess = null;
         this.watcherReady = false;
         this.watcherRestarting = false;
-        this.port = 51820; // Unique port for TEP-HUB
+        this.port = 55530; // Unique port for TEP-HUB (Paper 30)
     }
 
     async startLiveServer() {

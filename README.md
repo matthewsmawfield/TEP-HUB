@@ -6,8 +6,8 @@
 ![TEP-HUB: The Mount Wilson Paradigm](site/public/image.webp)
 
 **Author:** Matthew Lukin Smawfield  
-**Version:** v0.1 (Harare)  
-**First published:** 15 August 2026 · **Last updated:** 15 August 2026  
+**Version:** v0.2 (Harare)  
+**First published:** 15 August 2026 · **Last updated:** 13 September 2026  
 **Status:** Preprint  
 **DOI:** [10.5281/zenodo.21954258](https://doi.org/10.5281/zenodo.21954258)  
 **Website:** [https://mlsmawfield.com/tep/hub/](https://mlsmawfield.com/tep/hub/)  
@@ -46,7 +46,7 @@ npm run build
 
 This generates:
 - `site/dist/index.html` — static manuscript
-- `30-TEP-HUB-v0.1-Harare.md` — root markdown manuscript
+- `30-TEP-HUB-v0.2-Harare.md` — root markdown manuscript
 
 ## PDF Generation
 
@@ -54,7 +54,7 @@ This generates:
 python scripts/generate_site_pdf.py --quality high --wait-time 8
 ```
 
-Generates `30-TEP-HUB-v0.1-Harare.pdf` in both the root and `site/public/docs/`.
+Generates `30-TEP-HUB-v0.2-Harare.pdf` in both the root and `site/public/docs/`.
 
 ## Project Structure
 
@@ -72,8 +72,8 @@ TEP-HUB/
 │   ├── index.html        # Source HTML template
 │   └── manifest.json     # Site manifest
 ├── manuscripts/          # Markdown manuscripts synced from the TEP series
-├── 30-TEP-HUB-v0.1-Harare.md  # Auto-generated root manuscript
-└── 30-TEP-HUB-v0.1-Harare.pdf # Generated PDF
+├── 30-TEP-HUB-v0.2-Harare.md  # Auto-generated root manuscript
+└── 30-TEP-HUB-v0.2-Harare.pdf # Generated PDF
 ```
 
 ## License
@@ -99,7 +99,7 @@ Creative Commons Attribution 4.0 International License (CC BY 4.0) — see the [
 | **Paper 12** | [TEP-JWST](https://github.com/matthewsmawfield/TEP-JWST) | Temporal Equivalence Principle: A Unified Resolution to the JWST High-Redshift Anomalies | [10.5281/zenodo.19000827](https://doi.org/10.5281/zenodo.19000827) |
 | **Paper 13** | [TEP-WB](https://github.com/matthewsmawfield/TEP-WB) | Temporal Equivalence Principle: Temporal Shear Recovery in Gaia DR3 Wide Binaries | [10.5281/zenodo.19102061](https://doi.org/10.5281/zenodo.19102061) |
 | **Paper 14** | [TEP-GNSS-MGEX](https://github.com/matthewsmawfield/TEP-GNSS-MGEX) | Global Time Echoes: MGEX Multi-GNSS Clock Replication, 2025–2026 | [10.5281/zenodo.20572727](https://doi.org/10.5281/zenodo.20572727) |
-| **Paper 15** | [TEP-EFA](https://github.com/matthewsmawfield/TEP-EFA) | Temporal Equivalence Principle: Temporal Shear in the Earth Flyby Anomaly | [10.5281/zenodo.19454863](https://doi.org/10.5281/zenodo.19454863) |
+| **Paper 15** | [TEP-EFA](https://github.com/matthewsmawfield/TEP-EFA) | Temporal Equivalence Principle: Temporal Shear in the Earth Flyby Anomaly | [10.5281/zenodo.19454862](https://doi.org/10.5281/zenodo.19454862) |
 | **Paper 16** | [TEP-J0437](https://github.com/matthewsmawfield/TEP-J0437) | Temporal Equivalence Principle: Synchronization Holonomy in Pulsar Scintillation | [10.5281/zenodo.19454620](https://doi.org/10.5281/zenodo.19454620) |
 | **Paper 17** | [TEP-LLR](https://github.com/matthewsmawfield/TEP-LLR) | Temporal Equivalence Principle: Lunar Laser Ranging and the Nordtvedt Effect | [10.5281/zenodo.19446029](https://doi.org/10.5281/zenodo.19446029) |
 | **Paper 18** | [TEP-HC](https://github.com/matthewsmawfield/TEP-HC) | Temporal Equivalence Principle: Native hi_class Conformal Implementation, Linear Perturbation Closure, and CMB Acoustic Peak Preservation | [10.5281/zenodo.20572722](https://doi.org/10.5281/zenodo.20572722) |
@@ -108,5 +108,5 @@ Creative Commons Attribution 4.0 International License (CC BY 4.0) — see the [
 | **Paper 26** | [TEP-C0](https://github.com/matthewsmawfield/TEP-C0) | Temporal Equivalence Principle: A Covariant Alternative to Cosmic Expansion | [10.5281/zenodo.20370143](https://doi.org/10.5281/zenodo.20370143) |
 | **Paper 27** | [TEP-TH](https://github.com/matthewsmawfield/TEP-TH) | Temporal Equivalence Principle: Temporal Horizon Cosmology and the Absence of a Physical Big Bang Singularity | [10.5281/zenodo.20723059](https://doi.org/10.5281/zenodo.20723059) |
 | **Paper 28** | [TEP-BH](https://github.com/matthewsmawfield/TEP-BH) | Temporal Equivalence Principle: Black Holes and the Temporal Horizon | [10.5281/zenodo.21677826](https://doi.org/10.5281/zenodo.21677826) |
-| **Paper 29** | [TEP-BBN](https://github.com/matthewsmawfield/TEP-BBN) | Temporal Equivalence Principle: Dynamical Proper Time and the Illusion of Primordial Deuterium | [10.5281/zenodo.21841148](https://doi.org/10.5281/zenodo.21841148) |
+| **Paper 29** | [TEP-BBN](https://github.com/matthewsmawfield/TEP-BBN) | Temporal Equivalence Principle: Dynamical Proper Time and the Illusion of Primordial Deuterium | [10.5281/zenodo.21841147](https://doi.org/10.5281/zenodo.21841147) |
 | **Paper 30** | [TEP-HUB](https://github.com/matthewsmawfield/TEP-HUB) | The Mount Wilson Paradigm: Restoring the Eternal Universe via the Temporal Equivalence Principle | [10.5281/zenodo.21954258](https://doi.org/10.5281/zenodo.21954258) |

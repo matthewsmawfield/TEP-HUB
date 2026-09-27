@@ -296,8 +296,26 @@ class HTMLToMarkdownConverter {
             const markdown = this.buildMarkdownDocument(metadata, markdownContent);
             
             // Write to file
-            const outputPath = path.join(__dirname, '..', '30-TEP-HUB-v0.1-Harare.md');
+            const outputPath = path.join(__dirname, '..', '30-TEP-HUB-v0.2-Harare.md');
             fs.writeFileSync(outputPath, markdown, 'utf8');
+
+            // Keep the shared collection archive (../manuscripts/) in sync
+            try {
+                const sharedArchiveDir = path.join(__dirname, '..', '..', 'manuscripts');
+                if (fs.existsSync(sharedArchiveDir)) {
+                    const archiveName = path.basename(outputPath);
+                    const paperPrefix = archiveName.split('-')[0];
+                    for (const staleFile of fs.readdirSync(sharedArchiveDir)) {
+                        if (staleFile !== archiveName && staleFile.endsWith('.md') && staleFile.startsWith(`${paperPrefix}-TEP`)) {
+                            fs.rmSync(path.join(sharedArchiveDir, staleFile));
+                        }
+                    }
+                    fs.copyFileSync(outputPath, path.join(sharedArchiveDir, archiveName));
+                    console.log(`📄 Copied to shared archive: manuscripts/${archiveName}`);
+                }
+            } catch (archiveError) {
+                console.warn(`⚠️  Could not update shared manuscripts archive: ${archiveError.message}`);
+            }
             
             console.log('✅ Markdown conversion complete!');
             console.log(`📄 Output: ${outputPath}`);

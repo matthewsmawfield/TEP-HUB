@@ -1,7 +1,8 @@
 {
-  "version": "0.1",
+  "version": "0.2",
   "codename": "Harare",
   "description": "Paper 30: The Mount Wilson Paradigm: Restoring the Eternal Universe via the Temporal Equivalence Principle",
-  "date": "2026-08-15",
-  "paper": "30"
+  "date": "2026-09-13",
+  "paper": "30",
+  "previous_version": "0.1"
 }
