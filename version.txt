@@ -1,1 +1,4 @@
 v0.2 (Harare) — 13 September 2026
+
+- Labelled the displayed action as the canonical low-kinetic benchmark of the Paper-0 action, noting the P(X,phi) realization
+- Eternal-branch and theorem wording corrections; reference updates

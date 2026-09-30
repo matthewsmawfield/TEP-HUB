@@ -66,7 +66,7 @@ async function buildStaticSite() {
             // Replace the loading div and manuscript-content div with the built content
             .replace(
                 /<div id="loading".*?<\/div>\s*<div id="manuscript-content".*?<\/div>/s,
-                `<div id="manuscript-content">${componentsHtml}</div>`
+                () => `<div id="manuscript-content">${componentsHtml}</div>`
             )
             // Defensive cleanup: if the dynamic loader placeholders still exist anywhere
             // (e.g., due to an unexpected template transformation), remove them.
@@ -180,7 +180,7 @@ async function buildStaticSite() {
         
         console.log('✅ Static site built successfully!');
         console.log(`📁 Output: ${outputPath}`);
-        console.log('📄 Markdown: 30-TEP-HUB-v0.1-Harare.md (in root)');
+        console.log('📄 Markdown: 30-TEP-HUB-v0.2-Harare.md (in root)');
         console.log(`📊 Generated ${manifest.sections.length} sections (TEP-HUB)`);
         console.log('🚀 TEP-HUB ready for deployment');
         
@@ -201,6 +201,7 @@ function copyRecursiveSync(src, dest) {
             fs.mkdirSync(dest, { recursive: true });
         }
         fs.readdirSync(src).forEach(childItemName => {
+            if (childItemName === '.DS_Store') return;
             copyRecursiveSync(
                 path.join(src, childItemName),
                 path.join(dest, childItemName)

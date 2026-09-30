@@ -102,5 +102,8 @@
   "author": "Matthew Lukin Smawfield",
   "version": "v0.2 (Harare)",
   "codename": "Harare",
-  "date": "13 September 2026"
+  "first_published": "15 August 2026",
+  "last_updated": "30 September 2026",
+  "date": "30 September 2026",
+  "doi": "10.5281/zenodo.21954258"
 }

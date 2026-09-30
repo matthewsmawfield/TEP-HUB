@@ -1,6 +1,6 @@
 {
   "name": "tep-hub-site",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "The Mount Wilson Paradigm: Restoring the Eternal Universe via the Temporal Equivalence Principle",
   "comment": "Package version matches manuscript version v0.2 (Harare)",
   "main": "index.html",
