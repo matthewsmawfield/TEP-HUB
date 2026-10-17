@@ -3,26 +3,26 @@
     The Temporal Equivalence Principle (TEP) reopens the suppressed temporal degree of freedom by restoring an independent dynamical scalar proper-time field. TEP defines two related geometries: the bare gravitational metric ($g_{\mu\nu}$), and the causal matter metric ($\tilde g_{\mu\nu}$) to which standard rods, clocks, and photon fields couple.
 </p>
 <p>
-    These geometries are connected by a universal, dynamical scalar proper-time field ($\phi$). The canonical matter metric is defined as:
+    These geometries are connected by a universal, dynamical scalar proper-time field ($\phi$). In the canonical preferred-foliation decomposition of Paper 0 (v0.16, §2.2, Step 80) along the unit cosmic temporal flow $U_\mu \equiv -\nabla_\mu\bar\phi/\sqrt{2\bar X}$ ($g^{\mu\nu}U_\mu U_\nu = -1$) and orthogonal spatial projector $\Pi_{\mu\nu} = g_{\mu\nu} + U_\mu U_\nu$, the causal matter metric is defined as:
 </p>
 <div class="equation">
     \begin{equation}
-    \tilde g_{\mu\nu} = A^2(\phi)\,g_{\mu\nu} + B(\phi)\,\nabla_\mu\phi\,\nabla_\nu\phi
+    \tilde g_{\mu\nu} = -A_{\rm loc}^2(u_{\rm grav}(\mathbf x))\,U_\mu U_\nu + A_{\rm sp}^2(u_{\rm drift}(t,\mathbf x))\,\Pi_{\mu\nu} + B(\phi)\,\Pi_\mu^\alpha\Pi_\nu^\beta\nabla_\alpha\phi\nabla_\beta\phi ,
     \end{equation}
 </div>
 <p>
-    Here, $A(\phi)$ represents the conformal temporal background calibration, and $B(\phi)$ governs the disformal kinetic corrections. On the static, homogeneous cosmological branch, the spatial gravitational metric is invariant (the scale factor $a = 1$), meaning the spatial manifold does not expand.
+    written in isotropic conformal–disformal shorthand as $\tilde g_{\mu\nu} = A^2(\phi)\,g_{\mu\nu} + B(\phi)\,\nabla_\mu\phi\,\nabla_\nu\phi$. Here $A_{\rm loc}(u_{\rm grav})$ governs the stationary baryon-sourced temporal lapse $N_{\rm TEP}(\mathbf x) = A_{\rm loc}(u_{\rm grav}(\mathbf x))N_{\rm GR}(\mathbf x)$, $A_{\rm sp}(u_{\rm drift}) = \exp(\beta_A u_{\rm drift})$ governs the secular matter-frame spatial ruler calibration, and $B(\phi)$ governs spatially projected disformal kinetic corrections. On the static, homogeneous cosmological branch ($u_{\rm grav} = 0$, $A_{\rm loc} = 1$, $\Pi_\mu^\alpha\nabla_\alpha\phi = 0$), the spatial gravitational metric is invariant (the scale factor $a = 1$), the spatially projected disformal term vanishes identically, and the cosmological factor is $A_{\rm sp}(t) \equiv A(\phi(t))$.
 </p>
 <p>
-    The following derivation establishes the central result. On the cosmological branch, the scalar field is homogeneous: $\phi = \phi(t)$. Define the effective lapse
+    The following derivation establishes the central result on both the canonical preferred-foliation metric (where $N(t) = A_{\rm loc} = 1$ on the homogeneous background) and the general unprojected isotropic-disformal comparison branch $\tilde g_{\mu\nu} = A^2(\phi)g_{\mu\nu} + B(\phi)\nabla_\mu\phi\nabla_\nu\phi$. On the homogeneous cosmological branch, $\phi = \phi(t)$; define the general effective lapse ($N(t) \equiv 1$ on the preferred-foliation branch, or
 </p>
 <div class="equation">
     \begin{equation}
-    N^2(t) = A^2(\phi) - B(\phi)\,\dot\phi^2 > 0 .
+    N^2(t) = A^2(\phi) - B(\phi)\,\dot\phi^2 > 0
     \end{equation}
 </div>
 <p>
-    The matter-frame line element and comoving proper time are then
+    on the unprojected isotropic-disformal branch) and denote the cosmological ruler factor by $A(t) \equiv A_{\rm sp}(t)$. The matter-frame line element and comoving proper time are then
 </p>
 <div class="equation">
     \begin{equation}
@@ -66,15 +66,15 @@
 </p>
 <div class="equation">
     \begin{equation}
-    \boxed{1 + z = \frac{\omega_{\rm em}}{\omega_0} = \frac{A_0}{A_{\rm em}}}
+    \boxed{1 + z = \frac{\omega_{\rm em}}{\omega_0} = \frac{A_{\rm sp}(t_0)}{A_{\rm sp}(t_{\rm em})} \equiv \frac{A_0}{A_{\rm em}}}
     \end{equation}
 </div>
 <p>
-    The homogeneous disformal lapse cancels from the redshift ratio. In inhomogeneous regions, however, the disformal connection can become non-integrable and produce synchronization holonomy.
+    On the canonical preferred-foliation metric the spatially projected disformal term vanishes identically on the homogeneous background ($\Pi_\mu^\alpha\nabla_\alpha\phi = 0$), and even on the unprojected isotropic-disformal branch ($A^2 - B\dot\phi^2 > 0$) any homogeneous disformal lapse $N(t)$ cancels identically from the redshift ratio. In inhomogeneous regions, however, the disformal connection can become non-integrable and produce synchronization holonomy.
 </p>
 <h3>The Mount Wilson Equivalence Theorem</h3>
 <div class="theorem">
-    <p><strong>Mount Wilson Equivalence Theorem.</strong> On a homogeneous, static gravitational background, with universal matter coupling and $A^2 - B\dot\phi^2 > 0$, the endpoint redshift is $1+z = A_0/A_{\rm em}$, independently of the homogeneous disformal lapse. It is therefore observationally degenerate, at the level of redshift alone, with the FLRW relation $1+z = a_0/a_{\rm em}$.</p>
+    <p><strong>Mount Wilson Equivalence Theorem.</strong> On a homogeneous, static gravitational background with universal matter coupling to the canonical preferred-foliation metric (where $\Pi_\mu^\alpha\nabla_\alpha\phi = 0$, and as a corollary on the unprojected isotropic-disformal branch whenever $A^2 - B\dot\phi^2 > 0$), the endpoint redshift is $1+z = A_{\rm sp}(t_0)/A_{\rm sp}(t_{\rm em}) \equiv A_0/A_{\rm em}$, independently of any homogeneous lapse factor. It is therefore observationally degenerate, at the level of redshift alone, with the FLRW relation $1+z = a_0/a_{\rm em}$.</p>
 </div>
 <div class="equation">
     \begin{equation}
@@ -100,7 +100,7 @@
     \end{equation}
 </div>
 <p>
-    Here, $d_L^{\rm GW}$ is the luminosity distance measured from gravitational waves, while $d_L^{\rm EM}$ is the corresponding luminosity distance inferred through electromagnetic observations. If matter and gravity follow different effective geometries, the two need not agree. In minimally coupled single-metric FLRW, both sectors share one metric, so $\Delta_{\rm siren} = 0$. Under the canonical TEP radiation rule (Paper 22), $\Xi(z)=1/(1+z)$ and $\Delta_{\rm siren}=1/(1+z)-1$. The historical exponential-template fits in that paper do not replace a full likelihood analysis with the canonical mass and selection mapping. This dimensionless ratio is an invariant inter-sector observable: it cannot be removed by any conformal or disformal field redefinition, because no single transformation simultaneously maps both sectors to a common minimally coupled metric. The technical details of the frame analysis, including engagement with the existing conformal-frame literature, are carried in Appendix C.
+    Here, $d_L^{\rm GW}$ is the luminosity distance measured from gravitational waves, while $d_L^{\rm EM}$ is the corresponding luminosity distance inferred through electromagnetic observations. If matter and gravity follow different effective geometries, the two need not agree. In minimally coupled single-metric FLRW, both sectors share one metric, so $\Delta_{\rm siren} = 0$. Under the canonical TEP radiation rule (Paper 22), $\Xi(z)=1/(1+z)$ and $\Delta_{\rm siren}=1/(1+z)-1$. In Paper 22 (v0.2, Maputo), the full GWTC-3 bright, dark, and spectral-siren population likelihoods are evaluated under this canonical rule, showing that the apparent $H_0 \simeq 56\ {\rm km\,s^{-1}\,Mpc^{-1}}$ free-fit dark-siren posterior shift ($\Delta\chi^2 = +1.16$) is mechanically driven by $\Lambda$CDM-gated galaxy-catalog host redshifts ($70.0\langle(1+z_{\rm cat})^{-1}\rangle = 55.1\ {\rm km\,s^{-1}\,Mpc^{-1}}$), whereas self-consistent TEP-kernel reassociation at the fixed canonical $H_0 = 68.18\ {\rm km\,s^{-1}\,Mpc^{-1}}$ (Paper 18) recovers the baseline association likelihood ($-2\ln L = 944.31$) without shifting $H_0$, while the separate lab-fixed small-excursion comparison yields $H_0 \simeq 72.2$ versus $72.0\ {\rm km\,s^{-1}\,Mpc^{-1}}$ ($\Delta\chi^2 = +0.20$) at marginal significance. This dimensionless ratio is an invariant inter-sector observable: it cannot be removed by any conformal or disformal field redefinition, because no single transformation simultaneously maps both sectors to a common minimally coupled metric. The technical details of the frame analysis, including engagement with the existing conformal-frame literature, are carried in Appendix C.
 </p>
 <p>
     TEP therefore makes a sharp empirical prediction. If cosmological redshift is matter-clock transport, the same temporal field must leave dimensionless signatures wherever matter-clock calibration is compared with gravitational propagation, or wherever proper time is transported around non-integrable paths. A consistent null result across those channels would reject the TEP interpretation. A common signal across them would identify a missing dynamical sector of geometry.

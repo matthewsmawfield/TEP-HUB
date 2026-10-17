@@ -1,14 +1,14 @@
 <h2>Appendix A: Canonical TEP Metric and Cosmological Ansatz</h2>
 <p>
-    The rigorous foundation of the Temporal Equivalence Principle <sup class="cite">24</sup> relies on the distinction between the gravitational metric ($g_{\mu\nu}$) and the causal matter metric ($\tilde g_{\mu\nu}$). The canonical matter metric is defined as:
+    The rigorous foundation of the Temporal Equivalence Principle <sup class="cite">24</sup> relies on the distinction between the gravitational metric ($g_{\mu\nu}$) and the causal matter metric ($\tilde g_{\mu\nu}$). In the canonical preferred-foliation decomposition (Paper 0 v0.16, §2.2, Step 80) along the unit cosmic temporal flow $U_\mu \equiv -\nabla_\mu\bar\phi/\sqrt{2\bar X}$ ($g^{\mu\nu}U_\mu U_\nu = -1$) and orthogonal spatial projector $\Pi_{\mu\nu} = g_{\mu\nu} + U_\mu U_\nu$, the causal matter metric is defined as:
 </p>
 <div class="equation">
     \begin{equation}
-    \tilde g_{\mu\nu} = A^2(\phi)\,g_{\mu\nu} + B(\phi)\,\nabla_\mu\phi\,\nabla_\nu\phi
+    \tilde g_{\mu\nu} = -A_{\rm loc}^2(u_{\rm grav}(\mathbf x))\,U_\mu U_\nu + A_{\rm sp}^2(u_{\rm drift}(t,\mathbf x))\,\Pi_{\mu\nu} + B(\phi)\,\Pi_\mu^\alpha\Pi_\nu^\beta\nabla_\alpha\phi\nabla_\beta\phi ,
     \end{equation}
 </div>
 <p>
-    Here, $\phi$ is a dynamical scalar proper-time field. The coupling function takes the canonical form $A = \exp(\beta\phi/M_{\rm Pl})$, implying a field normalization compatible with $\phi/M_{\rm Pl}$ rather than a literal time coordinate. The canonical low-kinetic benchmark of the Paper-0 action is:
+    which is written in isotropic conformal–disformal shorthand as $\tilde g_{\mu\nu} = A^2(\phi)\,g_{\mu\nu} + B(\phi)\,\nabla_\mu\phi\,\nabla_\nu\phi$. Here, $\phi$ is a dynamical scalar proper-time field, with $A_{\rm loc}(u_{\rm grav}) = \exp(\beta_A u_{\rm grav})$ governing local gravitational clock depth and $A_{\rm sp}(u_{\rm drift}) = \exp(\beta_A u_{\rm drift}) \equiv A(\phi)$ governing cosmological ruler drift ($\beta_A = -1$). The canonical scalar comparison benchmark of the Paper-0 action is:
 </p>
 <div class="equation">
     \begin{equation}
@@ -16,16 +16,16 @@
     \end{equation}
 </div>
 <p>
-    where the operative screening realization replaces the canonical scalar term by $P(X,\phi)=X-V(\phi)+X|X|/\Lambda_X^4$. The redshift identity below depends on the stated metric and homogeneous geometry, not on replacing that nonlinear action by this benchmark. The matter action $S_m$ couples universally to $\tilde g_{\mu\nu}$, ensuring that the proper-time calibration of all physical clocks and the trajectories of all Standard Model fields are governed by the local value and gradient of $\phi$. The vector $\nabla_\mu\phi$ is strictly timelike on the cosmological branch to ensure Lorentzian signature and the invertibility of the effective metric. The conditions $A > 0$ and $A^2 - B\dot\phi^2 > 0$ are required on the homogeneous branch. The precise static cosmological ansatz fixes the spatial components of the background gravitational metric ($g_{ij}$) to a time-independent scale ($a = 1$).
+    where the operative screening realization replaces the canonical scalar term by the selected two-branch kinetic sector $P(X,\phi)=-V(\phi)+\frac{2k}{3\Lambda_X^2}X|X|^{1/2}+X|X|/\Lambda_X^4$ ($k\simeq16.03$ derived from $a_0$, carrying no canonical linear-$X$ low-gradient term) and embeds the preferred-foliation geometry in the spatially covariant ADM/khronon action of Paper 0 (§2.2, Step 80). The redshift identity below depends on the stated metric and homogeneous geometry, not on replacing that nonlinear action by the canonical scalar comparison benchmark. The matter action $S_m$ couples universally to $\tilde g_{\mu\nu}$, ensuring that the proper-time calibration of all physical clocks and the trajectories of all Standard Model fields are governed by the local value and gradient of $\phi$. The vector $\nabla_\mu\phi$ is strictly timelike on the cosmological branch to ensure Lorentzian signature and the invertibility of the effective metric. On the canonical preferred-foliation metric, $u_{\rm grav} = 0$ and $\Pi_\mu^\alpha\nabla_\alpha\phi = 0$ on the homogeneous branch, so Lorentzian invertibility requires only $A_{\rm sp} > 0$ (while on the unprojected isotropic-disformal comparison branch, $A^2 - B\dot\phi^2 > 0$ is additionally required). The static cosmological ansatz fixes the spatial components of the background gravitational metric ($g_{ij}$) to a time-independent scale ($a = 1$).
 </p>
 
 <h2>Appendix B: Derivation of Cosmological Redshift</h2>
 <p>
-    The full derivation is presented in Section 4. The key steps are summarized here for reference. On the homogeneous, static branch with $\phi = \phi(t)$, the effective lapse is $N^2(t) = A^2(\phi) - B(\phi)\,\dot\phi^2 > 0$. Spatial homogeneity supplies the Killing fields of the maximally symmetric spatial slice, so the covariant spatial wavevector $q_i = A^2\,h_{ij}\,k^j$ is conserved along the photon trajectory. The null condition gives $N^2(k^0)^2 = q^2/A^2$, and the measured photon frequency is:
+    The full derivation is presented in Section 4. The key steps are summarized here for reference. On the homogeneous, static branch with $\phi = \phi(t)$, $A(t) \equiv A_{\rm sp}(t)$, and effective lapse $N(t) = 1$ on the canonical preferred-foliation branch (or $N^2(t) = A^2(\phi) - B(\phi)\,\dot\phi^2 > 0$ on the unprojected isotropic-disformal branch), spatial homogeneity supplies the Killing fields of the maximally symmetric spatial slice, so the covariant spatial wavevector $q_i = A_{\rm sp}^2\,h_{ij}\,k^j$ is conserved along the photon trajectory. The null condition gives $N^2(k^0)^2 = q^2/A_{\rm sp}^2$, and the measured photon frequency is:
 </p>
 <div class="equation">
     \begin{equation}
-    \omega = -\tilde g_{\mu\nu}\,\tilde u^\mu\,k^\nu = N\,k^0 = \frac{q}{A}
+    \omega = -\tilde g_{\mu\nu}\,\tilde u^\mu\,k^\nu = N\,k^0 = \frac{q}{A_{\rm sp}}
     \end{equation}
 </div>
 <p>
@@ -33,7 +33,7 @@
 </p>
 <div class="equation">
     \begin{equation}
-    1+z = \frac{A_0}{A_{\rm em}}
+    1+z = \frac{A_{\rm sp}(t_0)}{A_{\rm sp}(t_{\rm em})} \equiv \frac{A_0}{A_{\rm em}}
     \end{equation}
 </div>
 <p>
@@ -96,10 +96,10 @@
         <td>TEP-TH <sup class="cite">30</sup> / TEP-JWST <sup class="cite">35</sup></td>
     </tr>
     <tr>
-        <td>Galactic Rotation Curves</td>
+        <td>Galactic Rotation Curves &amp; Lensing</td>
         <td>Cold Dark Matter halos</td>
-        <td>Temporal shear ($\Gamma_t$); Phantom Mass</td>
-        <td>TEP-GL <sup class="cite">25</sup></td>
+        <td>Temporal shear ($\Gamma_t$) &amp; unstretched-space temporal refraction; dynamical &amp; optical Phantom Mass</td>
+        <td>TEP-GL <sup class="cite">25</sup> / TEP-UCD <sup class="cite">45</sup></td>
     </tr>
     <tr>
         <td>Extreme Compact Objects</td>
