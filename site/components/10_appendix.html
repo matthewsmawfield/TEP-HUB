@@ -1,10 +1,13 @@
 <h2>Appendix A: Canonical TEP Metric and Cosmological Ansatz</h2>
 <p>
-    The rigorous foundation of the Temporal Equivalence Principle <sup class="cite">24</sup> relies on the distinction between the gravitational metric ($g_{\mu\nu}$) and the causal matter metric ($\tilde g_{\mu\nu}$). In the canonical preferred-foliation decomposition (Paper 0 v0.16, §2.2, Step 80) along the unit cosmic temporal flow $U_\mu \equiv -\nabla_\mu\bar\phi/\sqrt{2\bar X}$ ($g^{\mu\nu}U_\mu U_\nu = -1$) and orthogonal spatial projector $\Pi_{\mu\nu} = g_{\mu\nu} + U_\mu U_\nu$, the causal matter metric is defined as:
+    The rigorous foundation of the Temporal Equivalence Principle <sup class="cite">24</sup> relies on the distinction between the gravitational metric ($g_{\mu\nu}$) and the causal matter metric ($\tilde g_{\mu\nu}$). In the canonical preferred-foliation decomposition (Paper 0 v0.18, §2.2, Step 80) along the unit cosmic temporal flow $U_\mu \equiv -\nabla_\mu\bar\phi/\sqrt{2\bar X}$ ($g^{\mu\nu}U_\mu U_\nu = -1$) and orthogonal spatial projector $\Pi_{\mu\nu} = g_{\mu\nu} + U_\mu U_\nu$, the causal matter metric is defined as:
 </p>
 <div class="equation">
     \begin{equation}
-    \tilde g_{\mu\nu} = -A_{\rm loc}^2(u_{\rm grav}(\mathbf x))\,U_\mu U_\nu + A_{\rm sp}^2(u_{\rm drift}(t,\mathbf x))\,\Pi_{\mu\nu} + B(\phi)\,\Pi_\mu^\alpha\Pi_\nu^\beta\nabla_\alpha\phi\nabla_\beta\phi ,
+    \begin{aligned}
+    \tilde g_{\mu\nu} &= -A_{\rm loc}^2(u_{\rm grav}(\mathbf x))\,U_\mu U_\nu + A_{\rm sp}^2(u_{\rm drift}(t,\mathbf x))\,\Pi_{\mu\nu} \\
+    &\quad + B(\phi)\bigl(\Pi_\mu^\alpha\Pi_\nu^\beta\nabla_\alpha\phi\nabla_\beta\phi - 2(U\cdot\nabla\phi)U_{(\mu}\Pi_{\nu)}{}^\alpha\nabla_\alpha\phi\bigr) ,
+    \end{aligned}
     \end{equation}
 </div>
 <p>

@@ -1,5 +1,4 @@
-v0.3 (Harare) — 17 October 2026 — Two-branch kinetic screening, action-derived SPARC synthesis, and unstretched-space ADM optical refraction
+v0.4 (Harare) — 24 October 2026 — Classical cosmological observable equivalence corollary and synchronized Hubble-constant and standard-siren synthesis
 
-- Updated the theoretical synthesis to the selected two-branch kinetic action P(X,phi) = -V + (2k/3 Lambda_X^2) X|X|^{1/2} + X|X|/Lambda_X^4 (k = 16.03, zero free parameters) and the unified (3+1) ADM unstretched-space metric g_tilde_munu = -A_loc^2(u_grav) U_mu U_nu + A_sp^2(u_drift) Pi_munu
-- Integrated the baryon-only temporal refractive index n(x) = 1 - 2 Phi_N(x)/c^2 - beta_A u_grav(x) across cluster lensing, strong-lensing time delays, and CMB lensing alongside the action-derived SPARC radial-acceleration fit (0.2185 dex at Upsilon_d = 0.5, 0.2004 dex at Upsilon_d = 0.35; 0.1974 dex quadrature comparator)
-- Corrected the repository Zenodo DOI reference and synchronized the shared core library
+- Added the phase-space corollary and comparative table to the Mount Wilson Equivalence Theorem, contrasting tired light, standard expansion, and matter-metric clock transport across time dilation, distance duality, Tolman surface brightness, and CMB blackbody preservation
+- Synchronized the eternal-branch Hubble-constant and standard-siren comparisons with the updated companion distance-ladder and gravitational-wave analyses

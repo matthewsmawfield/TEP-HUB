@@ -230,7 +230,7 @@ class HTMLToMarkdownConverter {
         const version = versionMatch ? versionMatch[1]
             .replace(/<[^>]+>/g, '')
             .replace(/^Version:\s*/i, '')
-            .trim() : 'v0.3 (Harare)';
+            .trim() : 'v0.4 (Harare)';
         
         const dateMatch = html.match(/<div[^>]*class=["'][^"']*date[^"']*["'][^>]*>(.*?)<\/div>/i);
         const date = dateMatch ? dateMatch[1].replace(/<[^>]+>/g, '').trim() : 'First published: 15 August 2026 · Last updated: 15 August 2026';
@@ -303,7 +303,7 @@ class HTMLToMarkdownConverter {
             const markdown = this.buildMarkdownDocument(metadata, markdownContent);
             
             // Write to file
-            const outputPath = path.join(__dirname, '..', 'F30-TEP-HUB-v0.3-Harare.md');
+            const outputPath = path.join(__dirname, '..', 'F30-TEP-HUB-v0.4-Harare.md');
             fs.writeFileSync(outputPath, markdown, 'utf8');
 
             // Keep the shared collection archive (../manuscripts/) in sync

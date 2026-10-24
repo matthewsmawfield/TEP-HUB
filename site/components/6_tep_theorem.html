@@ -3,11 +3,14 @@
     The Temporal Equivalence Principle (TEP) reopens the suppressed temporal degree of freedom by restoring an independent dynamical scalar proper-time field. TEP defines two related geometries: the bare gravitational metric ($g_{\mu\nu}$), and the causal matter metric ($\tilde g_{\mu\nu}$) to which standard rods, clocks, and photon fields couple.
 </p>
 <p>
-    These geometries are connected by a universal, dynamical scalar proper-time field ($\phi$). In the canonical preferred-foliation decomposition of Paper 0 (v0.16, §2.2, Step 80) along the unit cosmic temporal flow $U_\mu \equiv -\nabla_\mu\bar\phi/\sqrt{2\bar X}$ ($g^{\mu\nu}U_\mu U_\nu = -1$) and orthogonal spatial projector $\Pi_{\mu\nu} = g_{\mu\nu} + U_\mu U_\nu$, the causal matter metric is defined as:
+    These geometries are connected by a universal, dynamical scalar proper-time field ($\phi$). In the canonical preferred-foliation decomposition of Paper 0 (v0.18, §2.2, Step 80) along the unit cosmic temporal flow $U_\mu \equiv -\nabla_\mu\bar\phi/\sqrt{2\bar X}$ ($g^{\mu\nu}U_\mu U_\nu = -1$) and orthogonal spatial projector $\Pi_{\mu\nu} = g_{\mu\nu} + U_\mu U_\nu$, the causal matter metric is defined as:
 </p>
 <div class="equation">
     \begin{equation}
-    \tilde g_{\mu\nu} = -A_{\rm loc}^2(u_{\rm grav}(\mathbf x))\,U_\mu U_\nu + A_{\rm sp}^2(u_{\rm drift}(t,\mathbf x))\,\Pi_{\mu\nu} + B(\phi)\,\Pi_\mu^\alpha\Pi_\nu^\beta\nabla_\alpha\phi\nabla_\beta\phi ,
+    \begin{aligned}
+    \tilde g_{\mu\nu} &= -A_{\rm loc}^2(u_{\rm grav}(\mathbf x))\,U_\mu U_\nu + A_{\rm sp}^2(u_{\rm drift}(t,\mathbf x))\,\Pi_{\mu\nu} \\
+    &\quad + B(\phi)\bigl(\Pi_\mu^\alpha\Pi_\nu^\beta\nabla_\alpha\phi\nabla_\beta\phi - 2(U\cdot\nabla\phi)U_{(\mu}\Pi_{\nu)}{}^\alpha\nabla_\alpha\phi\bigr) ,
+    \end{aligned}
     \end{equation}
 </div>
 <p>
@@ -87,6 +90,57 @@
 <p>
     The qualification "at the level of redshift alone" is essential. The theorem establishes that the redshift coordinate underlying the original Mount Wilson relation does not, by itself, distinguish an expanding spatial scale factor from dynamical matter-clock transport. The measured spectral shifts can be encoded either as the history of $a(t)$ or as the transport law of $A(\phi)$. Standard distance measurements do not immediately break this degeneracy: on the homogeneous branch, the luminosity distance $d_L(z)$ depends on the same integral over the matter-frame geometry that in FLRW depends on $a(t)$, so a suitable evolution of $A(\phi)$ can reproduce the FLRW distance-redshift relation to any desired precision, as demonstrated by the exact conformal reconstruction of the Pantheon+ distance-modulus relation in TEP-C0 <sup class="cite">29</sup>. The degeneracy is broken not by any single-metric observable but by inter-sector comparisons that probe both $g_{\mu\nu}$ and $\tilde g_{\mu\nu}$ simultaneously. Luminosity distance, time dilation, baryon acoustic oscillations, the cosmic microwave background, and standard sirens each require separate consistency checks that are addressed in the specialized TEP corpus.
 </p>
+<p>
+    Crucially, because all non-gravitational fields, clocks, and photons propagate on the Lorentzian causal matter metric $\tilde g_{\mu\nu}$, Liouville's theorem ($\tilde\nabla_\mu T^{\mu\nu}_{\rm EM}=0$ and conservation of photon phase-space density $f(x,p)\propto n_\gamma/\omega^3$ along $\tilde g$-null geodesics) holds identically in the matter frame. This immediately separates covariant matter-metric clock transport from ad-hoc 1929 "tired light" proposals in which individual photons lose energy in flight on a single static Minkowski metric without clock-rate rescaling. In TEP, photon arrival intervals dilate by $d\tilde\tau_o/d\tilde\tau_e = 1+z$, Etherington's distance-duality reciprocity $d_L = (1+z)^2 d_A$ is an exact geometric identity of $\tilde g_{\mu\nu}$, bolometric surface brightness dims as $I_{\rm bol}\propto (1+z)^{-4}$ (the full Tolman law), and a thermal Planck distribution $B_\nu(T_e)$ remains an exact blackbody at $T_o = T_e/(1+z)$ with zero spectral distortion (verified against all 43 COBE/FIRAS channels in TEP-C0 <sup class="cite">29</sup>), while Solar-System Equivalence Principle and PPN bounds are satisfied with zero free per-system parameters via the universal coupling $\tilde g_{\mu\nu}$ and the two-branch kinetic operator $P_{,X}=k\sqrt{\xi}+2\xi$ anchored solely to $g_t = cH_0/2$ ($|\gamma_{\rm PPN}-1|=4.32\times10^{-8}\ll2.3\times10^{-5}$ at $1.6\,R_\odot$).
+</p>
+<table>
+    <thead>
+        <tr>
+            <th>Observable / Constraint</th>
+            <th>Naive "Tired Light" (1929)</th>
+            <th>Standard FLRW ($\Lambda$CDM)</th>
+            <th>TEP Matter-Metric Transport ($\tilde g_{\mu\nu}$)</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Redshift $1+z$</td>
+            <td>Ad-hoc photon energy loss</td>
+            <td>Spatial expansion $a_0/a_{\rm em}$</td>
+            <td>Matter-ruler/clock ratio $A_{\rm sp}(t_o)/A_{\rm sp}(t_e)$</td>
+        </tr>
+        <tr>
+            <td>Supernova light-curve time dilation</td>
+            <td>None ($\propto 1$) — excluded</td>
+            <td>$\propto (1+z)$</td>
+            <td>$\propto (1+z)$ (exact on $\tilde g_{\mu\nu}$)</td>
+        </tr>
+        <tr>
+            <td>Etherington reciprocity $d_L/d_A$</td>
+            <td>$(1+z)^{1/2}$ — excluded</td>
+            <td>$(1+z)^2$</td>
+            <td>$(1+z)^2$ (Liouville theorem on $\tilde g_{\mu\nu}$)</td>
+        </tr>
+        <tr>
+            <td>Bolometric Tolman surface brightness</td>
+            <td>$\propto (1+z)^{-1}$ — excluded</td>
+            <td>$\propto (1+z)^{-4}$</td>
+            <td>$\propto (1+z)^{-4}$ (exact on $\tilde g_{\mu\nu}$)</td>
+        </tr>
+        <tr>
+            <td>CMB Planck blackbody spectrum</td>
+            <td>Spectral distortion — excluded</td>
+            <td>Preserved ($T\propto 1+z$)</td>
+            <td>Preserved ($T\propto 1+z$; verified on COBE/FIRAS)</td>
+        </tr>
+        <tr>
+            <td>WEP &amp; Solar-System Cassini PPN-$\gamma$</td>
+            <td>Not applicable</td>
+            <td>Exact by GR</td>
+            <td>WEP exact by universal $\tilde g_{\mu\nu}$; $|\gamma_{\rm PPN}-1|=4.32\times10^{-8}\ll2.3\times10^{-5}$ (zero free parameters, $g_t=cH_0/2$)</td>
+        </tr>
+    </tbody>
+</table>
 <h3>4.1 Static Space versus Conformal-Frame Equivalence</h3>
 <p>
     The equality of the two redshift laws does not make TEP a change of notation. In FLRW, one evolving metric governs matter, light and tensor propagation. In TEP, the gravitational metric remains spatially static while matter and electromagnetic fields couple to the scalar-dependent metric $\tilde g_{\mu\nu}$. A conformal or disformal change of variables may move $A(\phi)$ between sectors, but it cannot simultaneously map both the gravitational propagation sector ($g_{\mu\nu}$) and the causal matter sector ($\tilde g_{\mu\nu}$) to a minimally coupled single-metric FLRW spacetime. The two sectors carry independent physical content; no single field redefinition collapses them into one.
@@ -100,7 +154,7 @@
     \end{equation}
 </div>
 <p>
-    Here, $d_L^{\rm GW}$ is the luminosity distance measured from gravitational waves, while $d_L^{\rm EM}$ is the corresponding luminosity distance inferred through electromagnetic observations. If matter and gravity follow different effective geometries, the two need not agree. In minimally coupled single-metric FLRW, both sectors share one metric, so $\Delta_{\rm siren} = 0$. Under the canonical TEP radiation rule (Paper 22), $\Xi(z)=1/(1+z)$ and $\Delta_{\rm siren}=1/(1+z)-1$. In Paper 22 (v0.2, Maputo), the full GWTC-3 bright, dark, and spectral-siren population likelihoods are evaluated under this canonical rule, showing that the apparent $H_0 \simeq 56\ {\rm km\,s^{-1}\,Mpc^{-1}}$ free-fit dark-siren posterior shift ($\Delta\chi^2 = +1.16$) is mechanically driven by $\Lambda$CDM-gated galaxy-catalog host redshifts ($70.0\langle(1+z_{\rm cat})^{-1}\rangle = 55.1\ {\rm km\,s^{-1}\,Mpc^{-1}}$), whereas self-consistent TEP-kernel reassociation at the fixed canonical $H_0 = 68.18\ {\rm km\,s^{-1}\,Mpc^{-1}}$ (Paper 18) recovers the baseline association likelihood ($-2\ln L = 944.31$) without shifting $H_0$, while the separate lab-fixed small-excursion comparison yields $H_0 \simeq 72.2$ versus $72.0\ {\rm km\,s^{-1}\,Mpc^{-1}}$ ($\Delta\chi^2 = +0.20$) at marginal significance. This dimensionless ratio is an invariant inter-sector observable: it cannot be removed by any conformal or disformal field redefinition, because no single transformation simultaneously maps both sectors to a common minimally coupled metric. The technical details of the frame analysis, including engagement with the existing conformal-frame literature, are carried in Appendix C.
+    Here, $d_L^{\rm GW}$ is the luminosity distance measured from gravitational waves, while $d_L^{\rm EM}$ is the corresponding luminosity distance inferred through electromagnetic observations. If matter and gravity follow different effective geometries, the two need not agree. In minimally coupled single-metric FLRW, both sectors share one metric, so $\Delta_{\rm siren} = 0$. Under the canonical TEP radiation rule (Paper 22), $\Xi(z)=1/(1+z)$ and $\Delta_{\rm siren}=1/(1+z)-1$. In Paper 22 (v0.3, Maputo), the full GWTC-3 bright, dark, and spectral-siren population likelihoods are evaluated under this canonical rule, showing that the apparent $H_0 \simeq 56\ {\rm km\,s^{-1}\,Mpc^{-1}}$ free-fit dark-siren posterior shift ($\Delta\chi^2 = +1.16$) is mechanically driven by $\Lambda$CDM-gated galaxy-catalog host redshifts ($70.0\langle(1+z_{\rm cat})^{-1}\rangle = 55.1\ {\rm km\,s^{-1}\,Mpc^{-1}}$), whereas self-consistent TEP-kernel reassociation at the fixed canonical $H_0 = 68.18\ {\rm km\,s^{-1}\,Mpc^{-1}}$ (Paper 18) recovers the baseline association likelihood ($-2\ln L = 944.31$) without shifting $H_0$, while the separate lab-fixed small-excursion comparison yields $H_0 \simeq 72.2$ versus $72.0\ {\rm km\,s^{-1}\,Mpc^{-1}}$ ($\Delta\chi^2 = +0.20$) at marginal significance. This dimensionless ratio is an invariant inter-sector observable: it cannot be removed by any conformal or disformal field redefinition, because no single transformation simultaneously maps both sectors to a common minimally coupled metric. The technical details of the frame analysis, including engagement with the existing conformal-frame literature, are carried in Appendix C.
 </p>
 <p>
     TEP therefore makes a sharp empirical prediction. If cosmological redshift is matter-clock transport, the same temporal field must leave dimensionless signatures wherever matter-clock calibration is compared with gravitational propagation, or wherever proper time is transported around non-integrable paths. A consistent null result across those channels would reject the TEP interpretation. A common signal across them would identify a missing dynamical sector of geometry.

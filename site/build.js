@@ -180,7 +180,7 @@ async function buildStaticSite() {
         
         console.log('✅ Static site built successfully!');
         console.log(`📁 Output: ${outputPath}`);
-        console.log('📄 Markdown: F30-TEP-HUB-v0.3-Harare.md (in root)');
+        console.log('📄 Markdown: F30-TEP-HUB-v0.4-Harare.md (in root)');
         console.log(`📊 Generated ${manifest.sections.length} sections (TEP-HUB)`);
         console.log('🚀 TEP-HUB ready for deployment');
         
